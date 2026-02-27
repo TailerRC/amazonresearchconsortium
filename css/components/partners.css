@@ -1,0 +1,36 @@
+/* ==========================================
+   Partners Component – Logo Grid Only
+   ========================================== */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.partners-logo {
+  width: 160px;
+  height: 80px;
+  background: #ccc;
+}
+
+/* Partners responsive */
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+  .partners-logo {
+    width: 130px;
+    height: 65px;
+  }
+}

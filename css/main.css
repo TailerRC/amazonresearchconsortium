@@ -1,0 +1,1070 @@
+/* Global reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========================
+   Hero Section
+   ======================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.10) 0%,
+    rgba(0, 0, 0, 0.35) 70%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem 4rem;
+}
+
+.hero-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.15;
+  color: #fff;
+  max-width: 800px;
+}
+
+.hero-title-italic {
+  font-style: italic;
+}
+
+.hero-cta {
+  align-self: flex-end;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: transparent;
+  color: #f5c518;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 2px solid #f5c518;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.hero-cta:hover {
+  background: #f5c518;
+  color: #00264a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-cta {
+    align-self: center;
+  }
+}
+
+/* ========================
+   Mission Section
+   ======================== */
+.mission {
+  padding: 6rem 4rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.mission-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* --- Image Mosaic (two-column collage) --- */
+.mission-mosaic {
+  flex: 0 0 46%;
+  min-width: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.mosaic-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.mosaic-col--left {
+  flex: 1.5;
+  padding-top: 4rem;
+}
+
+.mosaic-col--right {
+  flex: 1.5;
+}
+
+.mosaic-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mosaic-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Text Column --- */
+.mission-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.mission-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+  line-height: 1.4;
+  color: #14505c;
+  margin-bottom: 1.5rem;
+}
+
+.mission-sub {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.mission-btn {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-btn:hover {
+  background: transparent;
+  color: #00264a;
+  transform: translateY(-2px);
+}
+
+/* Mission responsive */
+@media (max-width: 1024px) {
+  .mission {
+    padding: 4rem 2.5rem;
+  }
+
+  .mission-inner {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    padding: 3rem 1.5rem;
+  }
+
+  .mission-inner {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .mission-mosaic {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .mosaic-col--left {
+    padding-top: 2rem;
+  }
+
+  .mission-text {
+    text-align: center;
+  }
+
+  .mission-sub {
+    max-width: none;
+  }
+
+  .mission-btn {
+    margin: 0 auto;
+  }
+}
+
+/* ========================
+   Where We Work Section
+   ======================== */
+.where-we-work {
+  position: relative;
+  background: linear-gradient(180deg, #fbfdff 0%, #f3faff 40%, #96c3e9 100%);
+  overflow: hidden;
+}
+
+.where-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.where-text {
+  flex: 0 0 38%;
+  padding: 2rem 0 3rem;
+}
+
+.where-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.3;
+  color: #14505c;
+  margin-bottom: 1rem;
+}
+
+.where-sub {
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 420px;
+}
+
+.where-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.where-btn:hover {
+  background: transparent;
+  color: #00264a;
+  transform: translateY(-2px);
+}
+
+.where-map {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  align-self: flex-start;
+  margin-right: -4rem;
+}
+
+.where-map-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Where We Work responsive */
+@media (max-width: 1024px) {
+  .where-we-work {
+    padding: 4rem 0 0 2.5rem;
+  }
+
+  .where-inner {
+    gap: 1.5rem;
+  }
+
+  .where-map {
+    margin-right: -2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .where-we-work {
+    padding: 3rem 1.5rem 0;
+  }
+
+  .where-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .where-text {
+    flex: none;
+    text-align: center;
+    padding: 0 0 1rem;
+  }
+
+  .where-sub {
+    max-width: none;
+  }
+
+  .where-btn {
+    margin: 0 auto;
+  }
+
+  .where-map {
+    margin-right: -1.5rem;
+  }
+
+  .where-map-img {
+    width: 100%;
+  }
+}
+
+/* ========================
+   CTA Banner Section
+   ======================== */
+.cta-banner {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.cta-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cta-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 50, 65, 0.45);
+}
+
+.cta-banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cta-banner-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.35;
+  color: #fff;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.cta-banner-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-banner-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* CTA Banner responsive */
+@media (max-width: 768px) {
+  .cta-banner {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .cta-banner-heading {
+    font-size: 1.4rem;
+  }
+}
+
+/* ========================
+   Our Current Projects Section
+   ======================== */
+.projects {
+  padding: 5rem 4rem;
+  background: #fff;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: #14505c;
+  margin-bottom: 0.75rem;
+}
+
+.projects-subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.project-card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #b0b8bf;
+  border-radius: 2px;
+}
+
+.project-card:hover .project-img-placeholder {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #e87722;
+}
+
+.project-card:hover .project-name {
+  text-decoration: underline;
+}
+
+/* Projects responsive */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 4rem 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ======================================
+   Unlock the Power of Data – Carousel
+   ====================================== */
+.data-carousel-section {
+  padding: 3rem 4rem 4rem;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.data-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin-bottom: 2.5rem;
+}
+
+.data-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: #14505c;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.data-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.93rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #e8e8e8;
+  border: 1px solid #d0d0d0;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.carousel-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #e87722;
+  text-transform: uppercase;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #e87722;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  color: #14505c;
+  transform: scale(1.15);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #e87722;
+}
+
+/* Carousel responsive */
+@media (max-width: 1024px) {
+  .carousel-slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .data-carousel-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+  .carousel-arrow {
+    font-size: 2rem;
+  }
+}
+
+/* ========================
+   Upcoming Events Section
+   ======================== */
+.events {
+  padding: 3rem 4rem 5rem;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.events-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin-bottom: 2.5rem;
+}
+
+.events-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: #14505c;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e87722;
+  display: inline-block;
+}
+
+.events-content {
+  margin-top: 2.5rem;
+}
+
+.events-event-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  color: #e87722;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.events-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.events-text {
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.events-list li {
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.7;
+  padding-left: 1rem;
+}
+
+.events-list li::before {
+  content: '\2013';
+  margin-right: 0.5rem;
+  margin-left: -1rem;
+}
+
+.events-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2.2rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.events-btn:hover {
+  background: transparent;
+  color: #00264a;
+  transform: translateY(-2px);
+}
+
+/* Events responsive */
+@media (max-width: 768px) {
+  .events {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
+
+/* ==============================
+   News & Project Updates Section
+   ============================== */
+.news {
+  padding: 4rem 4rem 5rem;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: #14505c;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e87722;
+  display: inline-block;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+}
+
+.news-card {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.news-card__img {
+  width: 200px;
+  min-width: 200px;
+  aspect-ratio: 4 / 3;
+  background: #b0b8bf;
+  flex-shrink: 0;
+}
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.news-card__link {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e87722;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-card__link:hover {
+  color: #14505c;
+  text-decoration: underline;
+}
+
+.news-card__meta {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.news-btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 0.9rem 2.2rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.news-btn:hover {
+  background: transparent;
+  color: #00264a;
+  transform: translateY(-2px);
+}
+
+/* News responsive */
+@media (max-width: 1024px) {
+  .news-card__img {
+    width: 160px;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-card {
+    flex-direction: column;
+  }
+  .news-card__img {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ==========================================
+   Supporters – Leading Institutions
+   ========================================== */
+.collaborators {
+  padding: 4rem 4rem 3.5rem;
+  background: #f5f1ec;
+  text-align: center;
+}
+
+.collaborators-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.collaborators-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.supporters {
+  padding: 3rem 4rem 5rem;
+  background: #f5f1ec;
+  text-align: center;
+}
+
+.supporters-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.supporters-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.supporters-logo {
+  width: 180px;
+  height: 80px;
+  background: #ccc;
+}
+
+/* Supporters responsive */
+@media (max-width: 768px) {
+  .supporters {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+  .supporters-grid {
+    gap: 2rem;
+  }
+  .supporters-logo {
+    width: 140px;
+    height: 65px;
+  }
+}
+
+/* ==============================
+   Connect With Us Section
+   ============================== */
+.connect {
+  background: #fff;
+}
+
+.connect-banner {
+  width: 100%;
+  height: 500px;
+  background-size: 100% auto;
+  background-position: center 45%;
+  background-repeat: no-repeat;
+}
+
+.connect-inner {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 4rem 4rem;
+}
+
+.connect-left {
+  flex: 0 0 40%;
+}
+
+.connect-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #14505c;
+  margin-bottom: 1.5rem;
+}
+
+.connect-info p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.93rem;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.connect-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.connect-info a:hover {
+  color: #14505c;
+  text-decoration: underline;
+}
+
+.connect-social {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.connect-social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.93rem;
+  transition: color 0.3s ease;
+}
+
+.connect-social-item:hover {
+  color: #14505c;
+}
+
+.connect-social-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.connect-right {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.connect-italic {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.connect-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Connect responsive */
+@media (max-width: 768px) {
+  .connect-inner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 3rem;
+  }
+  .connect-left {
+    flex: unset;
+  }
+}
