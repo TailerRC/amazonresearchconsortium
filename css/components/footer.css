@@ -1,0 +1,16 @@
+/* ==================
+   Footer Component
+   ================== */
+.site-footer {
+  background: #ddd;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 2px solid #ccc;
+}
+
+.site-footer__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: #333;
+  margin: 0;
+}
