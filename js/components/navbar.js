@@ -1,12 +1,14 @@
+const _navbarScript = document.currentScript;
 async function loadNavbar() {
+  const base = _navbarScript.getAttribute('src').replace('js/components/navbar.js', '');
   // Loaded CSS
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = '/css/components/navbar.css';
+  link.href = base + 'css/components/navbar.css';
   document.head.appendChild(link);
 
   // This part is for loading the HTML content of the navbar
-  const res = await fetch('/components/navbar.html');
+  const res = await fetch(base + 'components/navbar.html');
   const html = await res.text();
   document.getElementById('navbar').innerHTML = html;
 
