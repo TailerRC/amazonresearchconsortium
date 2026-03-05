@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners & Supporters – Amazon Research Consortium</title>
+    <link rel="stylesheet" href="/css/partner.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="/js/components/navbar.js"></script>
+
+    <!-- Hero Banner -->
+    <section class="partner-hero">
+        <img
+            src="/assets/Banner-Image/2.png"
+            alt="Aerial view of Amazon rainforest canopy"
+            class="partner-hero__img"
+        />
+        <div class="partner-hero__overlay"></div>
+        <div class="partner-hero__content">
+            <h1 class="partner-hero__title">Our Partners &amp; Supporters</h1>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partner-section">
+        <p class="partner-section__label">JOIN THE SUCCESS</p>
+        <h2 class="partner-section__title">
+            At the ARC, we thrive on collaboration and innovation.
+        </h2>
+        <p class="partner-section__description">
+            Our work is made possible through the collaboration of our partners across the globe.
+            We are incredibly grateful for their continued hard work and dedication to building a
+            resilient, healthy future for Latin America.
+        </p>
+
+        <div id="partners"></div>
+        <script src="/js/components/partners.js"></script>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="partner-carousel-section">
+        <div class="carousel" id="partnerCarousel">
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide is-selected">
+                        <img src="/assets/ARC Team/1.png" alt="ARC Team in the field" class="carousel__image" />
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="/assets/ARC Team/2.png" alt="ARC Team fieldwork" class="carousel__image" />
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="/assets/ARC Team/3.png" alt="ARC Team research" class="carousel__image" />
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="/assets/ARC Team/4.png" alt="ARC Team collaboration" class="carousel__image" />
+                    </li>
+                </ul>
+            </div>
+
+            <button class="carousel__btn carousel__btn--left" aria-label="Previous slide">
+                <span>&#8249;</span>
+            </button>
+            <button class="carousel__btn carousel__btn--right" aria-label="Next slide">
+                <span>&#8250;</span>
+            </button>
+
+            <div class="carousel__dots">
+                <button class="carousel__dot is-active" aria-label="Slide 1"></button>
+                <button class="carousel__dot" aria-label="Slide 2"></button>
+                <button class="carousel__dot" aria-label="Slide 3"></button>
+                <button class="carousel__dot" aria-label="Slide 4"></button>
+            </div>
+        </div>
+    </section>
+    <script src="/js/partner.js"></script>
+
+    <!-- Connect With Us -->
+    <section class="connect-section">
+        <div class="connect-section__inner">
+            <!-- Left: contact info -->
+            <div class="connect-section__info">
+                <h2 class="connect-section__title">Connect With Us</h2>
+                <p class="connect-section__desc">
+                    We are constantly on the lookout for dedicated individuals and
+                    organizations who are passionate about driving meaningful change. We
+                    invite you to connect with us and share your interest in making a
+                    difference. <em>We look forward to hearing from you!</em>
+                </p>
+
+                <div class="connect-section__contact-item">
+                    <span class="connect-section__contact-label">EMAIL</span>
+                    <span class="connect-section__contact-value">Amazon.ARC@duke.edu</span>
+                </div>
+                <div class="connect-section__contact-item">
+                    <span class="connect-section__contact-label">PHONE</span>
+                    <span class="connect-section__contact-value">919-684-4108</span>
+                </div>
+                <div class="connect-section__contact-item">
+                    <span class="connect-section__contact-label">ADDRESS</span>
+                    <span class="connect-section__contact-value">310 Trent Drive, Durham, NC 27710</span>
+                </div>
+
+                <div class="connect-section__socials">
+                    <a href="#" aria-label="LinkedIn" class="connect-section__social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.5h5V24H0V8.5zm7.5 0H12v2.1h.06c.63-1.2 2.17-2.47 4.47-2.47C21.1 8.13 22 11.04 22 15.3V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24H7.5V8.5z"/></svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)" class="connect-section__social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.636 5.903-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: form -->
+            <form class="connect-section__form" onsubmit="return false;">
+                <div class="connect-form__row">
+                    <div class="connect-form__field">
+                        <input type="text" placeholder="First Name*" required />
+                    </div>
+                    <div class="connect-form__field">
+                        <input type="text" placeholder="Last Name*" required />
+                    </div>
+                </div>
+                <div class="connect-form__row">
+                    <div class="connect-form__field">
+                        <input type="email" placeholder="Email Address*" required />
+                    </div>
+                    <div class="connect-form__field">
+                        <input type="tel" placeholder="Phone Number" />
+                    </div>
+                </div>
+                <div class="connect-form__row connect-form__row--full">
+                    <div class="connect-form__field">
+                        <textarea placeholder="Message*" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="connect-form__submit-row">
+                    <button type="submit" class="connect-form__submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="/js/components/footer.js"></script>
+</body>
+</html>
