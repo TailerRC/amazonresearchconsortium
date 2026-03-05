@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Project Updates | ARC</title>
-    <link rel="stylesheet" href="/css/news.css">
+    <script>
+      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+      const base = document.createElement('base');
+      base.href = isLocal ? '/' : '/amazonresearchconsortium/';
+      document.head.prepend(base);
+    </script>
+    <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
-    <script src="/js/components/navbar.js"></script>
+    <script src="js/components/navbar.js"></script>
 
     <!-- News Hero Banner -->
     <section class="news-hero">
@@ -277,13 +283,13 @@
         <div class="news-cta-placeholder">[ Background image will go here ]</div>
         <div class="news-cta-content">
             <h2 class="news-cta-title">Ready to make an impact?</h2>
-            <a href="/pages/partner.html" class="news-cta-btn">LET'S COLLABORATE</a>
+            <a href="pages/partner.html" class="news-cta-btn">LET'S COLLABORATE</a>
         </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script src="/js/components/footer.js"></script>
+    <script src="js/components/footer.js"></script>
 
 </body>
 </html>

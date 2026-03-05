@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Partners & Supporters – Amazon Research Consortium</title>
-    <link rel="stylesheet" href="/css/partner.css">
+    <script>
+      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+      const base = document.createElement('base');
+      base.href = isLocal ? '/' : '/amazonresearchconsortium/';
+      document.head.prepend(base);
+    </script>
+    <link rel="stylesheet" href="css/partner.css">
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
-    <script src="/js/components/navbar.js"></script>
+    <script src="js/components/navbar.js"></script>
 
     <!-- Hero Banner -->
     <section class="partner-hero">
         <img
-            src="/assets/Banner-Image/2.png"
+            src="assets/Banner-Image/2.png"
             alt="Aerial view of Amazon rainforest canopy"
             class="partner-hero__img"
         />
@@ -37,7 +43,7 @@
         </p>
 
         <div id="partners"></div>
-        <script src="/js/components/partners.js"></script>
+        <script src="js/components/partners.js"></script>
     </section>
 
     <!-- Carousel Section -->
@@ -46,16 +52,16 @@
             <div class="carousel__track-container">
                 <ul class="carousel__track">
                     <li class="carousel__slide is-selected">
-                        <img src="/assets/ARC Team/1.png" alt="ARC Team in the field" class="carousel__image" />
+                        <img src="assets/ARC Team/1.png" alt="ARC Team in the field" class="carousel__image" />
                     </li>
                     <li class="carousel__slide">
-                        <img src="/assets/ARC Team/2.png" alt="ARC Team fieldwork" class="carousel__image" />
+                        <img src="assets/ARC Team/2.png" alt="ARC Team fieldwork" class="carousel__image" />
                     </li>
                     <li class="carousel__slide">
-                        <img src="/assets/ARC Team/3.png" alt="ARC Team research" class="carousel__image" />
+                        <img src="assets/ARC Team/3.png" alt="ARC Team research" class="carousel__image" />
                     </li>
                     <li class="carousel__slide">
-                        <img src="/assets/ARC Team/4.png" alt="ARC Team collaboration" class="carousel__image" />
+                        <img src="assets/ARC Team/4.png" alt="ARC Team collaboration" class="carousel__image" />
                     </li>
                 </ul>
             </div>
@@ -75,7 +81,7 @@
             </div>
         </div>
     </section>
-    <script src="/js/partner.js"></script>
+    <script src="js/partner.js"></script>
 
     <!-- Connect With Us -->
     <section class="connect-section">
@@ -145,6 +151,6 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script src="/js/components/footer.js"></script>
+    <script src="js/components/footer.js"></script>
 </body>
 </html>
