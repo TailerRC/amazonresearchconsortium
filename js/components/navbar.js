@@ -12,15 +12,26 @@ async function loadNavbar() {
   const html = await res.text();
   document.getElementById('navbar').innerHTML = html;
 
-  // Dropdown toggle logic
-  document.querySelectorAll('.has-dropdown > button').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  // Mobile menu toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      const parent = btn.closest('.nav-item');
+      navMenu.classList.toggle('show-menu');
+      navToggle.closest('.nav__data')?.classList.toggle('show-icon');
+    });
+  }
+
+  // Dropdown toggle logic
+  document.querySelectorAll('.dropdown__item > .nav__link').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = trigger.closest('.dropdown__item');
       const isOpen = parent.classList.contains('open');
 
       // Close all other dropdowns
-      document.querySelectorAll('.nav-item.open').forEach((item) => {
+      document.querySelectorAll('.dropdown__item.open').forEach((item) => {
         item.classList.remove('open');
       });
 
@@ -30,11 +41,13 @@ async function loadNavbar() {
     });
   });
 
-  // Close dropdowns when clicking outside
+  // Close dropdowns and mobile menu when clicking outside
   document.addEventListener('click', () => {
-    document.querySelectorAll('.nav-item.open').forEach((item) => {
+    document.querySelectorAll('.dropdown__item.open').forEach((item) => {
       item.classList.remove('open');
     });
+    navMenu?.classList.remove('show-menu');
+    navToggle?.closest('.nav__data')?.classList.remove('show-icon');
   });
 }
 

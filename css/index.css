@@ -1,5 +1,7 @@
 /* Global reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,13 +13,11 @@ body {
   line-height: 1.6;
 }
 
-/* ========================
-   Hero Section
-   ======================== */
+/*LINK Hero Section */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -36,9 +36,9 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.10) 0%,
-    rgba(0, 0, 0, 0.35) 70%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(223, 215, 215, 0.089) 0%,
+    rgba(70, 67, 67, 0.35) 70%,
+    rgba(6, 6, 6, 0.628) 100%
   );
 }
 
@@ -52,35 +52,46 @@ body {
 }
 
 .hero-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: 3.5rem;
   line-height: 1.15;
   color: #fff;
-  max-width: 800px;
 }
 
 .hero-title-italic {
   font-style: italic;
+  font-size: 2.3rem;
+  position: relative;
+  top: -20px;
 }
 
 .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   align-self: flex-end;
-  margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  background: transparent;
-  color: #f5c518;
+  padding: 0.9rem 2.4rem;
+  border: 2px solid #c8a84b;
+  border-radius: 50px;
+  background: #c8a84b;
+  color: #00264a;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.85rem;
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid #f5c518;
-  transition: background 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-cta:hover {
-  background: #f5c518;
+  background: #dfc06a;
+  border-color: #dfc06a;
   color: #00264a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(200, 168, 75, 0.45);
 }
 
 /* Responsive adjustments */
@@ -141,7 +152,9 @@ body {
   height: auto;
   border-radius: 3px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .mosaic-img:hover {
@@ -156,7 +169,7 @@ body {
 }
 
 .mission-heading {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.6rem, 2.6vw, 2.3rem);
   line-height: 1.4;
@@ -182,7 +195,10 @@ body {
   letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid #00264a;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .mission-btn:hover {
@@ -258,7 +274,7 @@ body {
 }
 
 .where-heading {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.4rem, 2.2vw, 1.9rem);
   line-height: 1.3;
@@ -284,7 +300,10 @@ body {
   letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid #00264a;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .where-btn:hover {
@@ -395,7 +414,7 @@ body {
 }
 
 .cta-banner-heading {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: italic;
   font-size: clamp(1.6rem, 3vw, 2.6rem);
@@ -415,7 +434,10 @@ body {
   letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid #00264a;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .cta-banner-btn:hover {
@@ -450,7 +472,7 @@ body {
 }
 
 .projects-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 2.8vw, 2.5rem);
   color: #14505c;
@@ -547,7 +569,7 @@ body {
 }
 
 .data-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: italic;
   font-size: clamp(1.8rem, 2.8vw, 2.5rem);
@@ -614,7 +636,9 @@ body {
   cursor: pointer;
   padding: 0 0.5rem;
   line-height: 1;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   flex-shrink: 0;
 }
 
@@ -681,7 +705,7 @@ body {
 }
 
 .events-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 2.8vw, 2.5rem);
   color: #14505c;
@@ -735,7 +759,7 @@ body {
 }
 
 .events-list li::before {
-  content: '\2013';
+  content: "\2013";
   margin-right: 0.5rem;
   margin-left: -1rem;
 }
@@ -751,7 +775,10 @@ body {
   letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid #00264a;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .events-btn:hover {
@@ -778,7 +805,7 @@ body {
 }
 
 .news-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 2.8vw, 2.5rem);
   color: #14505c;
@@ -815,7 +842,7 @@ body {
 }
 
 .news-card__link {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #e87722;
@@ -848,7 +875,10 @@ body {
   letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid #00264a;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .news-btn:hover {
@@ -905,7 +935,7 @@ body {
 }
 
 .collaborators-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   color: #333;
@@ -919,7 +949,7 @@ body {
 }
 
 .supporters-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   color: #333;
@@ -984,7 +1014,7 @@ body {
 }
 
 .connect-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   color: #14505c;
@@ -1043,7 +1073,7 @@ body {
 }
 
 .connect-italic {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 1rem;
   color: #333;

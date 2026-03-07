@@ -1,43 +1,97 @@
+<link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+<link href="/assets/fontawesome/css/brands.css" rel="stylesheet" />
+<link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
+<link href="/assets/fontawesome/css/sharp-thin.css" rel="stylesheet" />
+<link href="/assets/fontawesome/css/sharp-duotone-thin.css" rel="stylesheet" />
+
 <header class="site-header">
   <div class="header-inner">
     <div class="header-left">
       <a href="index.html" class="logo-link">
         <span class="logo-text">Duke</span>
       </a>
-      <span class="site-title">Amazon Research Consortium for Climate Change and One Health</span>
     </div>
     <div class="header-right">
-      <div class="search-box">
-        <input type="text" placeholder="Search" aria-label="Search" />
-        <button type="button" class="search-btn" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
+      <div class="logo-title">
+        <span class="logo-title-main">Amazon Research Consortium</span>
+        <span class="logo-title-sub">Climate Change &amp; One Health</span>
       </div>
     </div>
   </div>
 </header>
 
-<nav class="main-nav">
-  <ul class="nav-list">
-    <li class="nav-item has-dropdown">
-      <button class="nav-link">About <span class="arrow">&#9662;</span></button>
-      <ul class="dropdown">
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Team</a></li>
-      </ul>
-    </li>
-    <li class="nav-item has-dropdown">
-      <button class="nav-link">Our Work <span class="arrow">&#9662;</span></button>
-      <ul class="dropdown">
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Projects</a></li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a href="pages/news.html" class="nav-link">News</a>
-    </li>
-    <li class="nav-item">
-      <a href="pages/partner.html" class="nav-link">Partner With Us</a>
-    </li>
-  </ul>
+<nav class="nav container" aria-label="Primary">
+  <div class="nav__data">
+    <!-- Mobile burger toggle -->
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="ri-menu-line nav__burger"></i>
+      <i class="ri-close-line nav__close"></i>
+    </div>
+  </div>
+
+  <!--SECTION - NAV MENU-->
+  <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+
+      <!--LINK - DROPDOWN About-->
+      <li class="dropdown__item">
+        <div class="nav__link">
+          About <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+        </div>
+        <ul class="dropdown__menu">
+          <li>
+            <a href="pages/about/team.html" class="dropdown__link">
+              <i class="fa-solid fa-user-group"></i>Meet our Team</a>
+          </li>
+        </ul>
+      </li>
+
+      <!--LINK - DROPDOWN Our Work-->
+      <li class="dropdown__item">
+        <div class="nav__link">
+          Our Work <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+        </div>
+        <ul class="dropdown__menu">
+          <li>
+            <a href="pages/ourwork/sistema.html" class="dropdown__link">
+              <i class="fa-solid fa-chart-simple"></i>Access Data</a>
+          </li>
+          <li>
+            <a href="pages/ourwork/malaria.html" class="dropdown__link">
+              <i class="fa-solid fa-satellite"></i>SISTEMA</a>
+          </li>
+          <li>
+            <a href="pages/ourwork/acercar.html" class="dropdown__link">
+              <i class="fa-solid fa-mosquito"></i>R01 Malaria</a>
+          </li>
+          <li>
+            <a href="pages/ourwork/eliminar.html" class="dropdown__link">
+              <i class="fa-solid fa-earth-americas"></i>ACERCAR</a>
+          </li>
+          <li>
+            <a href="pages/ourwork/eliminar.html" class="dropdown__link">
+              <i class="fa-solid fa-earth-americas"></i>ELIMINAR</a>
+          </li>
+          <li>
+            <a href="pages/ourwork/eliminar.html" class="dropdown__link">
+              <i class="fa-solid fa-graduation-cap"></i>Students & Trainers</a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="pages/news.html" class="nav__link">News</a></li>
+      <li><a href="pages/partner.html" class="nav__link">Partner With Us</a></li>
+
+    </ul>
+    
+  </div>
+
+  <!-- Search bar -->
+  <div class="nav-search">
+    <input type="text" placeholder="Search" aria-label="Search" />
+    <button type="button" class="nav-search-btn" aria-label="Search">
+      <i class="ri-search-line"></i>
+    </button>
+  </div>
 </nav>
+
