@@ -1,6 +1,21 @@
 const _navbarScript = document.currentScript;
 async function loadNavbar() {
   const base = _navbarScript.getAttribute('src').replace('js/components/navbar.js', '');
+  
+  const faFiles = [
+    'assets/fontawesome/css/fontawesome.css',
+    'assets/fontawesome/css/brands.css',
+    'assets/fontawesome/css/solid.css',
+    'assets/fontawesome/css/sharp-thin.css',
+    'assets/fontawesome/css/sharp-duotone-thin.css',
+  ];
+  faFiles.forEach(file => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = base + file;
+    document.head.appendChild(link);
+  });
+  
   // Loaded CSS
   const link = document.createElement('link');
   link.rel = 'stylesheet';
