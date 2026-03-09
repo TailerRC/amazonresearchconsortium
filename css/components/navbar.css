@@ -92,6 +92,7 @@ ul {
 .nav {
   height: 3.5rem;
   background-color: #012169;
+  position: relative;
 }
 
 .nav__list {
@@ -102,7 +103,7 @@ ul {
 .nav__logo,
 .nav__burger,
 .nav__close {
-  color: var(--fg);
+  color: white;
 }
 
 .nav__data {
@@ -145,16 +146,31 @@ ul {
 
 /**LINK - NAVIGATION FOR MOBILE DEVICES*/
 @media screen and (max-width: 800px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .nav__data {
+    width: auto;
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+  }
+
   .nav__menu {
     position: absolute;
     left: 0;
-    top: 2.5rem;
+    top: 3.5rem;
     width: 100%;
     height: calc(100vh - 3.5rem);
     overflow: auto;
     pointer-events: none;
     opacity: 0;
     transition: top 0.4s, opacity 0.4s;
+    z-index: 100;
   }
 
   .nav__menu::-webkit-scrollbar {
@@ -162,7 +178,7 @@ ul {
   }
 
   .nav__list {
-    background-color: var(--bg);
+    background-color: #0e0f12;
     padding-top: 1rem;
     margin: 0;
     padding: 0;
@@ -274,6 +290,26 @@ ul {
 
   .nav__logo {
     font-size: 24px;
+  }
+
+  /* Scale down site header on small screens */
+  .site-header {
+    padding: 10px 14px;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+  }
+
+  .logo-title-main {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+
+  .logo-title-sub {
+    font-size: 0.75rem;
+    text-align: right;
   }
 }
 
@@ -398,8 +434,8 @@ ul {
 }
 
 .nav-search-btn:hover {
-  background-color: #012169;
-  border-color: #012169;
+  background-color: #06909a;
+  border-color: #06909a;
   color: #fff;
 }
 
@@ -407,4 +443,139 @@ ul {
   .nav-search {
     display: none;
   }
+}
+
+/* ===== MOBILE SEARCH BUTTON (inside nav bar) ===== */
+.nav__search-mobile-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav__search-mobile-btn:hover {
+  opacity: 0.8;
+}
+
+/* Hidden on desktop (nav__data itself is hidden at 1024px+, but explicit is safer) */
+@media screen and (min-width: 1024px) {
+  .nav__search-mobile-btn {
+    display: none;
+  }
+}
+
+/* ===== MOBILE SEARCH MODAL ===== */
+.mobile-search-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.mobile-search-modal.open {
+  display: flex;
+}
+
+.mobile-search-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  animation: fadeInOverlay 0.25s ease;
+}
+
+.mobile-search-modal__box {
+  position: relative;
+  z-index: 1;
+  background: #012169;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  animation: slideDownBox 0.25s ease;
+}
+
+.mobile-search-modal__box input {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #012169;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+.mobile-search-modal__box input::placeholder {
+  color: #888;
+}
+
+.mobile-search-modal__submit {
+  height: 44px;
+  width: 44px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  color: #012169;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.mobile-search-modal__submit:hover {
+  background-color: #e8eaf6;
+}
+
+.mobile-search-modal__close {
+  height: 44px;
+  width: 44px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.mobile-search-modal__close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Ensure modal never shows on desktop */
+@media screen and (min-width: 1024px) {
+  .mobile-search-modal {
+    display: none !important;
+  }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDownBox {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
 }

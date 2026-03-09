@@ -49,6 +49,33 @@ async function loadNavbar() {
     navMenu?.classList.remove('show-menu');
     navToggle?.closest('.nav__data')?.classList.remove('show-icon');
   });
+
+  // Mobile search modal
+  const mobileSearchBtn   = document.getElementById('nav-search-mobile-btn');
+  const mobileSearchModal = document.getElementById('mobile-search-modal');
+  const mobileSearchClose = document.getElementById('mobile-search-modal-close');
+  const mobileOverlay     = document.getElementById('mobile-search-overlay');
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+
+  function openMobileSearch(e) {
+    e.stopPropagation();
+    mobileSearchModal?.classList.add('open');
+    mobileSearchModal?.setAttribute('aria-hidden', 'false');
+    setTimeout(() => mobileSearchInput?.focus(), 50);
+  }
+
+  function closeMobileSearch() {
+    mobileSearchModal?.classList.remove('open');
+    mobileSearchModal?.setAttribute('aria-hidden', 'true');
+  }
+
+  mobileSearchBtn?.addEventListener('click', openMobileSearch);
+  mobileSearchClose?.addEventListener('click', closeMobileSearch);
+  mobileOverlay?.addEventListener('click', closeMobileSearch);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileSearch();
+  });
 }
 
 loadNavbar();

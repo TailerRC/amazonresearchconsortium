@@ -22,10 +22,14 @@
 
 <nav class="nav container" aria-label="Primary">
   <div class="nav__data">
+    <!-- Mobile search toggle (icon only, mobile only) -->
+    <button class="nav__search-mobile-btn" id="nav-search-mobile-btn" aria-label="Abrir búsqueda">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
     <!-- Mobile burger toggle -->
     <div class="nav__toggle" id="nav-toggle">
-      <i class="ri-menu-line nav__burger"></i>
-      <i class="ri-close-line nav__close"></i>
+      <i class="fa-solid fa-bars nav__burger"></i>
+      <i class="fa-solid fa-xmark nav__close"></i>
     </div>
   </div>
 
@@ -41,7 +45,11 @@
         <ul class="dropdown__menu">
           <li>
             <a href="pages/about/team.html" class="dropdown__link">
-              <i class="fa-solid fa-user-group"></i>Meet our Team</a>
+              <i class="fa-solid fa-user"></i>About</a>
+          </li>
+          <li>
+            <a href="pages/about/team.html" class="dropdown__link">
+              <i class="fa-solid fa-users"></i>Meet our Team</a>
           </li>
         </ul>
       </li>
@@ -86,12 +94,26 @@
     
   </div>
 
-  <!-- Search bar -->
+  <!-- Search bar (desktop only) -->
   <div class="nav-search">
     <input type="text" placeholder="Search" aria-label="Search" />
     <button type="button" class="nav-search-btn" aria-label="Search">
-      <i class="ri-search-line"></i>
+      <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
 </nav>
+
+<!-- Mobile Search Modal -->
+<div class="mobile-search-modal" id="mobile-search-modal" aria-hidden="true">
+  <div class="mobile-search-modal__overlay" id="mobile-search-overlay"></div>
+  <div class="mobile-search-modal__box">
+    <button class="mobile-search-modal__close" id="mobile-search-modal-close" aria-label="Cerrar búsqueda">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <input type="text" placeholder="Search..." aria-label="Buscar" id="mobile-search-input" />
+    <button class="mobile-search-modal__submit" aria-label="Buscar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+</div>
 
