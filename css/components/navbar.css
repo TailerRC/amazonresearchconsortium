@@ -93,6 +93,25 @@ ul {
   height: 3.5rem;
   background-color: #012169;
   position: relative;
+  z-index: 1000;
+}
+
+/* Applied via JS when user scrolls past the header */
+.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Spacer injected by JS to prevent content jump */
+.nav-spacer {
+  height: 3.5rem;
+  display: none;
+}
+
+.nav-spacer.visible {
+  display: block;
 }
 
 .nav__list {

@@ -91,6 +91,29 @@ async function loadNavbar() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMobileSearch();
   });
+
+  // Sticky nav: fix the blue bar once the header scrolls past the viewport
+  const nav = document.querySelector('.nav');
+  const siteHeader = document.querySelector('.site-header');
+
+  // Insert a spacer after #navbar to avoid content jump when nav becomes fixed
+  const spacer = document.createElement('div');
+  spacer.className = 'nav-spacer';
+  document.getElementById('navbar').after(spacer);
+
+  function handleNavScroll() {
+    const headerBottom = siteHeader ? siteHeader.getBoundingClientRect().bottom : 0;
+    if (headerBottom <= 0) {
+      nav?.classList.add('nav--fixed');
+      spacer.classList.add('visible');
+    } else {
+      nav?.classList.remove('nav--fixed');
+      spacer.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll(); // run once on load
 }
 
 loadNavbar();
