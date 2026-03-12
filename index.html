@@ -17,22 +17,56 @@
     <script src="js/components/navbar.js"></script>
     <script src="js/index.js" defer></script>
 
-    <!-- Hero Section -->
+    <!-- Hero Section – Carousel -->
     <section class="hero">
-      <img
-        src="assets/Images-Media/banner-image.jpg"
-        alt="Aerial view of the Amazon rainforest and river"
-        class="hero-img"
-      />
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Amazon Research Consortium<br />
-          <span class="hero-title-italic">for</span> Climate Change and One Health
-        </h1>
-        <a href="#main-content" class="hero-cta">LEARN MORE 
-          <i class="ri-arrow-down-s-fill"></i>
-        </a>
+      <div class="hero-track" id="heroCarousel">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image1.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Amazon Research Consortium<br />
+              <span class="hero-title-italic">for</span> Climate Change and One Health
+            </h1>
+            <a href="#main-content" class="hero-cta">LEARN MORE <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image2.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Visualizing Data<br />
+              <span class="hero-title-italic">for</span> a Malaria-Free Amazon
+            </h1>
+            <a href="pages/ourwork/sistema.html" class="hero-cta">OUR PROJECTS <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Connecting Communities<br />
+              <span class="hero-title-italic">across</span> Latin America
+            </h1>
+            <a href="#" class="hero-cta">SUPPORT OUR WORK <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero navigation dots -->
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot active" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-label="Slide 3"></button>
       </div>
     </section>
 
@@ -83,20 +117,6 @@
             class="where-map-img"
           />
         </div>
-      </div>
-    </section>
-
-    <!-- CTA Banner Section -->
-    <section class="cta-banner">
-      <img
-        src="assets/Images-Media/AMAZONAS.gif"
-        alt="Misty Amazon rainforest canopy"
-        class="cta-banner-bg"
-      />
-      <div class="cta-banner-overlay"></div>
-      <div class="cta-banner-content">
-        <h2 class="cta-banner-heading">We work hard for a resilient, healthy future.</h2>
-        <a href="#" class="cta-banner-btn">SUPPORT OUR WORK</a>
       </div>
     </section>
 

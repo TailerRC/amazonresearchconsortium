@@ -17,7 +17,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
   background: linear-gradient(
     to bottom,
     rgba(223, 215, 215, 0.089) 0%,
-    rgba(70, 67, 67, 0.35) 70%,
+    rgba(44, 43, 43, 0.781) 70%,
     rgba(6, 6, 6, 0.628) 100%
   );
 }
@@ -57,6 +57,8 @@ body {
   font-size: 3.5rem;
   line-height: 1.15;
   color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.5rem;
 }
 
 .hero-title-italic {
@@ -64,6 +66,10 @@ body {
   font-size: 2.3rem;
   position: relative;
   top: -20px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
 }
 
 .hero-cta {
@@ -94,14 +100,85 @@ body {
   box-shadow: 0 8px 24px rgba(200, 168, 75, 0.45);
 }
 
+/* Hero carousel track */
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+  will-change: transform;
+}
+
+.hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Hero navigation dots */
+.hero-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid #fff;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-dot.active {
+  background: #c8a84b;
+  border-color: #c8a84b;
+  transform: scale(1.25);
+}
+
+.hero-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.75);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+
   .hero-content {
     padding: 2rem 1.5rem;
   }
 
   .hero-cta {
     align-self: center;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.75rem;
+    gap: 0.35rem;
+    margin: 1.5rem;
+  }
+  .hero-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    padding-bottom: 0;
+    margin-bottom: 0.3rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-title-italic {
+    font-size: 1.7rem;
+    position: relative;
+    top: 0px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -375,88 +452,6 @@ body {
   }
 }
 
-/* ========================
-   CTA Banner Section
-   ======================== */
-.cta-banner {
-  position: relative;
-  width: 100%;
-  height: 45vh;
-  min-height: 300px;
-  overflow: hidden;
-}
-
-.cta-banner-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.cta-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 50, 65, 0.45);
-}
-
-.cta-banner-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  padding: 2rem;
-}
-
-.cta-banner-heading {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  line-height: 1.35;
-  color: #fff;
-  max-width: 700px;
-  margin-bottom: 2rem;
-}
-
-.cta-banner-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: #00264a;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  border: 2px solid #00264a;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.cta-banner-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #fff;
-  transform: translateY(-2px);
-}
-
-/* CTA Banner responsive */
-@media (max-width: 768px) {
-  .cta-banner {
-    height: 35vh;
-    min-height: 250px;
-  }
-
-  .cta-banner-heading {
-    font-size: 1.4rem;
-  }
-}
 
 /* ========================
    Our Current Projects Section
