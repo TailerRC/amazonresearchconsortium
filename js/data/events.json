@@ -1,0 +1,38 @@
+{
+  "eventSeries": [
+    {
+      "id": "asgm-evidence",
+      "title": "ASGM EVIDENCE: A COMMUNITY TO SHARE, DISCUSS, AND GENERATE INTERVENTIONS LEARNING",
+      "description": "This event series, organized by the Duke Evidence Team, focuses on artisanal and small-scale gold mining (ASGM) interventions in Latin America and the Caribbean. The goal is to create a space for exchanging knowledge and evidence to inform better practices and policies in the region.",
+      "about": "This series is designed to facilitate conversations between producers of evidence and consumers / users / demanders of evidence concerning which ASGM interventions have (not) had positive impacts on environmental and livelihoods outcomes. Those who research or document can share their evidence and hear from users, including agencies, about what evidence would usefully inform actions.",
+      "schedule": "Fridays in October and November, 9:00-10:30 AM EST (Real-time translation available for English and Spanish)",
+      "sessions": [
+        {
+          "date": "October 11",
+          "topic": "Introduction: Evidence Goals, Typology, and Examples"
+        },
+        {
+          "date": "October 18",
+          "topic": "Evidence About Miner-level Tech: Retorts & Gravimetric"
+        },
+        {
+          "date": "October 25",
+          "topic": "Evidence About Other-Actor Tech: Ore-Selling to Plants"
+        },
+        {
+          "date": "November 1",
+          "topic": "Evidence About Institutions: Formalization and For Tailings"
+        },
+        {
+          "date": "November 8",
+          "topic": "Evidence About Markets: Supply Chains and Livelihoods"
+        },
+        {
+          "date": "November 15",
+          "topic": "Evidence About Outcomes: One Health View of Impacts"
+        }
+      ],
+      "importance": "Artisanal & Small-scale Mining (AS(G)M) (hard- or soft-rock) is a major employer in low- and middle-income countries, but also the leading source of anthropogenic mercury concerning which the Minamata Convention calls to reduce, or eliminate, uses of mercury. Very little rigorous evidence about (non-) impact has been produced for learning from a heterogeneous history with some forms of success. We need to learn more about the conditions under which interventions have (not) worked. We aim to increase the sharing, discussion, and new generation of evidence about AS(G)M. We do not know the fates of all past interventions, yet we aim to facilitate learning about them through sharing more details of interventions and discussing what shifts could work better. While certainly we are not sure which next interventions would work, within each situation, we believe funding for new interventions should avoid approaches seen not to work to date and that learning can be hastened and augmented by including funding for documentation."
+    }
+  ]
+}
