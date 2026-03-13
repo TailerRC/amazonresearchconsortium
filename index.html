@@ -17,22 +17,56 @@
     <script src="js/components/navbar.js"></script>
     <script src="js/index.js" defer></script>
 
-    <!-- Hero Section -->
+    <!-- Hero Section – Carousel -->
     <section class="hero">
-      <img
-        src="assets/Images-Media/banner-image.jpg"
-        alt="Aerial view of the Amazon rainforest and river"
-        class="hero-img"
-      />
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Amazon Research Consortium<br />
-          <span class="hero-title-italic">for</span> Climate Change and One Health
-        </h1>
-        <a href="#main-content" class="hero-cta">LEARN MORE 
-          <i class="ri-arrow-down-s-fill"></i>
-        </a>
+      <div class="hero-track" id="heroCarousel">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image1.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Amazon Research Consortium<br />
+              <span class="hero-title-italic">for</span> Climate Change and One Health
+            </h1>
+            <a href="#main-content" class="hero-cta">LEARN MORE <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image2.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Visualizing Data<br />
+              <span class="hero-title-italic">for</span> a Malaria-Free Amazon
+            </h1>
+            <a href="pages/ourwork/sistema.html" class="hero-cta">OUR PROJECTS <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <img src="assets/Images-Media/banner-image.jpg" alt="Aerial view of the Amazon rainforest and river" class="hero-img" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Connecting Communities<br />
+              <span class="hero-title-italic">across</span> Latin America
+            </h1>
+            <a href="#" class="hero-cta">SUPPORT OUR WORK <i class="fa-solid fa-caret-down"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero navigation dots -->
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot active" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-label="Slide 3"></button>
       </div>
     </section>
 
@@ -40,14 +74,63 @@
     <section id="main-content" class="mission">
       <div class="mission-inner">
         <div class="mission-mosaic">
-          <div class="mosaic-col mosaic-col--left">
-            <img src="assets/Images-Media/1.png" alt="Deforestation in the Amazon" class="mosaic-img" />
-            <img src="assets/Images-Media/3.png" alt="Wildfire burning through forest" class="mosaic-img" />
+
+          <!-- Card 1: Deforestation -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Deforestation">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Images-Media/1.png" alt="Deforestation in the Amazon" class="mosaic-img" />
+                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="flip-back-title">Deforestation</h3>
+                <p class="flip-back-text">Deforestation in the Amazon threatens biodiversity and accelerates climate change, impacting millions of people and species across Latin America.</p>
+              </div>
+            </div>
           </div>
-          <div class="mosaic-col mosaic-col--right">
-            <img src="assets/Images-Media/2.png" alt="Malaria mosquito close-up" class="mosaic-img" />
-            <img src="assets/Images-Media/4.png" alt="Illegal gold mining in the Amazon" class="mosaic-img" />
+
+          <!-- Card 2: Malaria Mosquito -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Malaria">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Images-Media/2.png" alt="Malaria mosquito close-up" class="mosaic-img" />
+                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="flip-back-title">Malaria &amp; Health</h3>
+                <p class="flip-back-text">Malaria remains a critical public health challenge in the Amazon, driven by environmental changes that create ideal breeding conditions for disease vectors.</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Card 3: Wildfire -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Wildfires">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Images-Media/3.png" alt="Wildfire burning through forest" class="mosaic-img" />
+                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="flip-back-title">Wildfires</h3>
+                <p class="flip-back-text">Devastating wildfires release billions of tons of CO₂, degrade ecosystems, and endanger local communities and indigenous peoples across the Amazon.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gold Mining -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Gold Mining">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Images-Media/4.png" alt="Illegal gold mining in the Amazon" class="mosaic-img" />
+                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+              </div>
+              <div class="flip-card-back">
+                <h3 class="flip-back-title">Illegal Mining</h3>
+                <p class="flip-back-text">Illegal gold mining contaminates watersheds with mercury, destroys rainforest habitats, and poses severe risks to One Health in affected communities.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="mission-text">
           <h2 class="mission-heading">
@@ -86,20 +169,6 @@
       </div>
     </section>
 
-    <!-- CTA Banner Section -->
-    <section class="cta-banner">
-      <img
-        src="assets/Images-Media/AMAZONAS.gif"
-        alt="Misty Amazon rainforest canopy"
-        class="cta-banner-bg"
-      />
-      <div class="cta-banner-overlay"></div>
-      <div class="cta-banner-content">
-        <h2 class="cta-banner-heading">We work hard for a resilient, healthy future.</h2>
-        <a href="#" class="cta-banner-btn">SUPPORT OUR WORK</a>
-      </div>
-    </section>
-
     <!-- Our Current Projects Section -->
     <section class="projects">
       <div class="projects-header">
@@ -128,102 +197,56 @@
       </div>
     </section>
 
-    <!-- Unlock the Power of Data – Carousel Section -->
-    <section class="data-carousel-section">
+    <!-- Unlock the Power of Data – Hub Section -->
+    <section class="data-hub-section">
       <hr class="data-divider" />
       <h2 class="data-title">Unlock the Power of Data</h2>
-      <p class="data-subtitle">Explore our interactive dashboards and forecasts designed to inform policy and action &gt;</p>
+      <p class="data-subtitle">Explore our interactive dashboards and forecasts designed to inform policy and action</p>
 
-      <div class="carousel">
-        <button class="carousel-arrow carousel-arrow--left" aria-label="Previous">&lsaquo;</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track" id="dataCarousel">
-            <!-- Slide 1 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">CASE RATE VS LDAS EXPLORATION</h3>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">MALARIA SURVEILLANCE DASHBOARD</h3>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">LAG TIME CASE RATE-LDAS CORRELATION</h3>
-            </div>
-            <!-- Slide 4 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">CLIMATE VARIABILITY FORECASTS</h3>
-            </div>
-            <!-- Slide 5 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">HYDROLOGICAL DATA EXPLORER</h3>
-            </div>
-            <!-- Slide 6 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">DEFORESTATION TRACKING TOOL</h3>
-            </div>
-            <!-- Slide 7 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">MERCURY EXPOSURE ANALYSIS</h3>
-            </div>
-            <!-- Slide 8 -->
-            <div class="carousel-slide">
-              <div class="carousel-img-placeholder"></div>
-              <h3 class="carousel-label">ONE HEALTH RISK DASHBOARD</h3>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-arrow carousel-arrow--right" aria-label="Next">&rsaquo;</button>
+      <!-- Tab Navigation Strip -->
+      <div class="data-tabs-wrap">
+        <div class="data-tabs" id="dataTabs" role="tablist"></div>
       </div>
 
-      <div class="carousel-dots" id="carouselDots"></div>
+      <!-- Spotlight Panel -->
+      <div class="data-spotlight">
+
+        <!-- Left: Visual Preview -->
+        <div class="data-preview" id="dataPreview">
+          <div class="data-preview-top">
+            <span class="data-preview-dot"></span>
+            <span class="data-preview-dot"></span>
+            <span class="data-preview-dot"></span>
+          </div>
+          <div class="data-preview-body">
+            <i class="data-preview-icon" id="dataPreviewIcon"></i>
+            <p class="data-preview-label" id="dataPreviewLabel"></p>
+          </div>
+          <div class="data-preview-chart" id="dataPreviewChart"></div>
+        </div>
+
+        <!-- Right: Info Panel -->
+        <div class="data-info" id="dataInfo">
+          <span class="data-badge" id="dataBadge"></span>
+          <h3 class="data-spot-title" id="dataSpotTitle"></h3>
+          <p class="data-spot-desc" id="dataSpotDesc"></p>
+          <div class="data-spot-tags" id="dataSpotTags"></div>
+          <a href="#" class="data-view-btn" id="dataViewBtn">
+            VIEW DASHBOARD &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
     </section>
 
     <!-- Upcoming Events Section -->
     <section class="events">
       <hr class="events-divider" />
       <h2 class="events-title">Upcoming Events</h2>
-      <div class="events-content">
-        <h3 class="events-event-title">
-          ASGM EVIDENCE: A COMMUNITY TO SHARE, DISCUSS, AND GENERATE INTERVENTIONS LEARNING
-        </h3>
-        <p class="events-text">
-          This event series, organized by the Duke Evidence Team, focuses on artisanal and small-scale gold mining (ASGM) interventions in Latin America and the Caribbean. The goal is to create a space for exchanging knowledge and evidence to inform better practices and policies in the region.
-        </p>
-
-        <h4 class="events-subtitle">About the Event:</h4>
-        <p class="events-text">
-          This series is designed to facilitate conversations between producers of evidence and consumers / users / demanders of evidence concerning which ASGM interventions have (not) had positive impacts on environmental and livelihoods outcomes. Those who research or document can share their evidence and hear from users, including agencies, about what evidence would usefully inform actions.
-        </p>
-
-        <h4 class="events-subtitle">Zoom Event Series:</h4>
-        <p class="events-text">
-          Fridays in October and November, 9:00-10:30 AM EST (Real-time translation available for English and Spanish)
-        </p>
-        <ul class="events-list">
-          <li>October 11: Introduction: Evidence Goals, Typology, and Examples</li>
-          <li>October 18: Evidence About Miner-level Tech: Retorts &amp; Gravimetric</li>
-          <li>October 25: Evidence About Other-Actor Tech: Ore-Selling to Plants</li>
-          <li>November 1: Evidence About Institutions: Formalization and For Tailings</li>
-          <li>November 8: Evidence About Markets: Supply Chains and Livelihoods</li>
-          <li>November 15: Evidence About Outcomes: One Health View of Impacts</li>
-        </ul>
-
-        <h4 class="events-subtitle">The Importance of these Discussions:</h4>
-        <p class="events-text">
-          Artisanal &amp; Small-scale Mining (AS(G)M) (hard- or soft-rock) is a major employer in low- and middle-income countries, but also the leading source of anthropogenic mercury concerning which the Minamata Convention calls to reduce, or eliminate, uses of mercury. Very little rigorous evidence about (non-) impact has been produced for learning from a heterogeneous history with some forms of success. We need to learn more about the conditions under which interventions have (not) worked. We aim to increase the sharing, discussion, and new generation of evidence about AS(G)M. We do not know the fates of all past interventions, yet we aim to facilitate learning about them through sharing more details of interventions and discussing what shifts could work better. While certainly we are not sure which next interventions would work, within each situation, we believe funding for new interventions should avoid approaches seen not to work to date and that learning can be hastened and augmented by including funding for documentation.
-        </p>
-
-        <a href="#" class="events-btn">REGISTER NOW</a>
-      </div>
+      <!-- Events are loaded dynamically from events.json -->
+      <div class="events-content"></div>
     </section>
+    <script src="js/components/events.js"></script>
 
     <!-- News & Project Updates Section -->
     <section class="news">
@@ -309,34 +332,63 @@
     </section>
 
     <!-- Connect With Us Section -->
-    <section class="connect">
-      <div class="connect-banner" style="background-image: url('assets/Banner-Image/1.png');"
-           role="img" aria-label="Researchers crossing a river in the Amazon"></div>
-      <div class="connect-inner">
-        <div class="connect-left">
+    <section class="connect" style="background-image: url('assets/Banner-Image/1.png');">
+      <div class="connect-overlay"></div>
+      <div class="connect-container">
+        <div class="connect-header">
           <h2 class="connect-title">Connect With Us</h2>
-          <div class="connect-info">
-            <p><strong>Phone:</strong> +1 919 684 4108</p>
-            <p><strong>E-mail:</strong> <a href="mailto:Amazon.Arc@duke.edu">Amazon.Arc@duke.edu</a></p>
-          </div>
-          <div class="connect-social">
-            <a href="https://x.com/AmazonARC" class="connect-social-item" target="_blank" rel="noopener">
-              <svg class="connect-social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span>@AmazonARC</span>
-            </a>
-            <a href="https://www.linkedin.com/company/amazon-research-consortium" class="connect-social-item" target="_blank" rel="noopener">
-              <svg class="connect-social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <span>Amazon Research Consortium</span>
-            </a>
-          </div>
+          <p class="connect-subtitle">Join us in making a difference. We'd love to hear from you!</p>
         </div>
-        <div class="connect-right">
-          <p class="connect-italic">At the ARC, we thrive on collaboration and innovation.</p>
-          <p class="connect-description">
-            We are constantly on the lookout for dedicated individuals and organizations who are
-            passionate about driving meaningful change. We invite you to connect with us and share your
-            interest in making a difference. We look forward to hearing from you!
-          </p>
+
+        <div class="connect-content">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-cards">
+            <!-- Phone Card -->
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <h3 class="info-card__title">Call Us</h3>
+              <p class="info-card__text">+1 919 684 4108</p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h3 class="info-card__title">Email Us</h3>
+              <p class="info-card__text"><a href="mailto:Amazon.Arc@duke.edu">Amazon.Arc@duke.edu</a></p>
+            </div>
+
+            <!-- Social Card -->
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <h3 class="info-card__title">Follow Us</h3>
+              <div class="info-card__socials">
+                <a href="https://x.com/AmazonARC" target="_blank" rel="noopener" title="Follow on X">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/amazon-research-consortium" target="_blank" rel="noopener" title="Connect on LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Message -->
+          <div class="connect-message">
+            <div class="message-box">
+              <p class="message-italic">At the ARC, we thrive on collaboration and innovation.</p>
+              <p class="message-text">
+                We are constantly on the lookout for dedicated individuals and organizations who are
+                passionate about driving meaningful change. We invite you to connect with us and share your
+                interest in making a difference. We look forward to hearing from you!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
