@@ -1,4 +1,8 @@
 /* Global reset */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -531,7 +535,7 @@ body {
    Our Current Projects Section
    ======================== */
 .projects {
-  padding: 5rem 4rem;
+  padding: 3rem 4rem;
   background: #fff;
 }
 
@@ -578,7 +582,32 @@ body {
 .project-img-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: #b0b8bf;
+  background: #b0b8bf; /* fallback color while image loads */
+  border-radius: 2px;
+  background-size: cover;       /* preserved for compatibility if backgrounds are used */
+  background-position: center;  /* center the focal point */
+  background-repeat: no-repeat;
+  position: relative;           /* for optional overlay pseudo-element */
+  overflow: hidden;
+  min-height: 140px;            /* fallback for browsers without aspect-ratio */
+}
+
+/* Optional subtle overlay if you want to darken images for better contrast */
+.project-img-placeholder::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.18) 100%);
+  pointer-events: none;
+}
+
+/* Images placed with <img> should fill the placeholder */
+.project-img-placeholder img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 2px;
 }
 
@@ -674,7 +703,7 @@ body {
   gap: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 2px 4px;
+  padding: 4px 4px;
 }
 
 .data-tab {
@@ -742,6 +771,11 @@ body {
   display: flex;
   flex-direction: column;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  position: relative;
 }
 
 .data-fading {
@@ -753,20 +787,28 @@ body {
   display: flex;
   gap: 6px;
   align-items: center;
-  padding: 0.65rem 1rem;
-  background: rgba(0, 0, 0, 0.28);
+  padding: 0.8rem 1.2rem;
+  background: #f0f0f0;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  height: 30px;
+  border-radius: 12px 12px 0 0;
 }
 
 .data-preview-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(232, 229, 229, 0.765);
 }
 
 .data-preview-body {
   flex: 1;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -790,7 +832,7 @@ body {
 }
 
 .data-preview-chart {
-  display: flex;
+  display: none;
   align-items: flex-end;
   gap: 6px;
   padding: 0 1.5rem 1.25rem;
@@ -1064,6 +1106,20 @@ body {
   aspect-ratio: 4 / 3;
   background: #b0b8bf;
   flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .news-card__body {
@@ -1198,9 +1254,38 @@ body {
 }
 
 .supporters-logo {
-  width: 180px;
+  width: 160px;
   height: 80px;
-  background: #ccc;
+  scale: 150%;
+  background: #f5f5f500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.supporters-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.supporters-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.supporters-logo:hover {
+  transform: scale(1.1);
 }
 
 /* Supporters responsive */

@@ -38,37 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dashboards = [
     {
-      icon: 'fa-solid fa-chart-area',
-      tabLabel: 'Case Rate Explorer',
-      title: 'Case Rate vs LDAS Exploration',
+      icon: 'fa-solid fa-mosquito-net',
+      tabLabel: 'Malaria surveillance',
+      title: 'Malaria Surveillance Dashboard: Spatial Malaria and Climatic Data (R Shiny)',
       badge: 'CLIMATE & HEALTH',
       tags: ['Malaria', 'Climate Data', 'Amazon'],
-      desc: 'Interactively explore the relationship between malaria case rates and NASA Land Data Assimilation System (LDAS) variables across Amazon-basin countries.',
-      gradFrom: '#0d4f5c', gradTo: '#1a7a8c',
-      bars: [60, 85, 45, 70, 55, 90, 40, 75],
-      link: '#'
+      desc: 'An interactive R Shiny dashboard for visualizing spatial malaria and climatic data. It supports epidemiological surveillance through maps, charts, and statistical analyses.',
+      image: 'assets/Images-Media/dashboard1.jpg',
+      gradFrom: '#962323', gradTo: '#a93226',
+      link: 'pages/ourwork/data.html'
     },
     {
-      icon: 'fa-solid fa-mosquito',
-      tabLabel: 'Malaria Surveillance',
-      title: 'Malaria Surveillance Dashboard',
-      badge: 'HEALTH MONITORING',
-      tags: ['Malaria', 'Surveillance', 'Latin America'],
-      desc: 'Real-time and historical malaria incidence tracking across Ecuador, Peru, and Brazil — informing rapid response and targeted intervention strategies.',
-      gradFrom: '#6b1a1a', gradTo: '#a93226',
-      bars: [30, 70, 95, 50, 80, 35, 60, 85],
-      link: '#'
-    },
-    {
-      icon: 'fa-solid fa-clock-rotate-left',
-      tabLabel: 'Lag Time Correlation',
-      title: 'Lag Time Case Rate–LDAS Correlation',
-      badge: 'STATISTICAL ANALYSIS',
-      tags: ['Lag Analysis', 'LDAS', 'Forecasting'],
-      desc: 'Quantify how environmental changes precede shifts in malaria burden using time-lagged cross-correlation analysis across Amazonian regions.',
+      icon: 'fa-solid fa-map',
+      tabLabel: 'MalariaTracker',
+      title: 'MalariaTracker: Visualizing Community Connections (ArcGIS)',
+      badge: 'GEOGRAPHIC INFORMATION SYSTEMS',
+      tags: ['Malaria', 'Connectivity', 'Spatial Analysis'],
+      desc: 'Mapping malaria transmission networks across communities using ArcGIS spatial tools and geospatial analysis. It reveals geographic connectivity patterns and hotspot clusters to strengthen targeted public health interventions and support evidence-based decision-making.',
+      image: 'assets/Images-Media/dashboard2.jpg',
       gradFrom: '#1a3f6e', gradTo: '#2471a3',
-      bars: [75, 40, 85, 55, 70, 90, 45, 65],
-      link: '#'
+      link: 'pages/ourwork/data.html'
     },
     {
       icon: 'fa-solid fa-cloud-sun-rain',
@@ -77,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'CLIMATE',
       tags: ['Forecasting', 'El Niño', 'Weather Patterns'],
       desc: 'Subseasonal-to-seasonal climate projections for the Amazon region, supporting proactive public health and environmental management decisions.',
+      image: 'assets/Images-Media/dashboard1.jpg',
       gradFrom: '#2c3e50', gradTo: '#4a6fa5',
-      bars: [50, 65, 80, 35, 75, 55, 90, 45],
-      link: '#'
+      link: 'pages/ourwork/data.html'
     },
     {
       icon: 'fa-solid fa-water',
@@ -88,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'ENVIRONMENT',
       tags: ['Hydrology', 'Rivers', 'Flood Risk'],
       desc: 'Visualize streamflow, precipitation, and flood extent across major Amazon river basins to assess environmental and community risk.',
+      image: 'assets/Images-Media/dashboard1.jpg',
       gradFrom: '#154360', gradTo: '#1f618d',
-      bars: [85, 55, 70, 40, 90, 60, 75, 50],
-      link: '#'
+      link: 'pages/ourwork/data.html'
     },
     {
       icon: 'fa-solid fa-tree',
@@ -99,31 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'CONSERVATION',
       tags: ['Deforestation', 'Land Use', 'Satellite'],
       desc: 'Satellite-derived land cover change detection across the Amazon — quantifying deforestation rates and correlating them with health outcomes.',
+      image: 'assets/Images-Media/dashboard1.jpg',
       gradFrom: '#1a4a2e', gradTo: '#1e8449',
-      bars: [40, 80, 55, 90, 35, 70, 85, 50],
-      link: '#'
-    },
-    {
-      icon: 'fa-solid fa-flask-vial',
-      tabLabel: 'Mercury Exposure',
-      title: 'Mercury Exposure Analysis',
-      badge: 'ENVIRONMENTAL HEALTH',
-      tags: ['Mercury', 'ASGM', 'Community Health'],
-      desc: 'Map artisanal gold mining sites and analyze mercury contamination spread through watersheds and its impact on community health outcomes.',
-      gradFrom: '#4a1a5e', gradTo: '#7d3c98',
-      bars: [65, 45, 80, 70, 30, 95, 50, 75],
-      link: '#'
-    },
-    {
-      icon: 'fa-solid fa-heart-pulse',
-      tabLabel: 'One Health Risk',
-      title: 'One Health Risk Dashboard',
-      badge: 'ONE HEALTH',
-      tags: ['One Health', 'Risk Index', 'Multi-Hazard'],
-      desc: 'An integrated risk framework combining climate, ecological, and health indicators to identify vulnerable communities across Latin America.',
-      gradFrom: '#00264a', gradTo: '#14505c',
-      bars: [70, 85, 50, 65, 90, 40, 75, 55],
-      link: '#'
+      link: 'pages/ourwork/data.html'
     }
   ];
 
@@ -145,10 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderDashboard(d) {
-    previewEl.style.background = `linear-gradient(135deg, ${d.gradFrom}, ${d.gradTo})`;
-    iconEl.className = `${d.icon} data-preview-icon`;
-    labelEl.textContent = d.title.toUpperCase();
-    chartEl.innerHTML = buildBars(d.bars);
+    // Get the preview-top bar element
+    const previewTopEl = previewEl.querySelector('.data-preview-top');
+    
+    // Set gradient color to the top bar (separator)
+    if (previewTopEl) {
+      previewTopEl.style.background = `linear-gradient(90deg, ${d.gradFrom}, ${d.gradTo})`;
+    }
+    
+    // Set image as background directly on preview
+    previewEl.style.backgroundImage = `url('${d.image}')`;
+    
+    // Clear icon and chart
+    iconEl.className = 'data-preview-icon';
+    iconEl.style.display = 'none';
+    labelEl.style.display = 'none';
+    chartEl.innerHTML = '';
+    
     badgeEl.textContent = d.badge;
     titleEl.textContent = d.title;
     descEl.textContent = d.desc;
