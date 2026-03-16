@@ -30,13 +30,57 @@ async function loadNavbar() {
   // Mobile menu toggle
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+  
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       navMenu.classList.toggle('show-menu');
-      navToggle.closest('.nav__data')?.classList.toggle('show-icon');
+      navOverlay?.classList.toggle('visible');
+      navToggle.classList.toggle('hidden');
     });
   }
+
+  // Close menu when clicking overlay
+  navOverlay?.addEventListener('click', () => {
+    navMenu?.classList.remove('show-menu');
+    navOverlay?.classList.remove('visible');
+    navToggle?.classList.remove('hidden');
+  });
+
+  // Swipe to open/close menu
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!navMenu) return;
+
+    const touchCurrentX = e.touches[0].clientX;
+    const touchCurrentY = e.touches[0].clientY;
+    const diffX = touchStartX - touchCurrentX;
+    const diffY = Math.abs(touchStartY - touchCurrentY);
+
+    // Solo procesar si el movimiento es más horizontal que vertical
+    if (diffY > 10 && diffY > diffX * 0.5) return;
+
+    // Swipe izquierda (abrir menú)
+    if (diffX > 50 && !navMenu.classList.contains('show-menu')) {
+      navMenu.classList.add('show-menu');
+      navOverlay?.classList.add('visible');
+      navToggle?.classList.add('hidden');
+    }
+    // Swipe derecha (cerrar menú)
+    else if (diffX < -50 && navMenu.classList.contains('show-menu')) {
+      navMenu.classList.remove('show-menu');
+      navOverlay?.classList.remove('visible');
+      navToggle?.classList.remove('hidden');
+    }
+  }, { passive: true });
 
   // Dropdown toggle logic
   document.querySelectorAll('.dropdown__item > .nav__link').forEach((trigger) => {
@@ -62,7 +106,8 @@ async function loadNavbar() {
       item.classList.remove('open');
     });
     navMenu?.classList.remove('show-menu');
-    navToggle?.closest('.nav__data')?.classList.remove('show-icon');
+    navOverlay?.classList.remove('visible');
+    navToggle?.classList.remove('hidden');
   });
 
   // Mobile search modal
