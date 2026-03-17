@@ -137,6 +137,68 @@ async function loadNavbar() {
     if (e.key === 'Escape') closeMobileSearch();
   });
 
+  // Language switcher (Mobile menu and Desktop)
+  const customLangDesktop = document.getElementById('custom-lang-desktop');
+  const customLangMobileMenu = document.getElementById('custom-lang-mobile-menu');
+  const currentLang = localStorage.getItem('i18n_lang') || 'en';
+
+  // Helper: update all custom dropdowns to match a language
+  function updateLangSelectors(lang) {
+    document.querySelectorAll('.custom-lang-select').forEach((dropdown) => {
+      const valueSpan = dropdown.querySelector('.custom-lang-select__value');
+      if (valueSpan) valueSpan.textContent = lang.toUpperCase();
+
+      dropdown.querySelectorAll('.custom-lang-select__option').forEach((opt) => {
+        opt.classList.toggle('selected', opt.dataset.value === lang);
+      });
+    });
+  }
+
+  // Set current language on initial load
+  updateLangSelectors(currentLang);
+
+  // Init custom dropdown behavior for each instance
+  function initCustomLangSelect(dropdown) {
+    if (!dropdown) return;
+    const trigger = dropdown.querySelector('.custom-lang-select__trigger');
+    const options = dropdown.querySelectorAll('.custom-lang-select__option');
+
+    // Toggle open/close on click (arrow rotates via CSS .open class)
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Close other custom dropdowns first
+      document.querySelectorAll('.custom-lang-select.open').forEach((d) => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+      dropdown.classList.toggle('open');
+    });
+
+    // Option selection
+    options.forEach((opt) => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const lang = opt.dataset.value;
+        updateLangSelectors(lang);
+        dropdown.classList.remove('open');
+
+        // Trigger language change via i18n API
+        if (window.i18n && typeof window.i18n.setLang === 'function') {
+          window.i18n.setLang(lang);
+        }
+      });
+    });
+  }
+
+  initCustomLangSelect(customLangDesktop);
+  initCustomLangSelect(customLangMobileMenu);
+
+  // Close custom dropdowns when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-lang-select.open').forEach((d) => {
+      d.classList.remove('open');
+    });
+  });
+
   // Sticky nav: fix the blue bar once the header scrolls past the viewport
   const nav = document.querySelector('.nav');
   const siteHeader = document.querySelector('.site-header');

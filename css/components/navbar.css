@@ -204,6 +204,7 @@ ul {
     width: auto;
     flex: 1;
     justify-content: flex-end;
+    padding-left: 0.8rem;
     padding-right: 0.5rem;
   }
 
@@ -506,8 +507,21 @@ ul {
   color: #fff;
 }
 
+/* ===== LANGUAGE SWITCHER (Desktop) ===== */
+.nav__languages {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  background-color: #012169;
+}
+
 @media screen and (max-width: 800px) {
   .nav-search {
+    display: none;
+  }
+
+  .nav__languages {
     display: none;
   }
 }
@@ -645,4 +659,198 @@ ul {
 @keyframes slideDownBox {
   from { transform: translateY(-100%); opacity: 0; }
   to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+/* ===== CUSTOM LANGUAGE SELECT ===== */
+.custom-lang-select {
+  position: relative;
+  user-select: none;
+}
+
+.custom-lang-select__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #012169;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.08em;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-lang-select__trigger:hover {
+  background-color: white;
+  border-color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Arrow rotation – same animation as dropdown__arrow */
+.custom-lang-select__arrow {
+  font-size: 1rem;
+  transition: transform 0.4s;
+  line-height: 1;
+}
+
+.custom-lang-select.open .custom-lang-select__arrow {
+  transform: rotate(180deg);
+}
+
+/* Options panel */
+.custom-lang-select__options {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: #012169;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(-50%) translateY(-6px);
+  z-index: 300;
+  overflow: hidden;
+}
+
+.custom-lang-select.open .custom-lang-select__options {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Individual option items */
+.custom-lang-select__option {
+  padding: 0.65rem 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.custom-lang-select__option:hover {
+  background-color: #013a8a;
+  color: #fff;
+  padding-left: 1.5rem;
+}
+
+.custom-lang-select__option.selected {
+  background: linear-gradient(135deg, #2b51c3, #1a3fa0);
+  color: #fff;
+}
+
+/* Mobile Language Selector - Hidden from navbar */
+
+/* Show language switcher on mobile */
+@media screen and (max-width: 800px) {
+  .nav__languages-mobile {
+    display: flex;
+    align-items: center;
+    padding: 0 0.8rem;
+  }
+
+  /* Mobile trigger: same white pill style as desktop */
+
+  /* Mobile options panel */
+  .nav__languages-mobile .custom-lang-select__options {
+    top: calc(100% + 4px);
+    border-radius: 10px;
+    min-width: 80px;
+    left: 0;
+    transform: translateX(0);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav__languages-mobile .custom-lang-select.open .custom-lang-select__options {
+    transform: translateX(0) translateY(0);
+  }
+
+  .nav__languages-mobile .custom-lang-select__option {
+    padding: 0.55rem 1rem;
+    font-size: 0.75rem;
+    color: #012169;
+  }
+
+  .nav__languages-mobile .custom-lang-select__option:hover {
+    background-color: rgba(1, 33, 105, 0.1);
+    color: #012169;
+  }
+
+  .nav__languages-mobile .custom-lang-select__option.selected {
+    background: #013a8a;
+    color: #fff;
+  }
+
+  /* Language selector in mobile menu */
+  .nav__menu-lang-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.8rem 0;
+  }
+
+  .nav__menu-lang-item {
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__menu-lang-item .custom-lang-select {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .nav__menu-lang-item .custom-lang-select__trigger {
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .nav__menu-lang-item .custom-lang-select__trigger:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+
+  .nav__menu-lang-item .custom-lang-select__options {
+    left: 1rem;
+    right: 1rem;
+    transform: translateX(0);
+    width: calc(100% - 2rem);
+    min-width: auto;
+  }
+
+  .nav__menu-lang-item .custom-lang-select.open .custom-lang-select__options {
+    transform: translateY(0);
+  }
+
+  .nav__menu-lang-item .custom-lang-select__option {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
 }

@@ -2,28 +2,28 @@
   <div class="header-inner">
     <div class="header-left">
       <a href="index.html" class="logo-link">
-        <span class="logo-text">Duke</span>
+        <span data-i18n="components_navbar.span1" class="logo-text">Duke</span>
       </a>
     </div>
     <div class="header-right">
       <div class="logo-title">
-        <span class="logo-title-main">Amazon Research Consortium</span>
-        <span class="logo-title-sub">Climate Change &amp; One Health</span>
+        <span data-i18n="components_navbar.span2" class="logo-title-main">Amazon Research Consortium</span>
+        <span data-i18n="components_navbar.span3" class="logo-title-sub">Climate Change &amp; One Health</span>
       </div>
     </div>
   </div>
 </header>
 
-<nav class="nav container" aria-label="Primary">
+<nav class="nav container" aria-label="Primary" data-i18n-aria-label="components_navbar.aria-label1">
   <div class="nav__data">
     <!-- Mobile search toggle (icon only, mobile only) -->
-    <button class="nav__search-mobile-btn" id="nav-search-mobile-btn" aria-label="Abrir búsqueda">
+    <button class="nav__search-mobile-btn" id="nav-search-mobile-btn" aria-label="Abrir búsqueda" data-i18n-aria-label="components_navbar.aria-label2">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
 
   <!-- Mobile menu toggle tab (right side) -->
-  <button class="nav__toggle-tab" id="nav-toggle" aria-label="Abrir menú">
+  <button class="nav__toggle-tab" id="nav-toggle" aria-label="Abrir menú" data-i18n-aria-label="components_navbar.aria-label3">
     <i class="fa-solid fa-bars nav__burger"></i>
     <i class="fa-solid fa-xmark nav__close"></i>
   </button>
@@ -89,8 +89,8 @@
         </ul>
       </li>
 
-      <li><a href="pages/news.html" class="nav__link">News</a></li>
-      <li><a href="pages/partner.html" class="nav__link">Partner With Us</a></li>
+      <li><a data-i18n="components_navbar.a1" href="pages/news.html" class="nav__link">News</a></li>
+      <li><a data-i18n="components_navbar.a2" href="pages/partner.html" class="nav__link">Partner With Us</a></li>
 
     </ul>
     
@@ -98,10 +98,25 @@
 
   <!-- Search bar (desktop only) -->
   <div class="nav-search">
-    <input type="text" placeholder="Search" aria-label="Search" />
-    <button type="button" class="nav-search-btn" aria-label="Search">
+    <input type="text" placeholder="Search" data-i18n-placeholder="components_navbar.placeholder1" aria-label="Search" data-i18n-aria-label="components_navbar.aria-label4" />
+    <button type="button" class="nav-search-btn" aria-label="Search" data-i18n-aria-label="components_navbar.aria-label5">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
+  </div>
+
+  <!-- Language Switcher (Desktop only) -->
+  <div class="nav__languages">
+    <div class="custom-lang-select" id="custom-lang-desktop">
+      <button class="custom-lang-select__trigger" type="button">
+        <span class="custom-lang-select__value">EN</span>
+        <i class="fa-solid fa-caret-down custom-lang-select__arrow"></i>
+      </button>
+      <ul class="custom-lang-select__options">
+        <li class="custom-lang-select__option selected" data-value="en">EN</li>
+        <li class="custom-lang-select__option" data-value="es">ES</li>
+        <li class="custom-lang-select__option" data-value="pt">PT</li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -109,11 +124,11 @@
 <div class="mobile-search-modal" id="mobile-search-modal" aria-hidden="true">
   <div class="mobile-search-modal__overlay" id="mobile-search-overlay"></div>
   <div class="mobile-search-modal__box">
-    <button class="mobile-search-modal__close" id="mobile-search-modal-close" aria-label="Cerrar búsqueda">
+    <button class="mobile-search-modal__close" id="mobile-search-modal-close" aria-label="Cerrar búsqueda" data-i18n-aria-label="components_navbar.aria-label6">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <input type="text" placeholder="Search..." aria-label="Buscar" id="mobile-search-input" />
-    <button class="mobile-search-modal__submit" aria-label="Buscar">
+    <input type="text" placeholder="Search..." data-i18n-placeholder="components_navbar.placeholder2" aria-label="Buscar" data-i18n-aria-label="components_navbar.aria-label7" id="mobile-search-input" />
+    <button class="mobile-search-modal__submit" aria-label="Buscar" data-i18n-aria-label="components_navbar.aria-label8">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
