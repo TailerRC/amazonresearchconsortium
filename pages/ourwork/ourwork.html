@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const isLocal =
+        location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const base = document.createElement("base");
+      base.href = isLocal ? "/" : "/amazonresearchconsortium/";
+      document.head.prepend(base);
+    </script>
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="css/ourwork.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="js/components/navbar.js"></script>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <img
+        src="assets/Images-Media/AmazonGif.gif"
+        alt="Amazon rainforest"
+        class="hero-image"
+      />
+      <div class="hero-overlay"></div>
+      <h1 class="hero-text">We build for the future.</h1>
+    </div>
+
+    <!-- Where We Work Section -->
+    <section class="where-we-work">
+      <div class="where-inner">
+        <div class="where-text">
+          <h2 data-i18n="index.h22" class="where-heading">Where We Work</h2>
+          <p data-i18n="index.p6" class="where-sub">
+            Rooted in Latin America, our work is driven by impactful
+            partnerships with local communities and collaborators to create
+            meaningful change. See how our impact is growing as we expand to
+            regions across Latin America.
+          </p>
+          <a data-i18n="index.a2" href="#" class="where-btn">LEARN MORE</a>
+        </div>
+        <div class="where-map">
+          <img
+            src="assets/Images-Media/map-view.png"
+            alt="Map of Latin America showing our work locations: Honduras, Panama, Ecuador, Peru, and Brazil"
+            class="where-map-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Current Projects Section -->
+    <section id="our_projects" class="projects">
+      <div class="projects-header">
+        <h2 data-i18n="index.h23" class="projects-title">
+          Our Current Projects
+        </h2>
+        <p data-i18n="index.p7" class="projects-subtitle">
+          Discover how our current projects are advancing knowledge and creating
+          solutions in the Amazon and beyond &gt;
+        </p>
+      </div>
+      <div class="projects-grid">
+        <a href="pages/ourwork/sistema.html" class="project-card">
+          <div class="project-img-placeholder">
+            <img
+              src="assets/Images-Media/project1.jpg"
+              alt="SISTEMA project thumbnail"
+            />
+          </div>
+          <h3 data-i18n="index.h35" class="project-name">
+            Getting to Zero: Satellite-Informed System to Support Elimination of
+            Malaria in the Americas (SISTEMA)
+          </h3>
+        </a>
+        <a href="pages/ourwork/malaria.html" class="project-card">
+          <div class="project-img-placeholder">
+            <img
+              src="assets/Images-Media/project2.jpg"
+              alt="Malaria response project thumbnail"
+            />
+          </div>
+          <h3 data-i18n="index.h36" class="project-name">
+            Improving Response to Malaria Outbreaks in Amazon - Basin Countries
+          </h3>
+        </a>
+        <a href="pages/ourwork/acercar.html" class="project-card">
+          <div class="project-img-placeholder">
+            <img
+              src="assets/Images-Media/project3.jpg"
+              alt="ACERCAR project thumbnail"
+            />
+          </div>
+          <h3 data-i18n="index.h37" class="project-name">
+            A Consortium to Effectively Respond to Climate-Attributable Risks
+            (ACERCAR)
+          </h3>
+        </a>
+        <a href="pages/ourwork/eliminar.html" class="project-card">
+          <div class="project-img-placeholder">
+            <img
+              src="assets/Images-Media/project4.jpg"
+              alt="ELIMINAR Malaria project thumbnail"
+            />
+          </div>
+          <h3 data-i18n="index.h38" class="project-name">
+            Environmentally Linking Molecular Informatics and Network Analytics
+            to Reduce Malaria (ELIMINAR Malaria)
+          </h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/components/footer.js"></script>
+    <script src="js/components/scroll-to-top.js"></script>
+  </body>
+</html>

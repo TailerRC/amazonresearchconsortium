@@ -56,9 +56,38 @@
   }
 
   // ── Resolver clave (ej: "pages_ourwork_malaria.h11") ────────────────────
-  function resolve(key) {
-    if (translations[key] !== undefined) return translations[key];
-    return key.split('.').reduce((obj, k) => obj?.[k], translations) ?? null;
+  function resolve(key, depth = 0) {
+    // Prevenir loops infinitos en referencias circulares
+    if (depth > 10) {
+      console.warn(`[i18n] Referencia circular detectada para: ${key}`);
+      return key;
+    }
+
+    // Buscar la clave directamente
+    if (translations[key] !== undefined) {
+      const val = translations[key];
+      // Si el valor es una string que parece ser una referencia a otra clave,
+      // intentar resolver recursivamente
+      if (typeof val === 'string' && val.includes('.') && !val.includes('&') && !val.includes(' ')) {
+        const resolved = resolve(val, depth + 1);
+        // Si se resuelve a algo diferente que el mismo valor, usar lo resuelto
+        if (resolved !== val) return resolved;
+      }
+      return val;
+    }
+
+    // Navegar la estructura de objetos (para claves con puntos)
+    const nested = key.split('.').reduce((obj, k) => obj?.[k], translations);
+    if (nested !== undefined && nested !== null) {
+      // Aplicar la misma lógica de referencias recursivas
+      if (typeof nested === 'string' && nested.includes('.') && !nested.includes('&') && !nested.includes(' ')) {
+        const resolved = resolve(nested, depth + 1);
+        if (resolved !== nested) return resolved;
+      }
+      return nested;
+    }
+
+    return null;
   }
 
   // ── Aplicar traducciones al DOM ──────────────────────────────────────────

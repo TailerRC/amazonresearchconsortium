@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon Research Consortium for Climate Change and One Health</title>
     <script>
-      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-      const base = document.createElement('base');
-      base.href = isLocal ? '/' : '/amazonresearchconsortium/';
+      const isLocal =
+        location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const base = document.createElement("base");
+      base.href = isLocal ? "/" : "/amazonresearchconsortium/";
       document.head.prepend(base);
     </script>
     <script src="js/i18n.js"></script>
@@ -18,199 +19,191 @@
     <script src="js/components/navbar.js"></script>
     <script src="js/index.js" defer></script>
 
-    <!-- Hero Section – Carousel -->
+    <!--SECTION Hero Section -->
     <section class="hero">
       <div class="hero-track" id="heroCarousel">
-
-        <!-- Slide 1 -->
+        <!--LINK Slide 1 -->
         <div class="hero-slide">
-          <img src="assets/Images-Media/banner-image1.jpg" alt="Aerial view of the Amazon rainforest and river" data-i18n-alt="index.alt1" class="hero-img" />
+          <img src="assets/Images-Media/banner-image1.jpg" class="hero-img" />
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero-title1">
               Amazon Research Consortium<br />
-              <span data-i18n="index.span1" class="hero-title-italic">for</span> Climate Change and One Health
+              <span data-i18n="hero-span1" class="hero-title-italic">for</span>
+              <span data-i18n="hero-span2">Climate Change and One Health</span>
             </h1>
-            <a href="#our_projects" class="hero-cta">OUR PROJECTS <i class="fa-solid fa-caret-down"></i></a>
+            <a href="#our_projects" class="hero-cta" data-i18n="hero-cta1">
+              OUR PROJECTS <i class="fa-solid fa-caret-down"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!--LINK Slide 2 -->
         <div class="hero-slide">
-          <img src="assets/Images-Media/banner-image2.jpg" alt="Aerial view of the Amazon rainforest and river" data-i18n-alt="index.alt2" class="hero-img" />
+          <img src="assets/Images-Media/banner-image2.jpg" class="hero-img" />
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero-title2">
               Visualizing Data<br />
-              <span data-i18n="index.span2" class="hero-title-italic">for</span> a Malaria-Free Amazon
+              <span data-i18n="hero-span3" class="hero-title-italic">for</span>
+              <span data-i18n="hero-span4">a Malaria-Free Amazon</span>
             </h1>
-            <a href="#data-hub-section" class="hero-cta">OUR DASHBOARD <i class="fa-solid fa-caret-down"></i></a>
+            <a href="#data-hub-section" class="hero-cta" data-i18n="hero-cta2">
+              OUR DASHBOARD <i class="fa-solid fa-caret-down"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!--LINK Slide 3 -->
         <div class="hero-slide">
-          <img src="assets/Images-Media/banner-image3.jpg" alt="Aerial view of the Amazon rainforest and river" data-i18n-alt="index.alt3" class="hero-img" />
+          <img src="assets/Images-Media/banner-image3.jpg" class="hero-img" />
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero-title3">
               Connecting Communities<br />
-              <span data-i18n="index.span3" class="hero-title-italic">across</span> Latin America
+              <span data-i18n="hero-span5" class="hero-title-italic"
+                >across</span
+              >
+              <span data-i18n="hero-span6">Latin America</span>
             </h1>
-            <a href="#news-section" class="hero-cta">SUPPORT OUR WORK <i class="fa-solid fa-caret-down"></i></a>
+            <a href="#news-section" class="hero-cta" data-i18n="hero-cta3">
+              SUPPORT OUR WORK <i class="fa-solid fa-caret-down"></i>
+            </a>
           </div>
         </div>
-
       </div>
 
-      <!-- Hero navigation dots -->
+      <!--LINK Hero navigation POINTS -->
       <div class="hero-dots" id="heroDots">
-        <button class="hero-dot active" aria-label="Slide 1" data-i18n-aria-label="index.aria-label1"></button>
-        <button class="hero-dot" aria-label="Slide 2" data-i18n-aria-label="index.aria-label2"></button>
-        <button class="hero-dot" aria-label="Slide 3" data-i18n-aria-label="index.aria-label3"></button>
+        <button class="hero-dot active" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-label="Slide 3"></button>
       </div>
     </section>
+    <!--!SECTION -->
 
-    <!-- Mission Section -->
+    <!--SECTION Mission Section -->
     <section id="main-content" class="mission">
       <div class="mission-inner">
         <div class="mission-mosaic">
-
-          <!-- Card 1: Deforestation -->
-          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Deforestation" data-i18n-aria-label="index.aria-label4">
+          <!--LINK Card 1: Deforestation -->
+          <div class="flip-card" tabindex="0" role="button">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/Images-Media/1.jpg" alt="Deforestation in the Amazon" data-i18n-alt="index.alt4" class="mosaic-img" />
-                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+                <img src="assets/Images-Media/1.jpg" class="mosaic-img" />
+                <div class="flip-hint">
+                  <i class="fa-solid fa-hand-pointer"></i>
+                </div>
               </div>
               <div class="flip-card-back">
-                <h3 data-i18n="index.h31" class="flip-back-title">Deforestation</h3>
-                <p data-i18n="index.p1" class="flip-back-text">Deforestation in the Amazon threatens biodiversity and accelerates climate change, impacting millions of people and species across Latin America.</p>
+                <h3 data-i18n="Card1_Title" class="flip-back-title">
+                  Deforestation
+                </h3>
+                <p data-i18n="Card1_Description" class="flip-back-text">
+                  Deforestation in the Amazon threatens biodiversity and
+                  accelerates climate change, impacting millions of people and
+                  species across Latin America.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Malaria Mosquito -->
-          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Malaria" data-i18n-aria-label="index.aria-label5">
+          <!--LINK Card 2: Malaria Mosquito -->
+          <div class="flip-card" tabindex="0" role="button">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/Images-Media/2.jpg" alt="Malaria mosquito close-up" data-i18n-alt="index.alt5" class="mosaic-img" />
-                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+                <img src="assets/Images-Media/2.jpg" class="mosaic-img" />
+                <div class="flip-hint">
+                  <i class="fa-solid fa-hand-pointer"></i>
+                </div>
               </div>
               <div class="flip-card-back">
-                <h3 data-i18n="index.h32" class="flip-back-title">Malaria &amp; Health</h3>
-                <p data-i18n="index.p2" class="flip-back-text">Malaria remains a critical public health challenge in the Amazon, driven by environmental changes that create ideal breeding conditions for disease vectors.</p>
+                <h3 data-i18n="Card2_Title" class="flip-back-title">
+                  Malaria &amp; Health
+                </h3>
+                <p data-i18n="Card2_Description" class="flip-back-text">
+                  Malaria remains a critical public health challenge in the
+                  Amazon, driven by environmental changes that create ideal
+                  breeding conditions for disease vectors.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Wildfire -->
-          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Wildfires" data-i18n-aria-label="index.aria-label6">
+          <!--LINK Card 3: Wildfire -->
+          <div class="flip-card" tabindex="0" role="button">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/Images-Media/3.jpg" alt="Wildfire burning through forest" data-i18n-alt="index.alt6" class="mosaic-img" />
-                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+                <img src="assets/Images-Media/3.jpg" class="mosaic-img" />
+                <div class="flip-hint">
+                  <i class="fa-solid fa-hand-pointer"></i>
+                </div>
               </div>
               <div class="flip-card-back">
-                <h3 data-i18n="index.h33" class="flip-back-title">Wildfires</h3>
-                <p data-i18n="index.p3" class="flip-back-text">Devastating wildfires release billions of tons of CO₂, degrade ecosystems, and endanger local communities and indigenous peoples across the Amazon.</p>
+                <h3 data-i18n="Card3_Title" class="flip-back-title">
+                  Wildfires
+                </h3>
+                <p data-i18n="Card3_Description" class="flip-back-text">
+                  Devastating wildfires release billions of tons of CO₂, degrade
+                  ecosystems, and endanger local communities and indigenous
+                  peoples across the Amazon.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Card 4: Gold Mining -->
-          <div class="flip-card" tabindex="0" role="button" aria-label="Learn about Gold Mining" data-i18n-aria-label="index.aria-label7">
+          <!--LINK Card 4: Gold Mining -->
+          <div class="flip-card" tabindex="0" role="button">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/Images-Media/4.jpg" alt="Illegal gold mining in the Amazon" data-i18n-alt="index.alt7" class="mosaic-img" />
-                <div class="flip-hint"><i class="fa-solid fa-hand-pointer"></i></div>
+                <img src="assets/Images-Media/4.jpg" class="mosaic-img" />
+                <div class="flip-hint">
+                  <i class="fa-solid fa-hand-pointer"></i>
+                </div>
               </div>
               <div class="flip-card-back">
-                <h3 data-i18n="index.h34" class="flip-back-title">Illegal Mining</h3>
-                <p data-i18n="index.p4" class="flip-back-text">Illegal gold mining contaminates watersheds with mercury, destroys rainforest habitats, and poses severe risks to One Health in affected communities.</p>
+                <h3 data-i18n="Card4_Title" class="flip-back-title">
+                  Illegal Mining
+                </h3>
+                <p data-i18n="Card4_Description" class="flip-back-text">
+                  Illegal gold mining contaminates watersheds with mercury,
+                  destroys rainforest habitats, and poses severe risks to One
+                  Health in affected communities.
+                </p>
               </div>
             </div>
           </div>
-
         </div>
         <div class="mission-text">
-          <h2 data-i18n="index.h21" class="mission-heading">
-            Integrating climate and health research to empower communities
-            and ecosystems across Latin America with sustainable, data-driven
+          <h2 data-i18n="mission-heading" class="mission-heading">
+            Integrating climate and health research to empower communities and
+            ecosystems across Latin America with sustainable, data-driven
             solutions.
           </h2>
-          <p data-i18n="index.p5" class="mission-sub">
-            From rainforests to oceans and everything in between &ndash; we tackle the most
-            critical climate and health challenges in Latin America.
+          <p data-i18n="mission-sub" class="mission-sub">
+            From rainforests to oceans and everything in between &ndash; we
+            tackle the most critical climate and health challenges in Latin
+            America.
           </p>
-          <a data-i18n="index.a1" href="pages/thegroup/about.html" class="mission-btn">LEARN MORE</a>
+          <a
+            data-i18n="mission-btn"
+            href="pages/thegroup/about.html"
+            class="mission-btn"
+            >LEARN MORE</a
+          >
         </div>
       </div>
     </section>
+    <!--!SECTION -->
 
-    <!-- Where We Work Section -->
-    <section class="where-we-work">
-      <div class="where-inner">
-        <div class="where-text">
-          <h2 data-i18n="index.h22" class="where-heading">Where We Work</h2>
-          <p data-i18n="index.p6" class="where-sub">
-            Rooted in Latin America, our work is driven by impactful partnerships with local
-            communities and collaborators to create meaningful change. See how our
-            impact is growing as we expand to regions across Latin America.
-          </p>
-          <a data-i18n="index.a2" href="#" class="where-btn">LEARN MORE</a>
-        </div>
-        <div class="where-map">
-          <img
-            src="assets/Images-Media/map-view.png"
-            alt="Map of Latin America showing our work locations: Honduras, Panama, Ecuador, Peru, and Brazil" data-i18n-alt="index.alt8"
-            class="where-map-img"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Current Projects Section -->
-    <section id="our_projects" class="projects">
-      <div class="projects-header">
-        <h2 data-i18n="index.h23" class="projects-title">Our Current Projects</h2>
-        <p data-i18n="index.p7" class="projects-subtitle">
-          Discover how our current projects are advancing knowledge and creating solutions in the Amazon and beyond &gt;
-        </p>
-      </div>
-      <div class="projects-grid">
-        <a href="pages/ourwork/sistema.html" class="project-card">
-          <div class="project-img-placeholder">
-            <img src="assets/Images-Media/project1.jpg" alt="SISTEMA project thumbnail" data-i18n-alt="index.alt9">
-          </div>
-          <h3 data-i18n="index.h35" class="project-name">Getting to Zero: Satellite-Informed System to Support Elimination of Malaria in the Americas (SISTEMA)</h3>
-        </a>
-        <a href="pages/ourwork/malaria.html" class="project-card">
-          <div class="project-img-placeholder">
-            <img src="assets/Images-Media/project2.jpg" alt="Malaria response project thumbnail" data-i18n-alt="index.alt10">
-          </div>
-          <h3 data-i18n="index.h36" class="project-name">Improving Response to Malaria Outbreaks in Amazon - Basin Countries</h3>
-        </a>
-        <a href="pages/ourwork/acercar.html" class="project-card">
-          <div class="project-img-placeholder">
-            <img src="assets/Images-Media/project3.jpg" alt="ACERCAR project thumbnail" data-i18n-alt="index.alt11">
-          </div>
-          <h3 data-i18n="index.h37" class="project-name">A Consortium to Effectively Respond to Climate-Attributable Risks (ACERCAR)</h3>
-        </a>
-        <a href="pages/ourwork/eliminar.html" class="project-card">
-          <div class="project-img-placeholder">
-            <img src="assets/Images-Media/project4.jpg" alt="ELIMINAR Malaria project thumbnail" data-i18n-alt="index.alt12">
-          </div>
-          <h3 data-i18n="index.h38" class="project-name">Environmentally Linking Molecular Informatics and Network Analytics to Reduce Malaria (ELIMINAR Malaria)</h3>
-        </a>
-      </div>
-    </section>
-
-    <!-- Unlock the Power of Data – Hub Section -->
+    <!--SECTION Dashboard -->
     <section id="data-hub-section" class="data-hub-section">
       <hr class="data-divider" />
       <h2 data-i18n="index.h24" class="data-title">Unlock the Power of Data</h2>
-      <p data-i18n="index.p8" class="data-subtitle">Explore our interactive dashboards and forecasts designed to inform policy and action</p>
+      <p data-i18n="index.p8" class="data-subtitle">
+        Explore our interactive dashboards and forecasts designed to inform
+        policy and action
+      </p>
 
       <!-- Tab Navigation Strip -->
       <div class="data-tabs-wrap">
@@ -219,7 +212,6 @@
 
       <!-- Spotlight Panel -->
       <div class="data-spotlight">
-
         <!-- Left: Visual Preview -->
         <div class="data-preview" id="dataPreview">
           <div class="data-preview-top">
@@ -241,144 +233,70 @@
           <p class="data-spot-desc" id="dataSpotDesc"></p>
           <div class="data-spot-tags" id="dataSpotTags"></div>
           <a href="#" class="data-view-btn" id="dataViewBtn">
-            VIEW DASHBOARD &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            VIEW DASHBOARD &nbsp;<i
+              class="fa-solid fa-arrow-up-right-from-square"
+            ></i>
           </a>
         </div>
-
       </div>
-    </section>
-
-    <!-- Upcoming Events Section -->
-    <section class="events">
-      <hr class="events-divider" />
-      <h2 data-i18n="index.h25" class="events-title">Upcoming Events</h2>
-      <!-- Events are loaded dynamically from events.json -->
-      <div class="events-content"></div>
-    </section>
-    <script src="js/components/events.js"></script>
-
-    <!-- News & Project Updates Section -->
-    <section id="news-section" class="news">
-      <h2 data-i18n="index.h26" class="news-title">News & Project Updates</h2>
-      <div class="news-grid">
-
-        <!-- Card 1 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news1.jpg" alt="ELIMINAR Malaria Project" data-i18n-alt="index.alt13">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a3" href="https://journals.ametsoc.org/view/journals/hydr/25/5/JHM-D-23-0064.1.xml" class="news-card__link">Introducing Our New Project: Effectively Linking Molecular Informatics and Network Analytics to Reduce Malaria (ELIMINAR-Malaria)</a>
-            <p data-i18n="index.p9" class="news-card__meta">JUNE 18, 2024 | NEW RESEARCH PROJECT</p>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news2.jpg" alt="Meteorological Forecast" data-i18n-alt="index.alt14">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a4" href="https://journals.ametsoc.org/view/journals/hydr/25/5/JHM-D-23-0064.1.xml" class="news-card__link">Contributions of Initial Conditions and Meteorological Forecast to Subseasonal-to-Seasonal Hydrological Forecast Skill in Western Tropical South America</a>
-            <p data-i18n="index.p10" class="news-card__meta">MAY 15, 2024 | NEW PUBLICATION</p>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news3.jpg" alt="Climate Impact on Malaria Ecuador" data-i18n-alt="index.alt15">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a5" href="https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000315" class="news-card__link">Impact of Climate and Land Use/ Land Cover Changes on Malaria Incidence in the Ecuadorian Amazon</a>
-            <p data-i18n="index.p11" class="news-card__meta">APRIL 19, 2024 | NEW PUBLICATION</p>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news4.jpg" alt="Malaria Response Study Protocol" data-i18n-alt="index.alt16">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a6" href="https://bmjopen.bmj.com/content/14/4/e078911.info" class="news-card__link">Study Protocol: Improving Response to Malaria in the Amazon through Identification of Inter-Community Networks and Human Mobility in Border Regions of Ecuador, Peru, Brazil</a>
-            <p data-i18n="index.p12" class="news-card__meta">APRIL 15, 2024 | NEW PUBLICATION</p>
-          </div>
-        </article>
-
-        <!-- Card 5 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news5.jpg" alt="Malaria Control Peru PAMAFRO" data-i18n-alt="index.alt17">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a7" href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(23)00051-0/fulltext" class="news-card__link">The Impact of Sustained Malaria Control in the Loreto Region of Peru: A Retrospective, Observational, Spatially-Varying Interrupted Time Series Analysis of the PAMAFRO Program</a>
-            <p data-i18n="index.p13" class="news-card__meta">MARCH 15, 2023 | NEW PUBLICATION</p>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="news-card">
-          <div class="news-card__img">
-            <img src="assets/Images-Media/news6.jpg" alt="Gold Mining ASGM Workshop" data-i18n-alt="index.alt18">
-          </div>
-          <div class="news-card__body">
-            <a data-i18n="index.a8" href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(23)00051-0/fulltext" class="news-card__link">Duke Team Gold Holds Workshop &ldquo;Bridging Policy, Research, and Implementation in ASGM&rdquo; with PureEarth Colombia and the US Department of State</a>
-            <p data-i18n="index.p14" class="news-card__meta">JUNE 23, 2021 | POLICY, MINING, CONSERVATION</p>
-          </div>
-        </article>
-
-      </div>
-      <a data-i18n="index.a9" href="pages/news.html" class="news-btn">MORE NEWS</a>
     </section>
 
     <!-- Global Collaborators -->
     <section class="collaborators">
       <p data-i18n="index.p15" class="collaborators-label">JOIN THE SUCCESS</p>
-      <h2 data-i18n="index.h27" class="collaborators-title">Making a Difference With Our Global Collaborators</h2>
+      <h2 data-i18n="index.h27" class="collaborators-title">
+        Making a Difference With Our Global Collaborators
+      </h2>
       <div id="partners"></div>
       <script src="js/components/partners.js"></script>
     </section>
 
     <!-- Powered by the Support of Leading Institutions -->
     <section class="supporters">
-      <h2 data-i18n="index.h28" class="supporters-title">Powered by the Support of Leading Institutions</h2>
+      <h2 data-i18n="index.h28" class="supporters-title">
+        Powered by the Support of Leading Institutions
+      </h2>
       <div class="supporters-grid">
         <div class="supporters-logo">
           <a href="https://climate.duke.edu">
-            <img src="assets/Logo/logo11.png" alt="Supporter 1" data-i18n-alt="index.alt19">
+            <img src="assets/Logo/logo11.png" alt="Supporter 1" />
           </a>
         </div>
         <div class="supporters-logo">
           <a href="https://nicholas.duke.edu">
-            <img src="assets/Logo/logo12.png" alt="Supporter 2" data-i18n-alt="index.alt20">
+            <img src="assets/Logo/logo12.png" alt="Supporter 2" />
           </a>
         </div>
         <div class="supporters-logo">
           <a href="https://appliedsciences.nasa.gov">
-            <img src="assets/Logo/logo13.png" alt="Supporter 3" data-i18n-alt="index.alt21">
+            <img src="assets/Logo/logo13.png" alt="Supporter 3" />
           </a>
         </div>
         <div class="supporters-logo">
           <a href="https://www.niaid.nih.gov">
-            <img src="assets/Logo/logo14.png" alt="Supporter 4" data-i18n-alt="index.alt22">
+            <img src="assets/Logo/logo14.png" alt="Supporter 4" />
           </a>
         </div>
         <div class="supporters-logo">
           <a href="https://www.niehs.nih.gov">
-            <img src="assets/Logo/logo15.png" alt="Supporter 5" data-i18n-alt="index.alt23">
+            <img src="assets/Logo/logo15.png" alt="Supporter 5" />
           </a>
         </div>
       </div>
     </section>
 
     <!-- Connect With Us Section -->
-    <section class="connect" style="background-image: url('assets/Banner-Image/1.png');">
+    <section
+      class="connect"
+      style="background-image: url(&quot;assets/Banner-Image/1.png&quot;)"
+    >
       <div class="connect-overlay"></div>
       <div class="connect-container">
         <div class="connect-header">
           <h2 data-i18n="index.h29" class="connect-title">Connect With Us</h2>
-          <p data-i18n="index.p16" class="connect-subtitle">Join us in making a difference. We'd love to hear from you!</p>
+          <p data-i18n="index.p16" class="connect-subtitle">
+            Join us in making a difference. We'd love to hear from you!
+          </p>
         </div>
 
         <div class="connect-content">
@@ -399,7 +317,11 @@
                 <i class="fa-solid fa-envelope"></i>
               </div>
               <h3 data-i18n="index.h310" class="info-card__title">Email Us</h3>
-              <p class="info-card__text"><a data-i18n="index.a10" href="mailto:Amazon.Arc@duke.edu">Amazon.Arc@duke.edu</a></p>
+              <p class="info-card__text">
+                <a data-i18n="index.a10" href="mailto:Amazon.Arc@duke.edu"
+                  >Amazon.Arc@duke.edu</a
+                >
+              </p>
             </div>
 
             <!-- Social Card -->
@@ -409,25 +331,23 @@
               </div>
               <h3 data-i18n="index.h311" class="info-card__title">Follow Us</h3>
               <div class="info-card__socials">
-                <a href="https://x.com/AmazonARC" target="_blank" rel="noopener" title="Follow on X" data-i18n-title="index.title1">
+                <a
+                  href="https://x.com/AmazonARC"
+                  target="_blank"
+                  rel="noopener"
+                  title="Follow on X"
+                >
                   <i class="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/amazon-research-consortium" target="_blank" rel="noopener" title="Connect on LinkedIn" data-i18n-title="index.title2">
+                <a
+                  href="https://www.linkedin.com/company/amazon-research-consortium"
+                  target="_blank"
+                  rel="noopener"
+                  title="Connect on LinkedIn"
+                >
                   <i class="fa-brands fa-linkedin-in"></i>
                 </a>
               </div>
-            </div>
-          </div>
-
-          <!-- Right Side Message -->
-          <div class="connect-message">
-            <div class="message-box">
-              <p data-i18n="index.p17" class="message-italic">At the ARC, we thrive on collaboration and innovation.</p>
-              <p data-i18n="index.p18" class="message-text">
-                We are constantly on the lookout for dedicated individuals and organizations who are
-                passionate about driving meaningful change. We invite you to connect with us and share your
-                interest in making a difference. We look forward to hearing from you!
-              </p>
             </div>
           </div>
         </div>

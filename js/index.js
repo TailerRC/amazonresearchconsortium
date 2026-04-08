@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'An interactive R Shiny dashboard for visualizing spatial malaria and climatic data. It supports epidemiological surveillance through maps, charts, and statistical analyses.',
       image: 'assets/Images-Media/dashboard1.jpg',
       gradFrom: '#962323', gradTo: '#a93226',
-      link: 'pages/ourwork/data.html'
+      link: 'https://usfq.shinyapps.io/Malaria_Ecuador/'
     },
     {
       icon: 'fa-solid fa-map',
@@ -57,16 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Mapping malaria transmission networks across communities using ArcGIS spatial tools and geospatial analysis. It reveals geographic connectivity patterns and hotspot clusters to strengthen targeted public health interventions and support evidence-based decision-making.',
       image: 'assets/Images-Media/dashboard2.jpg',
       gradFrom: '#1a3f6e', gradTo: '#2471a3',
-      link: 'pages/ourwork/data.html'
+      link: 'https://experience.arcgis.com/experience/779365e587f34fb3b2f2e11e024c5974/page/Inicio/'
     },
     {
       icon: 'fa-solid fa-cloud-sun-rain',
-      tabLabel: 'Climate Forecasts',
-      title: 'Climate Variability Forecasts',
-      badge: 'CLIMATE',
-      tags: ['Forecasting', 'El Niño', 'Weather Patterns'],
-      desc: 'Subseasonal-to-seasonal climate projections for the Amazon region, supporting proactive public health and environmental management decisions.',
-      image: 'assets/Images-Media/dashboard1.jpg',
+      tabLabel: 'Malaria Dashboard',
+      title: 'LDAS Hydrometeorological and Malaria Dashboard',
+      badge: 'MALARIA',
+      tags: ['Rainfall', 'Temperature', 'Malaria Cases'],
+      desc: 'Integrated platform combining NASA LDAS hydrometeorological variables — including rainfall, temperature, and soil moisture — with epidemiological malaria case data to identify climate-driven transmission patterns, supporting early warning systems and proactive public health decision-making in vulnerable regions.',
+      image: 'assets/Images-Media/dashboard3.jpg',
       gradFrom: '#2c3e50', gradTo: '#4a6fa5',
       link: 'pages/ourwork/data.html'
     },

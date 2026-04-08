@@ -2,28 +2,30 @@
   <div class="header-inner">
     <div class="header-left">
       <a href="index.html" class="logo-link">
-        <span data-i18n="components_navbar.span1" class="logo-text">Duke</span>
+        <span class="logo-text">Duke</span>
       </a>
     </div>
     <div class="header-right">
       <div class="logo-title">
-        <span data-i18n="components_navbar.span2" class="logo-title-main">Amazon Research Consortium</span>
-        <span data-i18n="components_navbar.span3" class="logo-title-sub">Climate Change &amp; One Health</span>
+        <span class="logo-title-main">Amazon Research Consortium</span>
+        <span class="logo-title-sub">Climate Change & One Health</span>
       </div>
     </div>
   </div>
 </header>
 
-<nav class="nav container" aria-label="Primary" data-i18n-aria-label="components_navbar.aria-label1">
+<nav class="nav container" aria-label="Primary">
+  
+  <!--LINK ICONOS MOBILE-->
   <div class="nav__data">
-    <!-- Mobile search toggle (icon only, mobile only) -->
-    <button class="nav__search-mobile-btn" id="nav-search-mobile-btn" aria-label="Abrir búsqueda" data-i18n-aria-label="components_navbar.aria-label2">
+    <!-- Mobile search toggle -->
+    <button class="nav__search-mobile-btn" id="nav-search-mobile-btn">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
 
-  <!-- Mobile menu toggle tab (right side) -->
-  <button class="nav__toggle-tab" id="nav-toggle" aria-label="Abrir menú" data-i18n-aria-label="components_navbar.aria-label3">
+  <!-- Mobile menu toggle tab-->
+  <button class="nav__toggle-tab" id="nav-toggle">
     <i class="fa-solid fa-bars nav__burger"></i>
     <i class="fa-solid fa-xmark nav__close"></i>
   </button>
@@ -35,35 +37,35 @@
   <div class="nav__menu" id="nav-menu">
     <ul class="nav__list">
 
-      <!--LINK - DROPDOWN About-->
+      <!--LINK - DROPDOWN Group-->
       <li class="dropdown__item">
-        <div class="nav__link">
-          The Group <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+        <div class="nav__link" data-i18n="navbar-item1">
+          Group <i class="fa-solid fa-caret-down dropdown__arrow"></i>
         </div>
         <ul class="dropdown__menu">
           <li>
-            <a href="pages/thegroup/about.html" class="dropdown__link">
-              <i class="fa-solid fa-user"></i>About</a>
+            <a href="pages/thegroup/about.html" class="dropdown__link" data-i18n="navbar-subitem1">
+              <i class="fa-solid fa-user"></i>About us</a>
           </li>
           <li>
-            <a href="pages/thegroup/team.html" class="dropdown__link">
+            <a href="pages/thegroup/team.html" class="dropdown__link" data-i18n="navbar-subitem2">
               <i class="fa-solid fa-users"></i>Meet our Team</a>
           </li>
         </ul>
       </li>
 
-      <!--LINK - DROPDOWN Our Work-->
+      <!--LINK - DROPDOWN Work-->
       <li class="dropdown__item">
-        <div class="nav__link">
+        <div class="nav__link" data-i18n="navbar-item2">
           Work <i class="fa-solid fa-caret-down dropdown__arrow"></i>
         </div>
         <ul class="dropdown__menu">
           <li>
-            <a href="pages/ourwork/sistema.html" class="dropdown__link">
+            <a href="pages/ourwork/ourwork.html" class="dropdown__link" data-i18n="navbar-subitem3">
               <i class="fa-solid fa-briefcase"></i>Our Work</a>
           </li>
           <li>
-            <a href="pages/ourwork/sistema.html" class="dropdown__link">
+            <a href="pages/ourwork/sistema.html" class="dropdown__link" data-i18n="navbar-subitem4">
               <i class="fa-solid fa-chart-simple"></i>Access Data</a>
           </li>
           <li>
@@ -83,23 +85,25 @@
               <i class="fa-solid fa-earth-americas"></i>ELIMINAR</a>
           </li>
           <li>
-            <a href="pages/ourwork/eliminar.html" class="dropdown__link">
+            <a href="pages/ourwork/eliminar.html" class="dropdown__link" data-i18n="navbar-subitem5">
               <i class="fa-solid fa-graduation-cap"></i>Students & Trainers</a>
           </li>
         </ul>
       </li>
 
-      <li><a data-i18n="components_navbar.a1" href="pages/news.html" class="nav__link">News</a></li>
-      <li><a data-i18n="components_navbar.a2" href="pages/partner.html" class="nav__link">Partner With Us</a></li>
+        <li><a data-i18n="navbar-item3" href="pages/news.html" class="nav__link">News</a></li>
+        <li><a data-i18n="navbar-item4" href="pages/partner.html" class="nav__link">Partner With Us</a></li>
 
     </ul>
-    
-  </div>
+
+    <div class="nav__menu-lang-divider"></div>
+    <div class="nav__menu-lang-item" id="nav-menu-lang-slot"></div>
+    </div>
 
   <!-- Search bar (desktop only) -->
   <div class="nav-search">
-    <input type="text" placeholder="Search" data-i18n-placeholder="components_navbar.placeholder1" aria-label="Search" data-i18n-aria-label="components_navbar.aria-label4" />
-    <button type="button" class="nav-search-btn" aria-label="Search" data-i18n-aria-label="components_navbar.aria-label5">
+    <input type="text" placeholder="Search" data-i18n-placeholder="navbar-item5"/>
+    <button type="button" class="nav-search-btn">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>
@@ -124,11 +128,11 @@
 <div class="mobile-search-modal" id="mobile-search-modal" aria-hidden="true">
   <div class="mobile-search-modal__overlay" id="mobile-search-overlay"></div>
   <div class="mobile-search-modal__box">
-    <button class="mobile-search-modal__close" id="mobile-search-modal-close" aria-label="Cerrar búsqueda" data-i18n-aria-label="components_navbar.aria-label6">
+    <button class="mobile-search-modal__close" id="mobile-search-modal-close">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <input type="text" placeholder="Search..." data-i18n-placeholder="components_navbar.placeholder2" aria-label="Buscar" data-i18n-aria-label="components_navbar.aria-label7" id="mobile-search-input" />
-    <button class="mobile-search-modal__submit" aria-label="Buscar" data-i18n-aria-label="components_navbar.aria-label8">
+    <input type="text" placeholder="Search" data-i18n-placeholder="navbar-itemMobiel1" id="mobile-search-input" />
+    <button class="mobile-search-modal__submit">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </div>

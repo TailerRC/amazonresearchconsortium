@@ -758,49 +758,8 @@ ul {
   color: #fff;
 }
 
-/* Mobile Language Selector - Hidden from navbar */
-
-/* Show language switcher on mobile */
+/* Mobile Language Selector - moved into mobile menu via JS */
 @media screen and (max-width: 800px) {
-  .nav__languages-mobile {
-    display: flex;
-    align-items: center;
-    padding: 0 0.8rem;
-  }
-
-  /* Mobile trigger: same white pill style as desktop */
-
-  /* Mobile options panel */
-  .nav__languages-mobile .custom-lang-select__options {
-    top: calc(100% + 4px);
-    border-radius: 10px;
-    min-width: 80px;
-    left: 0;
-    transform: translateX(0);
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
-  }
-
-  .nav__languages-mobile .custom-lang-select.open .custom-lang-select__options {
-    transform: translateX(0) translateY(0);
-  }
-
-  .nav__languages-mobile .custom-lang-select__option {
-    padding: 0.55rem 1rem;
-    font-size: 0.75rem;
-    color: #012169;
-  }
-
-  .nav__languages-mobile .custom-lang-select__option:hover {
-    background-color: rgba(1, 33, 105, 0.1);
-    color: #012169;
-  }
-
-  .nav__languages-mobile .custom-lang-select__option.selected {
-    background: #013a8a;
-    color: #fff;
-  }
-
   /* Language selector in mobile menu */
   .nav__menu-lang-divider {
     height: 1px;
