@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const isLocal =
+        location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const base = document.createElement("base");
+      base.href = isLocal ? "/" : "/amazonresearchconsortium/";
+      document.head.prepend(base);
+    </script>
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="css/about.css" />
+    <script src="js/about.js" defer></script>
+  </head>
+  <body>
+        <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="js/components/navbar.js"></script>
+
+    <!-- LINK Hero Banner -->
+    <section class="partner-hero">
+        <img
+            src="assets/Images-Media/forest.gif"
+            alt="Aerial view of Amazon rainforest canopy" data-i18n-alt="pages_partner.alt1" data-i18n-alt="pages_partner.alt1" data-i18n-alt="pages_partner.alt2" data-i18n-alt="pages_partner.alt1" data-i18n-alt="pages_partner.alt3" data-i18n-alt="pages_partner.alt2" data-i18n-alt="pages_partner.alt4"
+            class="partner-hero__img"
+        />
+        <div class="partner-hero__overlay"></div>
+        <div class="partner-hero__content">
+            <h1 data-i18n="about.title" class="partner-hero__title">About us</h1>
+        </div>
+    </section>
+
+    <!-- LINK Interactive Album Section -->
+    <section class="about-album">
+        <div class="album-container">
+            <div class="album-gallery">
+                <img id="mainAlbumImage" src="assets/Images-Media2/Album1.png" alt="Gallery Image" class="album-main-img" />
+                <div class="album-thumbnails">
+                    <img src="assets/Images-Media2/Album1.png" class="album-thumb active" data-index="0" alt="Thumb 1" />
+                    <img src="assets/Images-Media2/Album2.png" class="album-thumb" data-index="1" alt="Thumb 2" />
+                    <img src="assets/Images-Media2/Album3.jpg" class="album-thumb" data-index="2" alt="Thumb 3" />
+                    <img src="assets/Images-Media2/Album4.png" class="album-thumb" data-index="3" alt="Thumb 4" />
+                </div>
+            </div>
+            
+            <div class="album-info-container">
+                <!-- Section 1 -->
+                <div class="album-info-item active" data-index="0">
+                    <h2 data-i18n="about.album.title0">Who We Are</h2>
+                    <p data-i18n="about.album.desc0">The Amazon Research Consortium for Climate Change and One Health (ARC) was established in 2024 to address the urgent challenges of climate change and health in the Amazon and across Latin America. Our consortium unites experts from universities, government agencies, NGOs, and other institutions, fostering multi-disciplinary, multi-institutional, and cross-cultural collaborations.</p>
+                </div>
+                <!-- Section 2 -->
+                <div class="album-info-item" data-index="1" style="display: none;">
+                    <h2 data-i18n="about.album.title1">Our Mission</h2>
+                    <p data-i18n="about.album.desc1">Our mission is to expand and enable the integration of climate, environmental, and human health research and outreach to develop effective strategies that reduce disease burden and strengthen climate resilience in local communities and watersheds in the Amazon and across Latin America. Integral to this mission is building multi-institutional climate and one health knowledge and capacity, essential for accelerating the identification and adoption of climate adaptive solutions.</p>
+                </div>
+                <!-- Section 3 -->
+                <div class="album-info-item" data-index="2" style="display: none;">
+                    <h2 data-i18n="about.album.title2">Our Approach</h2>
+                    <p data-i18n="about.album.desc2">We merge climate science with health research to generate actionable insights that protect both human and environmental health. By integrating climate and environmental data into disease research and surveillance, and enhancing climate literacy and capacity-building among health professionals and communities, we aim to improve climate change preparedness, adaptability, and mitigation efforts across the region.</p>
+                    <p>At the heart of our work is a commitment to building strong local and regional networks that uplift the voices and needs of at-risk communities. We prioritize empowering these communities by fostering meaningful partnerships and ensuring they actively participate in shaping the solutions that impact their lives. Together, we address critical challenges through research and policy, including infectious diseases, malnutrition, land use changes, chemical exposures, wildfires, and more.</p>
+                </div>
+                <!-- Section 4 -->
+                <div class="album-info-item" data-index="3" style="display: none;">
+                    <h2 data-i18n="about.album.title3">Our Vision</h2>
+                    <p data-i18n="about.album.desc3">We envision the ARC as a transformative force in the Amazon and throughout Latin America, providing policy makers, researchers, health professionals, and local communities with the knowledge and tools to build a sustainable, resilient future. Our strategy is designed not just to respond to today’s challenges, but to create a healthier, more resilient future for the Amazon and broader Latin America. Through our commitment to integrating science with community wisdom, we drive innovation and preparedness in the face of climate change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LINK Accordion Section -->
+    <section class="about-accordion">
+        <h2 data-i18n="about.accordion.title" class="accordion-title">Our Core Commitments</h2>
+        
+        <div class="accordion-container">
+            <!-- Item 1 -->
+            <div class="accordion-item active">
+                <div class="accordion-header">
+                    <span data-i18n="about.accordion.item1.title">Integrating Science and Community Wisdom</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text" data-i18n="about.accordion.item1.text">
+                        We believe in the power of combining rigorous scientific research with the rich wisdom of local communities to anticipate, respond to, and effectively mitigate the impacts of climate change. This collaborative approach not only informs our strategies but also ensures that our actions are grounded in real-world applicability and sensitivity to local needs. We believe bidirectional learning between climate-health scientists and local communities will lead to novel climate measures, improved risk communication, more research-ready communities and more researchers ready for communities.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-i18n="about.accordion.item2.title">Building Capacity and Leadership</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text" data-i18n="about.accordion.item2.text">
+                        We are committed to nurturing the next generation of visionary leaders in climate and One Health research dedicated to making a lasting impact across Latin America. Through comprehensive training programs and partnerships with leading global institutions, we empower researchers and practitioners with the tools they need to drive change and innovation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-i18n="about.accordion.item3.title">Enhancing Community Partnerships and Engagement</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text" data-i18n="about.accordion.item3.text">
+                        Our work is deeply collaborative, involving active engagement with local communities to ensure that our research and interventions are inclusive and beneficial. We respect and incorporate local knowledge, fostering meaningful partnerships and mutual learning to develop tailored strategies that enhance regional climate resilience strategies.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-i18n="about.accordion.item4.title">Driving Research and Innovation</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text" data-i18n="about.accordion.item4.text">
+                        We strive to advance the field of climate and health by integrating up-to-date climate data with health surveillance. Our research aims to uncover new insights into how climate changes affect health, leading to better disease prevention strategies and reducing health risks associated with climate change.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span data-i18n="about.accordion.item5.title">Promoting Health and Climate Resilience</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text" data-i18n="about.accordion.item5.text">
+                        Our goal is to create sustainable health and environmental outcomes through innovative research that not only understands the current challenges but also anticipates future conditions. By integrating climate and environmental data with human health measures, we work to build a resilient infrastructure that can withstand and adapt to the changing climate.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Cards Section / Carousel -->
+    <section class="commitment-cards">
+        <h2 data-i18n="about.commitments.title" class="commitment-title">Our Commitment To Diversity, Equity, And Inclusion</h2>
+        <p data-i18n="about.commitments.subtitle" class="commitment-subtitle">At the Amazon Research Consortium for Climate Change and One Health, we are dedicated to fostering an inclusive research environment that prioritizes diverse perspectives and collaborations in addressing complex climate and health challenges in the Amazon and across Latin America.</p>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="commitmentTrack">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="assets/Images-Media/1.jpg" alt="Multidisciplinary" class="card-img" />
+                    <h3 data-i18n="about.card1.title" class="card-title">EMBRACING MULTIDISCIPLINARY AND MULTICULTURAL PERSPECTIVES</h3>
+                    <p data-i18n="about.card1.text" class="card-text">We are committed to cultivating multi-disciplinary, multi-institutional, and multi-cultural partnerships that foster innovative solutions to climate change and One Health challenges. By actively engaging with key organizations in the Global South and scientists from diverse and historically underrepresented groups, we ensure our research is both inclusive and impactful, addressing the needs of vulnerable communities.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="assets/Images-Media/2.jpg" alt="Next Generation" class="card-img" />
+                    <h3 data-i18n="about.card2.title" class="card-title">NURTURING THE NEXT GENERATION OF RESEARCHERS</h3>
+                    <p data-i18n="about.card2.text" class="card-text">We are committed to providing significant training opportunities and resources to junior investigators from traditionally underrepresented backgrounds, aiming to build a strong network of Amazon-focused climate and health scientists. We support the development of junior scientists and foster North-South and South-South collaborations that are vital for a holistic understanding of regional challenges.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="assets/Images-Media/3.jpg" alt="At-Risk Communities" class="card-img" />
+                    <h3 data-i18n="about.card3.title" class="card-title">AMPLIFYING VOICES OF AT-RISK COMMUNITIES</h3>
+                    <p data-i18n="about.card3.text" class="card-text">We are committed to amplifying the voices of at-risk communities by fostering partnerships that give them agency in shaping the research that reflect their priorities. By working collaboratively, we ensure that our research and solutions are rooted in the realities of those on the frontlines of climate change and health challenges, fostering a collaborative path forward with policymakers and researchers alike.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Dots and Navigation -->
+        <div class="carousel-controls" id="commitmentControls">
+            <button class="carousel-btn carousel-btn--prev" id="prevBtn" aria-label="Previous slide">
+                <span>&#10094;</span>
+            </button>
+            
+            <div class="dots" id="commitmentDots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+            </div>
+
+            <button class="carousel-btn carousel-btn--next" id="nextBtn" aria-label="Next slide">
+                <span>&#10095;</span>
+            </button>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/components/footer.js"></script>
+    <script src="js/components/scroll-to-top.js"></script>
+  </body>
+</html>
