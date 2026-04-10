@@ -14,9 +14,11 @@
  */
 
 (function () {
+  console.log('[i18n] Script cargado correctamente');
   const SUPPORTED_LANGS = ['en', 'es', 'pt'];
   const DEFAULT_LANG    = 'en';
   const LOCALES_BASE    = '/locales';
+  console.log('[i18n] LOCALES_BASE:', LOCALES_BASE);
 
   let currentLang  = DEFAULT_LANG;
   let translations = {};
@@ -41,10 +43,13 @@
   // ── Cargar JSON de traducciones ──────────────────────────────────────────
   async function loadTranslations(lang) {
     const url = `${LOCALES_BASE}/${lang}.json`;
+    console.log('[i18n] Intentando cargar:', url);
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      const data = await res.json();
+      console.log('[i18n] Traducciones cargadas correctamente:', lang);
+      return data;
     } catch (e) {
       console.warn(`[i18n] No se pudo cargar ${lang}.json, usando inglés.`, e);
       if (lang !== DEFAULT_LANG) {
@@ -92,6 +97,7 @@
 
   // ── Aplicar traducciones al DOM ──────────────────────────────────────────
   function applyTranslations() {
+    console.log('[i18n] Aplicando traducciones para idioma:', currentLang);
     // Texto de elementos
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -149,10 +155,13 @@
 
   // ── Inicializar ──────────────────────────────────────────────────────────
   async function init() {
+    console.log('[i18n] Inicializando sistema de traducciones...');
     const lang = detectLang();
+    console.log('[i18n] Idioma detectado:', lang);
     currentLang  = lang;
     translations = await loadTranslations(lang);
     applyTranslations();
+    console.log('[i18n] Sistema listo ✓');
 
     // Conectar botones de idioma (data-lang)
     document.querySelectorAll('[data-lang]').forEach(btn => {
