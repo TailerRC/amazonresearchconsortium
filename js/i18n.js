@@ -17,7 +17,7 @@
   console.log('[i18n] Script cargado correctamente');
   const SUPPORTED_LANGS = ['en', 'es', 'pt'];
   const DEFAULT_LANG    = 'en';
-  const LOCALES_BASE    = '/locales';
+  const LOCALES_BASE    = 'locales';
   console.log('[i18n] LOCALES_BASE:', LOCALES_BASE);
 
   let currentLang  = DEFAULT_LANG;
