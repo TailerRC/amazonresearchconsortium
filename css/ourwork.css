@@ -1,0 +1,301 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 170%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* ========================
+   Where We Work Section
+   ======================== */
+.where-we-work {
+  position: relative;
+  background: linear-gradient(180deg, #fbfdff 0%, #f3faff 40%, #96c3e9 100%);
+  overflow: hidden;
+}
+
+.where-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.where-text {
+  flex: 0 0 38%;
+  padding: 2rem 0 3rem;
+}
+
+.where-heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.3;
+  color: #14505c;
+  margin-bottom: 1rem;
+}
+
+.where-sub {
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 420px;
+}
+
+.where-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #00264a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 2px solid #00264a;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.where-btn:hover {
+  background: transparent;
+  color: #00264a;
+  transform: translateY(-2px);
+}
+
+.where-map {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  align-self: flex-start;
+  margin-right: -4rem;
+}
+
+.where-map-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Where We Work responsive */
+@media (max-width: 1024px) {
+  .where-we-work {
+    padding: 4rem 0 0 2.5rem;
+  }
+
+  .where-inner {
+    gap: 1.5rem;
+  }
+
+  .where-map {
+    margin-right: -2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .where-we-work {
+    padding: 3rem 1.5rem 0;
+  }
+
+  .where-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .where-text {
+    flex: none;
+    text-align: center;
+    padding: 0 0 1rem;
+  }
+
+  .where-sub {
+    max-width: none;
+  }
+
+  .where-btn {
+    margin: 0 auto;
+  }
+
+  .where-map {
+    margin-right: -1.5rem;
+  }
+
+  .where-map-img {
+    width: 100%;
+  }
+}
+
+
+/* ========================
+   Our Current Projects Section
+   ======================== */
+.projects {
+  padding: 3rem 4rem;
+  background: #fff;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: #14505c;
+  margin-bottom: 0.75rem;
+}
+
+.projects-subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.project-card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #b0b8bf; /* fallback color while image loads */
+  border-radius: 2px;
+  background-size: cover;       /* preserved for compatibility if backgrounds are used */
+  background-position: center;  /* center the focal point */
+  background-repeat: no-repeat;
+  position: relative;           /* for optional overlay pseudo-element */
+  overflow: hidden;
+  min-height: 140px;            /* fallback for browsers without aspect-ratio */
+}
+
+/* Optional subtle overlay if you want to darken images for better contrast */
+.project-img-placeholder::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.18) 100%);
+  pointer-events: none;
+}
+
+/* Images placed with <img> should fill the placeholder */
+.project-img-placeholder img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.project-card:hover .project-img-placeholder {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #e87722;
+}
+
+.project-card:hover .project-name {
+  text-decoration: underline;
+}
+
+/* Projects responsive */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 4rem 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

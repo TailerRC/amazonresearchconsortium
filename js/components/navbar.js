@@ -27,16 +27,65 @@ async function loadNavbar() {
   const html = await res.text();
   document.getElementById('navbar').innerHTML = html;
 
+  // Apply translations to the newly loaded navbar
+  if (window.i18n && typeof window.i18n.reapply === 'function') {
+    window.i18n.reapply();
+  }
+
   // Mobile menu toggle
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+  
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       navMenu.classList.toggle('show-menu');
-      navToggle.closest('.nav__data')?.classList.toggle('show-icon');
+      navOverlay?.classList.toggle('visible');
+      navToggle.classList.toggle('hidden');
     });
   }
+
+  // Close menu when clicking overlay
+  navOverlay?.addEventListener('click', () => {
+    navMenu?.classList.remove('show-menu');
+    navOverlay?.classList.remove('visible');
+    navToggle?.classList.remove('hidden');
+  });
+
+  // Swipe to open/close menu
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!navMenu) return;
+
+    const touchCurrentX = e.touches[0].clientX;
+    const touchCurrentY = e.touches[0].clientY;
+    const diffX = touchStartX - touchCurrentX;
+    const diffY = Math.abs(touchStartY - touchCurrentY);
+
+    // Solo procesar si el movimiento es más horizontal que vertical
+    if (diffY > 10 && diffY > diffX * 0.5) return;
+
+    // Swipe izquierda (abrir menú)
+    if (diffX > 50 && !navMenu.classList.contains('show-menu')) {
+      navMenu.classList.add('show-menu');
+      navOverlay?.classList.add('visible');
+      navToggle?.classList.add('hidden');
+    }
+    // Swipe derecha (cerrar menú)
+    else if (diffX < -50 && navMenu.classList.contains('show-menu')) {
+      navMenu.classList.remove('show-menu');
+      navOverlay?.classList.remove('visible');
+      navToggle?.classList.remove('hidden');
+    }
+  }, { passive: true });
 
   // Dropdown toggle logic
   document.querySelectorAll('.dropdown__item > .nav__link').forEach((trigger) => {
@@ -62,7 +111,8 @@ async function loadNavbar() {
       item.classList.remove('open');
     });
     navMenu?.classList.remove('show-menu');
-    navToggle?.closest('.nav__data')?.classList.remove('show-icon');
+    navOverlay?.classList.remove('visible');
+    navToggle?.classList.remove('hidden');
   });
 
   // Mobile search modal
@@ -90,6 +140,72 @@ async function loadNavbar() {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMobileSearch();
+  });
+
+  // Language switcher – single element, moved between desktop/mobile containers
+  const langSelect = document.getElementById('custom-lang-desktop');
+  const desktopSlot = document.querySelector('.nav__languages');
+  const mobileSlot = document.getElementById('nav-menu-lang-slot');
+  const currentLang = localStorage.getItem('i18n_lang') || 'en';
+
+  // Move the single selector between containers based on viewport
+  const mobileMediaQuery = window.matchMedia('(max-width: 800px)');
+
+  function moveLangSelector() {
+    if (!langSelect) return;
+    if (mobileMediaQuery.matches && mobileSlot) {
+      mobileSlot.appendChild(langSelect);
+    } else if (desktopSlot) {
+      desktopSlot.appendChild(langSelect);
+    }
+    // Close dropdown when moving
+    langSelect.classList.remove('open');
+  }
+
+  moveLangSelector();
+  mobileMediaQuery.addEventListener('change', moveLangSelector);
+
+  // Helper: update custom dropdown display to match a language
+  function updateLangSelectors(lang) {
+    if (!langSelect) return;
+    const valueSpan = langSelect.querySelector('.custom-lang-select__value');
+    if (valueSpan) valueSpan.textContent = lang.toUpperCase();
+
+    langSelect.querySelectorAll('.custom-lang-select__option').forEach((opt) => {
+      opt.classList.toggle('selected', opt.dataset.value === lang);
+    });
+  }
+
+  // Set current language on initial load
+  updateLangSelectors(currentLang);
+
+  // Init custom dropdown behavior
+  if (langSelect) {
+    const trigger = langSelect.querySelector('.custom-lang-select__trigger');
+    const options = langSelect.querySelectorAll('.custom-lang-select__option');
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langSelect.classList.toggle('open');
+    });
+
+    options.forEach((opt) => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const lang = opt.dataset.value;
+        updateLangSelectors(lang);
+        langSelect.classList.remove('open');
+
+        if (window.i18n && typeof window.i18n.setLang === 'function') {
+          window.i18n.setLang(lang);
+        }
+      });
+    });
+  }
+
+  // Close custom dropdown when clicking outside
+  document.addEventListener('click', () => {
+    langSelect?.classList.remove('open');
   });
 
   // Sticky nav: fix the blue bar once the header scrolls past the viewport

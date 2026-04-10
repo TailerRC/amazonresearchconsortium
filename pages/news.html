@@ -10,6 +10,7 @@
       base.href = isLocal ? '/' : '/amazonresearchconsortium/';
       document.head.prepend(base);
     </script>
+    <script src="js/i18n.js"></script>
     <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
@@ -21,13 +22,13 @@
     <section class="news-hero">
         <div class="news-hero-placeholder">[ Banner image will go here ]</div>
         <div class="news-hero-content">
-            <h1 class="news-hero-title">News & Project Updates</h1>
+            <h1 data-i18n="pages_news.h11" class="news-hero-title">News & Project Updates</h1>
         </div>
     </section>
 
     <!-- Featured News Section -->
     <section class="featured-news">
-        <h2 class="featured-news-heading">Featured News</h2>
+        <h2 data-i18n="pages_news.h21" class="featured-news-heading">Featured News</h2>
         <div class="featured-news-divider"></div>
 
         <div class="news-grid">
@@ -36,8 +37,8 @@
                 <div class="news-card-bg"></div>
                 <div class="news-card-overlay"></div>
                 <div class="news-card-content">
-                    <h3 class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
-                    <p class="news-card-meta">MARCH 21, 2023 | DUKE TODAY</p>
+                    <h3 data-i18n="pages_news.h31" class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+                    <p data-i18n="pages_news.p1" class="news-card-meta">MARCH 21, 2023 | DUKE TODAY</p>
                 </div>
             </a>
 
@@ -46,8 +47,8 @@
                 <div class="news-card-bg"></div>
                 <div class="news-card-overlay"></div>
                 <div class="news-card-content">
-                    <h3 class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
-                    <p class="news-card-meta">APRIL 20, 2018 | DUKE TODAY</p>
+                    <h3 data-i18n="pages_news.h32" class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+                    <p data-i18n="pages_news.p2" class="news-card-meta">APRIL 20, 2018 | DUKE TODAY</p>
                 </div>
             </a>
 
@@ -56,8 +57,8 @@
                 <div class="news-card-bg"></div>
                 <div class="news-card-overlay"></div>
                 <div class="news-card-content">
-                    <h3 class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
-                    <p class="news-card-meta">JUNE 15, 2020 | DUKE TODAY</p>
+                    <h3 data-i18n="pages_news.h33" class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+                    <p data-i18n="pages_news.p3" class="news-card-meta">JUNE 15, 2020 | DUKE TODAY</p>
                 </div>
             </a>
 
@@ -66,8 +67,8 @@
                 <div class="news-card-bg"></div>
                 <div class="news-card-overlay"></div>
                 <div class="news-card-content">
-                    <h3 class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
-                    <p class="news-card-meta">JANUARY 10, 2021 | DUKE TODAY</p>
+                    <h3 data-i18n="pages_news.h34" class="news-card-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+                    <p data-i18n="pages_news.p4" class="news-card-meta">JANUARY 10, 2021 | DUKE TODAY</p>
                 </div>
             </a>
         </div>
@@ -75,7 +76,7 @@
 
     <!-- More News Section -->
     <section class="more-news">
-        <h2 class="more-news-heading">More News</h2>
+        <h2 data-i18n="pages_news.h22" class="more-news-heading">More News</h2>
         <div class="more-news-divider"></div>
 
         <div class="more-news-grid">
@@ -83,8 +84,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
-                    <p class="more-news-meta">JANUARY 23, 2024 | DUKE GLOBAL HEALTH INSTITUTE</p>
+                    <h3 data-i18n="pages_news.h35" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
+                    <p data-i18n="pages_news.p5" class="more-news-meta">JANUARY 23, 2024 | DUKE GLOBAL HEALTH INSTITUTE</p>
                 </div>
             </a>
 
@@ -92,8 +93,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
-                    <p class="more-news-meta">DECEMBER 27, 2023 | DUKE GLOBAL HEALTH INSTITUTE</p>
+                    <h3 data-i18n="pages_news.h36" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
+                    <p data-i18n="pages_news.p6" class="more-news-meta">DECEMBER 27, 2023 | DUKE GLOBAL HEALTH INSTITUTE</p>
                 </div>
             </a>
 
@@ -101,8 +102,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
-                    <p class="more-news-meta">OCTOBER 4, 2023 | DUKE NICHOLAS SCHOOL OF THE ENVIRONMENT</p>
+                    <h3 data-i18n="pages_news.h37" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+                    <p data-i18n="pages_news.p7" class="more-news-meta">OCTOBER 4, 2023 | DUKE NICHOLAS SCHOOL OF THE ENVIRONMENT</p>
                 </div>
             </a>
 
@@ -110,8 +111,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur</h3>
-                    <p class="more-news-meta">JUNE 21, 2023 | NASA EARTH SCIENCE APPLIED SCIENCES</p>
+                    <h3 data-i18n="pages_news.h38" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur</h3>
+                    <p data-i18n="pages_news.p8" class="more-news-meta">JUNE 21, 2023 | NASA EARTH SCIENCE APPLIED SCIENCES</p>
                 </div>
             </a>
 
@@ -119,8 +120,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed</h3>
-                    <p class="more-news-meta">NOVEMBER 10, 2022 | DUKE NICHOLAS SCHOOL OF THE ENVIRONMENT</p>
+                    <h3 data-i18n="pages_news.h39" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed</h3>
+                    <p data-i18n="pages_news.p9" class="more-news-meta">NOVEMBER 10, 2022 | DUKE NICHOLAS SCHOOL OF THE ENVIRONMENT</p>
                 </div>
             </a>
 
@@ -128,8 +129,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit</h3>
-                    <p class="more-news-meta">JULY 12, 2022 | DUKE GLOBAL HEALTH INSTITUTE</p>
+                    <h3 data-i18n="pages_news.h310" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit</h3>
+                    <p data-i18n="pages_news.p10" class="more-news-meta">JULY 12, 2022 | DUKE GLOBAL HEALTH INSTITUTE</p>
                 </div>
             </a>
 
@@ -137,8 +138,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
-                    <p class="more-news-meta">MAY 28, 2020 | DUKE TODAY</p>
+                    <h3 data-i18n="pages_news.h311" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
+                    <p data-i18n="pages_news.p11" class="more-news-meta">MAY 28, 2020 | DUKE TODAY</p>
                 </div>
             </a>
 
@@ -146,8 +147,8 @@
             <a href="#" class="more-news-item">
                 <div class="more-news-thumb"></div>
                 <div class="more-news-info">
-                    <h3 class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit</h3>
-                    <p class="more-news-meta">MAY 19, 2015 | NPR</p>
+                    <h3 data-i18n="pages_news.h312" class="more-news-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit</h3>
+                    <p data-i18n="pages_news.p12" class="more-news-meta">MAY 19, 2015 | NPR</p>
                 </div>
             </a>
         </div>
@@ -157,7 +158,7 @@
     <section class="work-in-action">
         <div class="work-in-action-header">
             <div class="work-in-action-line"></div>
-            <h2 class="work-in-action-title">See Our Work In Action</h2>
+            <h2 data-i18n="pages_news.h23" class="work-in-action-title">See Our Work In Action</h2>
             <div class="work-in-action-line"></div>
         </div>
 
@@ -206,84 +207,167 @@
         </div>
     </section>
 
-    <!-- Project Updates Section -->
-    <section class="project-updates">
-        <h2 class="project-updates-heading">Project Updates</h2>
-        <div class="project-updates-divider"></div>
+    <!-- News & Project Updates Section -->
+    <section id="news-section" class="project-updates-container">
+      <h2 data-i18n="index.h26" class="section-heading">News & Project Updates</h2>
+      <div class="items-layout">
+        <!-- Card 1 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news1.jpg"
+              alt="ELIMINAR Malaria Project"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a3"
+              href="https://journals.ametsoc.org/view/journals/hydr/25/5/JHM-D-23-0064.1.xml"
+              class="update-item__title"
+              >Introducing Our New Project: Effectively Linking Molecular
+              Informatics and Network Analytics to Reduce Malaria
+              (ELIMINAR-Malaria)</a
+            >
+            <p data-i18n="index.p9" class="update-item__date">
+              JUNE 18, 2024 | NEW RESEARCH PROJECT
+            </p>
+          </div>
+        </article>
 
-        <div class="project-updates-grid">
-            <!-- Item 1 -->
-            <a href="#" class="project-updates-item">
-                <div class="project-updates-thumb"></div>
-                <div class="project-updates-info">
-                    <h3 class="project-updates-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor</h3>
-                    <p class="project-updates-meta">JUNE 18, 2024 | NEW RESEARCH PROJECT</p>
-                </div>
-            </a>
+        <!-- Card 2 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news2.jpg"
+              alt="Meteorological Forecast"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a4"
+              href="https://journals.ametsoc.org/view/journals/hydr/25/5/JHM-D-23-0064.1.xml"
+              class="update-item__title"
+              >Contributions of Initial Conditions and Meteorological Forecast
+              to Subseasonal-to-Seasonal Hydrological Forecast Skill in Western
+              Tropical South America</a
+            >
+            <p data-i18n="index.p10" class="update-item__date">
+              MAY 15, 2024 | NEW PUBLICATION
+            </p>
+          </div>
+        </article>
 
-            <!-- Item 2 -->
-            <a href="#" class="project-updates-item">
-                <div class="project-updates-thumb"></div>
-                <div class="project-updates-info">
-                    <h3 class="project-updates-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor</h3>
-                    <p class="project-updates-meta">MAY 15, 2024 | NEW PUBLICATION</p>
-                </div>
-            </a>
+        <!-- Card 3 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news3.jpg"
+              alt="Climate Impact on Malaria Ecuador"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a5"
+              href="https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000315"
+              class="update-item__title"
+              >Impact of Climate and Land Use/ Land Cover Changes on Malaria
+              Incidence in the Ecuadorian Amazon</a
+            >
+            <p data-i18n="index.p11" class="update-item__date">
+              APRIL 19, 2024 | NEW PUBLICATION
+            </p>
+          </div>
+        </article>
 
-            <!-- Item 3 -->
-            <a href="#" class="project-updates-item">
-                <div class="project-updates-thumb"></div>
-                <div class="project-updates-info">
-                    <h3 class="project-updates-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do</h3>
-                    <p class="project-updates-meta">APRIL 19, 2024 | NEW PUBLICATION</p>
-                </div>
-            </a>
+        <!-- Card 4 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news4.jpg"
+              alt="Malaria Response Study Protocol"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a6"
+              href="https://bmjopen.bmj.com/content/14/4/e078911.info"
+              class="update-item__title"
+              >Study Protocol: Improving Response to Malaria in the Amazon
+              through Identification of Inter-Community Networks and Human
+              Mobility in Border Regions of Ecuador, Peru, Brazil</a
+            >
+            <p data-i18n="index.p12" class="update-item__date">
+              APRIL 15, 2024 | NEW PUBLICATION
+            </p>
+          </div>
+        </article>
 
-            <!-- Item 4 -->
-            <a href="#" class="project-updates-item">
-                <div class="project-updates-thumb"></div>
-                <div class="project-updates-info">
-                    <h3 class="project-updates-title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt</h3>
-                    <p class="project-updates-meta">APRIL 15, 2024 | NEW PUBLICATION</p>
-                </div>
-            </a>
-        </div>
+        <!-- Card 5 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news5.jpg"
+              alt="Malaria Control Peru PAMAFRO"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a7"
+              href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(23)00051-0/fulltext"
+              class="update-item__title"
+              >The Impact of Sustained Malaria Control in the Loreto Region of
+              Peru: A Retrospective, Observational, Spatially-Varying
+              Interrupted Time Series Analysis of the PAMAFRO Program</a
+            >
+            <p data-i18n="index.p13" class="update-item__date">
+              MARCH 15, 2023 | NEW PUBLICATION
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="update-item">
+          <div class="update-item__image">
+            <img
+              src="assets/Images-Media/news6.jpg"
+              alt="Gold Mining ASGM Workshop"
+            />
+          </div>
+          <div class="update-item__content">
+            <a
+              data-i18n="index.a8"
+              href="https://www.thelancet.com/journals/lanam/article/PIIS2667-193X(23)00051-0/fulltext"
+              class="update-item__title"
+              >Duke Team Gold Holds Workshop &ldquo;Bridging Policy, Research,
+              and Implementation in ASGM&rdquo; with PureEarth Colombia and the
+              US Department of State</a
+            >
+            <p data-i18n="index.p14" class="update-item__date">
+              JUNE 23, 2021 | POLICY, MINING, CONSERVATION
+            </p>
+          </div>
+        </article>
+      </div>
+      <a data-i18n="index.a9" href="pages/news.html" class="view-more-button"
+        >MORE NEWS</a
+      >
     </section>
 
     <!-- Upcoming Events Section -->
-    <section class="upcoming-events">
-        <h2 class="upcoming-events-heading">Upcoming Events</h2>
-        <div class="upcoming-events-divider"></div>
-
-        <div class="event-block">
-            <h3 class="event-title">ASGM EVIDENCE: A COMMUNITY TO SHARE, DISCUSS, AND GENERATE INTERVENTIONS LEARNING</h3>
-            <p class="event-intro">This event series, organized by the Duke Evidence Team, focuses on artisanal and small-scale gold mining (ASGM) interventions in Latin America and the Caribbean. The goal is to create a space for exchanging knowledge and evidence to inform better practices and policies in the region.</p>
-
-            <p class="event-subsection-title">About the Event:</p>
-            <p class="event-body">This series is designed to facilitate conversations between producers of evidence and consumers / users / demanders of evidence concerning which ASGM interventions have (not) had positive impacts on environmental and livelihoods outcomes. Those who research or document can share their evidence and hear from users, including agencies, about what evidence would usefully inform actions.</p>
-
-            <p class="event-subsection-title">Zoom Event Series:</p>
-            <p class="event-body">Fridays in October and November, 9:00-10:30 AM EST (Real-time translation available for English and Spanish)</p>
-            <p class="event-body">– October 11: Introduction: Evidence Goals, Typology, and Examples</p>
-            <p class="event-body">– October 18: Evidence About Miner-level Tech: Retorts &amp; Gravimetric</p>
-            <p class="event-body">– October 25: Evidence About Other-Actor Tech: Ore-Selling to Plants</p>
-            <p class="event-body">– November 1: Evidence About Institutions: Formalization and For Tailings</p>
-            <p class="event-body">– November 8: Evidence About Markets: Supply Chains and Livelihoods</p>
-            <p class="event-body">– November 15: Evidence About Outcomes: One Health View of Impacts</p>
-
-            <p class="event-subsection-title">The Importance of these Discussions:</p>
-            <p class="event-body">Artisanal &amp; Small-scale Mining (AS(G)M) (hard- or soft-rock) is a major employer in low- and middle-income countries, but also the leading source of anthropogenic mercury concerning which the Minamata Convention calls to reduce, or eliminate, uses of mercury. Very little rigorous evidence about (non-) impact has been produced for learning from a heterogeneous history with some forms of success. We need to learn more about the conditions under which interventions have (not) worked. We aim to increase the sharing, discussion, and new generation of evidence about AS(G)M. We do not know the fates of all past interventions, yet we aim to facilitate learning about them through sharing more details of interventions and discussing what shifts could work better. While certainly we are not sure which next interventions would work, within each situation, we believe funding for new interventions should avoid approaches seen not to work to date and that learning can be hastened and augmented by including funding for documentation.</p>
-
-            <a href="#" class="event-register-btn">REGISTER NOW</a>
-        </div>
+    <section class="events">
+      <hr class="events-divider" />
+      <h2 data-i18n="index.h25" class="events-title">Upcoming Events</h2>
+      <!-- Events are loaded dynamically from events.json -->
+      <div class="events-content"></div>
     </section>
+    <script src="js/components/events.js"></script>
 
     <!-- CTA Banner -->
     <section class="news-cta">
         <div class="news-cta-placeholder">[ Background image will go here ]</div>
         <div class="news-cta-content">
-            <h2 class="news-cta-title">Ready to make an impact?</h2>
-            <a href="pages/partner.html" class="news-cta-btn">LET'S COLLABORATE</a>
+            <h2 data-i18n="pages_news.h26" class="news-cta-title">Ready to make an impact?</h2>
+            <a data-i18n="pages_news.a2" href="pages/partner.html" class="news-cta-btn">LET'S COLLABORATE</a>
         </div>
     </section>
 
