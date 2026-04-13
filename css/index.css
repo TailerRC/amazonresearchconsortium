@@ -413,11 +413,11 @@ body {
   }
 
   .flip-back-title {
-    font-size: clamp(0.85rem, 1.4vw, 1.3rem);
+    font-size: 16px;
   }
 
   .flip-back-text {
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-size: 9px;
   }
 }
 
