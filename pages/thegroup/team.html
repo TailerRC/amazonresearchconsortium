@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const isLocal =
+        location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const base = document.createElement("base");
+      base.href = isLocal ? "/" : "/amazonresearchconsortium/";
+      document.head.prepend(base);
+    </script>
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="css/team.css" />
+    <script src="js/team.js" defer></script>
+</head>
+<body>
+        <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="js/components/navbar.js"></script>
+
+    <!-- Team Hero Section -->
+    <section class="team-hero">
+        <div class="team-hero-container">
+            <div class="team-hero-content">
+                <h1 class="team-hero-title" data-i18n="team-hero-title">AT THE ARC, OUR TEAM IS AT THE HEART OF EVERYTHING WE DO.</h1>
+                <p class="team-hero-description" data-i18n="team-hero-description">Comprising a dedicated group of experts, emerging scholars, and strategic partners, we work together to tackle some of the most pressing environmental and health challenges in the Amazon and beyond.</p>
+            </div>
+            <div class="team-hero-image-wrapper">
+                <img src="assets/Banner-Image/2.png" alt="ARC Team" class="team-hero-image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="team-grid-section">
+        <h2 class="team-grid-title" data-i18n="team-grid-title1">Science Team</h2>
+        <div class="team-grid">
+            <!-- 32 Team Members -->
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/1.png" alt="Team Member">
+                <h3 class="team-member-name">William Pan</h3>
+                <p class="team-member-desc">Elizabeth Brooks Reid and Whitelaw Reid Professor of Global Environmental Health and Population Studies, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/2.png" alt="Team Member">
+                <h3 class="team-member-name">Ben Zaitchik</h3>
+                <p class="team-member-desc">Morton K. Blaustein Chair and Professor of Earth and Planetary Sciences, Johns Hopkins University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/3.png" alt="Team Member">
+                <h3 class="team-member-name">Alisson Barbieri</h3>
+                <p class="team-member-desc">Professor of Demography, Federal Minas Gerais University, Brazil</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/4.png" alt="Team Member">
+                <h3 class="team-member-name">Carlos Mena</h3>
+                <p class="team-member-desc">Professor and Director of the Geography Institute, San Francisco de Quito University, Ecuador</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/5.png" alt="Team Member">
+                <h3 class="team-member-name">Valerie Paz-Soldan</h3>
+                <p class="team-member-desc">Associate Professor and Director of Tulane Health Offices for Latin America, Tulane University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/6.png" alt="Team Member">
+                <h3 class="team-member-name">Mark Janko</h3>
+                <p class="team-member-desc">Instructor of Global Health, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/7.png" alt="Team Member">
+                <h3 class="team-member-name">Andres Lescano</h3>
+                <p class="team-member-desc">Associate Professor and Head of EMERGE Research Unit, Cayetano Heredia Peruvian University, Peru</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/8.png" alt="Team Member">
+                <h3 class="team-member-name">Shineng Hu</h3>
+                <p class="team-member-desc">Assistant Professor of Physical Oceanography, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/9.png" alt="Team Member">
+                <h3 class="team-member-name">Drew Shindell</h3>
+                <p class="team-member-desc">Nicholas Distinguished Professor of Earth Science, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/10.png" alt="Team Member">
+                <h3 class="team-member-name">Beth Feingold</h3>
+                <p class="team-member-desc">Associate Professor of Environmental Health Sciences, State University of New York at Albany, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/11.png" alt="Team Member">
+                <h3 class="team-member-name">Chris Lara</h3>
+                <p class="team-member-desc">Senior Research Data Tech, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/12.png" alt="Team Member">
+                <h3 class="team-member-name">Jonathan Juliano</h3>
+                <p class="team-member-desc">Professor of Medicine, University of North Carolina, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/13.png" alt="Team Member">
+                <h3 class="team-member-name">Ernesto Ortiz</h3>
+                <p class="team-member-desc">Research Associate, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/14.png" alt="Team Member">
+                <h3 class="team-member-name">Charles Muiruri</h3>
+                <p class="team-member-desc">Assistant Professor of Population Health Sciences, Assistant Research Professor of Global Health, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/15.png" alt="Team Member">
+                <h3 class="team-member-name">John Fay</h3>
+                <p class="team-member-desc">Lecturing Fellow, Division of Environmental Science and Policy, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/16.png" alt="Team Member">
+                <h3 class="team-member-name">Andrea Araujo</h3>
+                <p class="team-member-desc">Researcher, Ecuador</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/17.png" alt="Team Member">
+                <h3 class="team-member-name">Reinaldo Santos</h3>
+                <p class="team-member-desc">Associate Professor of Demography, Federal Minas Gerais University, Brazil</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/18.png" alt="Team Member">
+                <h3 class="team-member-name">Rodrigo Oliveira Braga Reis</h3>
+                <p class="team-member-desc">Professor, Institute of Nature and Culture, Federal University of Amazonas, Brazil</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/19.png" alt="Team Member">
+                <h3 class="team-member-name">Gilvan Guedes</h3>
+                <p class="team-member-desc">Associate Professor of Demography, Federal Minas Gerais University, Brazil</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/20.png" alt="Team Member">
+                <h3 class="team-member-name">Jose Loiza</h3>
+                <p class="team-member-desc">Research Scientist, Institute of Scientific Research and High Technology Services of Panama AIP, Panama</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/21.png" alt="Team Member">
+                <h3 class="team-member-name">Paul Lantos</h3>
+                <p class="team-member-desc">Professor of Medicine, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/22.png" alt="Team Member">
+                <h3 class="team-member-name">Carolina Coombes Pérez</h3>
+                <p class="team-member-desc">Research Consultant, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/23.png" alt="Team Member">
+                <h3 class="team-member-name">Lorena Benítez Ramírez</h3>
+                <p class="team-member-desc">Researcher, Institute of Geography, San Francisco de Quito University, Ecuador</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/24.png" alt="Team Member">
+                <h3 class="team-member-name">Henry Cárdenas Campoverde</h3>
+                <p class="team-member-desc">Spatial Analyst, Institute of Geography, San Francisco de Quito University, Ecuador</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/25.png" alt="Team Member">
+                <h3 class="team-member-name">Qianhui Zheng</h3>
+                <p class="team-member-desc">Programmer Analyst, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/26.png" alt="Team Member">
+                <h3 class="team-member-name">Perla Medrano</h3>
+                <p class="team-member-desc">Program Coordinator, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainees Section -->
+    <section class="team-grid-section">
+        <h2 class="team-grid-title" data-i18n="team-grid-title2">Trainees</h2>
+        <div class="team-grid">
+            <!-- 9 Trainees -->
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/27.png" alt="Trainee">
+                <h3 class="team-member-name">Francesco Pizzitutti</h3>
+                <p class="team-member-desc">Post-Doctoral Research Fellow, Oregon Science and Health University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/28.png" alt="Trainee">
+                <h3 class="team-member-name">Prakrut Kansara</h3>
+                <p class="team-member-desc">Post-Doctoral Fellow, Department of Earth and Planetary Sciences, Johns Hopkins University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/29.png" alt="Trainee">
+                <h3 class="team-member-name">Mengxin Pan</h3>
+                <p class="team-member-desc">Post-Doctoral Associate, Nicholas School of Environment, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/30.png" alt="Trainee">
+                <h3 class="team-member-name">Manuel Narvaez</h3>
+                <p class="team-member-desc">PhD Student, Department of Earth and Planetary Sciences, Johns Hopkins University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/31.png" alt="Trainee">
+                <h3 class="team-member-name">Sara O'Malley</h3>
+                <p class="team-member-desc">PhD Student in Environment, Nicholas School of Environment, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/32.png" alt="Trainee">
+                <h3 class="team-member-name">Pamela Chacón Uscamaita</h3>
+                <p class="team-member-desc">MPS Student in Biomedical and Health Informatics, University of North Carolina at Chapel Hill, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/33.png" alt="Trainee">
+                <h3 class="team-member-name">Annika Gunderson</h3>
+                <p class="team-member-desc">PhD Student in Epidemiology, University of North Carolina at Chapel Hill, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/34.png" alt="Trainee">
+                <h3 class="team-member-name">Hena Vadher</h3>
+                <p class="team-member-desc">MS Student in Global Health, Duke Global Health Institute, Duke University, USA</p>
+            </div>
+            <div class="team-member-card">
+                <img src="assets/ARC Headshots/35.png" alt="Trainee">
+                <h3 class="team-member-name">Kris Su</h3>
+                <p class="team-member-desc">BS in Environmental Science and BA in Philosophy Student, Johns Hopkins University, USA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Banner -->
+    <section class="team-connect-banner">
+        <img src="assets/Images-Media2/connect.gif" alt="Forest Connect" class="team-connect-banner-img">
+        <div class="team-connect-overlay"></div>
+        <div class="team-connect-content">
+            <h2 class="team-connect-title" data-i18n="team-connect-title">Join us to make a difference</h2>
+            <a href="pages/partner.html" class="team-connect-btn" data-i18n="team-connect-btn">LET'S CONNECT</a>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/components/footer.js"></script>
+    <script src="js/components/scroll-to-top.js"></script>
+</body>
+</html>
