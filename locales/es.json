@@ -470,5 +470,27 @@
   "pages_partner.aria-label29": "[ES] X (Twitter)",
   "pages_partner.aria-label30": "[ES] pages_partner.aria-label15",
   "pages_partner.aria-label31": "[ES] pages_partner.aria-label8",
-  "pages_partner.aria-label32": "[ES] pages_partner.aria-label16"
+  "pages_partner.aria-label32": "[ES] pages_partner.aria-label16",
+
+  "popup.brasil.title": "Brasil",
+  "popup.brasil.institution": "CEDEPLAR, Universidade Federal de Minas Gerais",
+  "popup.ecuador.title": "Ecuador",
+  "popup.ecuador.institution1": "Instituto de Geografía, Universidad San Francisco de Quito",
+  "popup.ecuador.institution2": "Centro de Ciencias de Galápagos, Universidad San Francisco de Quito",
+  "popup.honduras.title": "Honduras",
+  "popup.honduras.institution": "Iniciativa de Acceso de Salud Clinton (CHAI)",
+  "popup.panama.title": "Panamá",
+  "popup.panama.institution1": "Instituto Interamericano para la Investigación del Cambio Global (IAI)",
+  "popup.panama.institution2": "Iniciativa de Acceso de Salud Clinton (CHAI)",
+  "popup.panama.institution3": "INDICASAT-AIP",
+  "popup.peru.title": "Perú",
+  "popup.peru.institution1": "EMERGE, Universidad Peruana Cayetano Heredia",
+  "popup.peru.institution2": "Oficina de Salud de Tulane para América Latina (HOLA), Universidad de Tulane",
+  "popup.usa.title": "Estados Unidos",
+  "popup.usa.institution1": "Escuela Nicholas del Medio Ambiente, Universidad de Duke",
+  "popup.usa.institution2": "Instituto Global de Salud de Duke, Universidad de Duke",
+  "popup.usa.institution3": "Laboratorio de Epidemiología y Ecología de Enfermedades Infecciosas, Universidad de Carolina del Norte en Chapel Hill",
+  "popup.usa.institution4": "Grupo de Investigación de Hidroclima, Universidad Johns Hopkins",
+  "popup.usa.institution5": "Universidad Estatal de Nueva York en Albany",
+  "popup.visit": "Visitar Sitio Web"
 }

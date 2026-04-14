@@ -100,21 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
             goToSlide((currentSlide + 1) % totalSlides);
         });
     }
-
-    // Swipe functionality for mobile
-    let startX = 0;
-    track.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-    });
-
-    track.addEventListener('touchend', e => {
-        const diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) {
-            if (diff > 0) {
-                goToSlide((currentSlide + 1) % totalSlides);
-            } else {
-                goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
-            }
-        }
-    });
 });
