@@ -1,0 +1,126 @@
+{
+  "locations": [
+    {
+      "id": "brasil-1",
+      "lat": -19.867118647058444,
+      "lng": -43.96288288507255,
+      "country": "Brasil",
+      "institution": "Center for Development and Regional Planning (CEDEPLAR), Universidade Federal de Minas Gerais",
+      "website": "https://maps.app.goo.gl/L1WYwxcfVyLmdcoM8"
+    },
+    {
+      "id": "ecuador-1",
+      "lat": -0.19682559577805836,
+      "lng": -78.43603932024051,
+      "country": "Ecuador",
+      "institution": "Institute of Geography, Universidad San Francisco de Quito",
+      "website": "https://maps.app.goo.gl/vwieNad6x5uJzGEZ9"
+    },
+    {
+      "id": "ecuador-2",
+      "lat": -0.8954031581735246,
+      "lng": -89.60878831926755,
+      "country": "Ecuador",
+      "institution": "Galapagos Science Center (GSC), Universidad San Francisco de Quito",
+      "website": "https://maps.app.goo.gl/Jws7YybZfRNDBT8j9"
+    },
+    {
+      "id": "honduras-1",
+      "lat": 14.0619266104033,
+      "lng": -87.18629222366422,
+      "country": "Honduras",
+      "institution": "Clinton Health Access Initiative, Inc. (CHAI)",
+      "website": "https://maps.app.goo.gl/c5Dc73xvt96QF33a8"
+    },
+    {
+      "id": "panama-1",
+      "lat": 8.999408861948156,
+      "lng": -79.58453126424654,
+      "country": "Panama",
+      "institution": "Inter-American Institute for Global Change Research (IAI)",
+      "website": "https://maps.app.goo.gl/4Wzq3y9ozGWtcpFW8"
+    },
+    {
+      "id": "panama-2",
+      "lat": 8.96057663499875,
+      "lng": -79.54667974907595,
+      "country": "Panama",
+      "institution": "Clinton Health Access Initiative (CHAI)",
+      "website": "https://maps.app.goo.gl/ibw14wmtob7ZdV1M6"
+    },
+    {
+      "id": "panama-3",
+      "lat": 9.001795509464454,
+      "lng": -79.58426628193517,
+      "country": "Panama",
+      "institution": "Instituto de Investigaciones Científicas y Servicios de Alta Tecnología de Panamá AIP (INDICASAT-AIP)",
+      "website": "https://maps.app.goo.gl/Y7ShX7TM8VXA8ysU6"
+    },
+    {
+      "id": "peru-1",
+      "lat": -12.020080077224556,
+      "lng": -77.05669437372377,
+      "country": "Peru",
+      "institution": "Research Unit on Emerging Diseases and Climate Change (EMERGE), Universidad Peruana Cayetano Heredia",
+      "website": "https://maps.app.goo.gl/HxCxF4w1YwX3NCiQ7"
+    },
+    {
+      "id": "peru-2",
+      "lat": -12.141841500344047, 
+      "lng": -77.02245108918954,
+      "country": "Peru",
+      "institution": "Tulane Health Office for Latin America (HOLA), Tulane University",
+      "website": "https://maps.app.goo.gl/mzXf7Lvqr6n2Q2iUA"
+    },
+    {
+      "id": "usa-1",
+      "lat": 35.9940,
+      "lng": -78.8986,
+      "country": "United States",
+      "countryI18n": "popup.usa.title",
+      "institution": "Nicholas School of the Environment, Duke University",
+      "institutionI18n": "popup.usa.institution1",
+      "website": "https://nicholas.duke.edu"
+    },
+    {
+      "id": "usa-2",
+      "lat": 35.9940,
+      "lng": -78.8986,
+      "country": "United States",
+      "countryI18n": "popup.usa.title",
+      "institution": "Duke Global Health Institute, Duke University",
+      "institutionI18n": "popup.usa.institution2",
+      "website": "https://globalhealth.duke.edu"
+    },
+    {
+      "id": "usa-3",
+      "lat": 35.9049,
+      "lng": -79.0469,
+      "country": "United States",
+      "countryI18n": "popup.usa.title",
+      "institution": "Infectious Disease Epidemiology and Ecology Lab, UNC Chapel Hill",
+      "institutionI18n": "popup.usa.institution3",
+      "website": "https://sph.unc.edu"
+    },
+    {
+      "id": "usa-4",
+      "lat": 39.3299,
+      "lng": -76.6205,
+      "country": "United States",
+      "countryI18n": "popup.usa.title",
+      "institution": "Hydroclimate Research Group, Johns Hopkins University",
+      "institutionI18n": "popup.usa.institution4",
+      "website": "https://krieger.jhu.edu"
+    },
+    {
+      "id": "usa-5",
+      "lat": 42.6868,
+      "lng": -73.8259,
+      "country": "United States",
+      "countryI18n": "popup.usa.title",
+      "institution": "State University of New York at Albany",
+      "institutionI18n": "popup.usa.institution5",
+      "website": "https://www.albany.edu"
+    }
+  ]
+}

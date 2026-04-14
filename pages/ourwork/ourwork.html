@@ -13,6 +13,7 @@
     </script>
     <script src="js/i18n.js"></script>
     <link rel="stylesheet" href="css/ourwork.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   </head>
   <body>
     <!-- Navbar -->
@@ -30,28 +31,26 @@
       <h1 class="hero-text">We build for the future.</h1>
     </div>
 
-    <!-- Where We Work Section -->
+    <!--LINK Maps -->
     <section class="where-we-work">
       <div class="where-inner">
-        <div class="where-text">
+        <div class="where-map-container">
           <h2 data-i18n="index.h22" class="where-heading">Where We Work</h2>
-          <p data-i18n="index.p6" class="where-sub">
-            Rooted in Latin America, our work is driven by impactful
-            partnerships with local communities and collaborators to create
-            meaningful change. See how our impact is growing as we expand to
-            regions across Latin America.
-          </p>
-          <a data-i18n="index.a2" href="#" class="where-btn">LEARN MORE</a>
+          <div id="map" class="where-map"></div>
+          <button id="resetMapBtn" class="reset-map-btn">
+            <i class="fa-solid fa-rotate-right"></i> Reset Map
+          </button>
         </div>
-        <div class="where-map">
-          <img
-            src="assets/Images-Media/map-view.png"
-            alt="Map of Latin America showing our work locations: Honduras, Panama, Ecuador, Peru, and Brazil"
-            class="where-map-img"
-          />
+        <div class="where-accordion-container">
+          <h3 class="accordion-title" data-i18n="accordion-title">Our Collaborators</h3>
+          <div class="where-accordion">
+          </div>
         </div>
       </div>
     </section>
+
+
+    
 
     <!-- Our Current Projects Section -->
     <section id="our_projects" class="projects">
@@ -119,5 +118,7 @@
     <div id="footer"></div>
     <script src="js/components/footer.js"></script>
     <script src="js/components/scroll-to-top.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/ourwork.js" defer></script>
   </body>
 </html>
