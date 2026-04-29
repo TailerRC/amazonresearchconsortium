@@ -11,6 +11,8 @@
       document.head.prepend(base);
     </script>
     <link rel="stylesheet" href="css/partner.css">
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
 </head>
 <body>
     <!-- Navbar -->
@@ -155,7 +157,208 @@
                             <span data-i18n="pages_partner.label_phone">Phone Number</span>
                             <span class="connect-form__restriction">(Numbers only)</span>
                         </label>
-                        <input type="tel" id="phone" placeholder="555-000-0000" data-i18n-placeholder="pages_partner.placeholder_phone" inputmode="numeric" />
+                        <div class="connect-form__phone-group">
+                            <!-- Custom dropdown con emojis -->
+                            <div class="phone-dropdown" id="countryDropdown">
+                                <div class="phone-dropdown__selected" onclick="toggleDropdown()">
+                                    <span class="fi fi-us"></span>
+                                    <span id="countryDialCode">+1</span>
+                                    <span class="phone-dropdown__arrow">▾</span>
+                                </div>
+                                <ul class="phone-dropdown__list" id="countryList">
+                                    <li onclick="selectCountry('93','af')"><span class="fi fi-af"></span> +93 AF</li>
+                                    <li onclick="selectCountry('355','al')"><span class="fi fi-al"></span> +355 AL</li>
+                                    <li onclick="selectCountry('213','dz')"><span class="fi fi-dz"></span> +213 DZ</li>
+                                    <li onclick="selectCountry('376','ad')"><span class="fi fi-ad"></span> +376 AD</li>
+                                    <li onclick="selectCountry('244','ao')"><span class="fi fi-ao"></span> +244 AO</li>
+                                    <li onclick="selectCountry('54','ar')"><span class="fi fi-ar"></span> +54 AR</li>
+                                    <li onclick="selectCountry('61','au')"><span class="fi fi-au"></span> +61 AU</li>
+                                    <li onclick="selectCountry('43','at')"><span class="fi fi-at"></span> +43 AT</li>
+                                    <li onclick="selectCountry('994','az')"><span class="fi fi-az"></span> +994 AZ</li>
+                                    <li onclick="selectCountry('1','bs')"><span class="fi fi-bs"></span> +1 BS</li>
+                                    <li onclick="selectCountry('973','bh')"><span class="fi fi-bh"></span> +973 BH</li>
+                                    <li onclick="selectCountry('880','bd')"><span class="fi fi-bd"></span> +880 BD</li>
+                                    <li onclick="selectCountry('32','be')"><span class="fi fi-be"></span> +32 BE</li>
+                                    <li onclick="selectCountry('501','bz')"><span class="fi fi-bz"></span> +501 BZ</li>
+                                    <li onclick="selectCountry('229','bj')"><span class="fi fi-bj"></span> +229 BJ</li>
+                                    <li onclick="selectCountry('975','bt')"><span class="fi fi-bt"></span> +975 BT</li>
+                                    <li onclick="selectCountry('591','bo')"><span class="fi fi-bo"></span> +591 BO</li>
+                                    <li onclick="selectCountry('387','ba')"><span class="fi fi-ba"></span> +387 BA</li>
+                                    <li onclick="selectCountry('267','bw')"><span class="fi fi-bw"></span> +267 BW</li>
+                                    <li onclick="selectCountry('55','br')"><span class="fi fi-br"></span> +55 BR</li>
+                                    <li onclick="selectCountry('673','bn')"><span class="fi fi-bn"></span> +673 BN</li>
+                                    <li onclick="selectCountry('359','bg')"><span class="fi fi-bg"></span> +359 BG</li>
+                                    <li onclick="selectCountry('226','bf')"><span class="fi fi-bf"></span> +226 BF</li>
+                                    <li onclick="selectCountry('257','bi')"><span class="fi fi-bi"></span> +257 BI</li>
+                                    <li onclick="selectCountry('238','cv')"><span class="fi fi-cv"></span> +238 CV</li>
+                                    <li onclick="selectCountry('855','kh')"><span class="fi fi-kh"></span> +855 KH</li>
+                                    <li onclick="selectCountry('237','cm')"><span class="fi fi-cm"></span> +237 CM</li>
+                                    <li onclick="selectCountry('1','ca')"><span class="fi fi-ca"></span> +1 CA</li>
+                                    <li onclick="selectCountry('236','cf')"><span class="fi fi-cf"></span> +236 CF</li>
+                                    <li onclick="selectCountry('235','td')"><span class="fi fi-td"></span> +235 TD</li>
+                                    <li onclick="selectCountry('56','cl')"><span class="fi fi-cl"></span> +56 CL</li>
+                                    <li onclick="selectCountry('86','cn')"><span class="fi fi-cn"></span> +86 CN</li>
+                                    <li onclick="selectCountry('57','co')"><span class="fi fi-co"></span> +57 CO</li>
+                                    <li onclick="selectCountry('269','km')"><span class="fi fi-km"></span> +269 KM</li>
+                                    <li onclick="selectCountry('242','cg')"><span class="fi fi-cg"></span> +242 CG</li>
+                                    <li onclick="selectCountry('506','cr')"><span class="fi fi-cr"></span> +506 CR</li>
+                                    <li onclick="selectCountry('385','hr')"><span class="fi fi-hr"></span> +385 HR</li>
+                                    <li onclick="selectCountry('53','cu')"><span class="fi fi-cu"></span> +53 CU</li>
+                                    <li onclick="selectCountry('357','cy')"><span class="fi fi-cy"></span> +357 CY</li>
+                                    <li onclick="selectCountry('420','cz')"><span class="fi fi-cz"></span> +420 CZ</li>
+                                    <li onclick="selectCountry('45','dk')"><span class="fi fi-dk"></span> +45 DK</li>
+                                    <li onclick="selectCountry('253','dj')"><span class="fi fi-dj"></span> +253 DJ</li>
+                                    <li onclick="selectCountry('1','dm')"><span class="fi fi-dm"></span> +1 DM</li>
+                                    <li onclick="selectCountry('1','do')"><span class="fi fi-do"></span> +1 DO</li>
+                                    <li onclick="selectCountry('593','ec')"><span class="fi fi-ec"></span> +593 EC</li>
+                                    <li onclick="selectCountry('20','eg')"><span class="fi fi-eg"></span> +20 EG</li>
+                                    <li onclick="selectCountry('503','sv')"><span class="fi fi-sv"></span> +503 SV</li>
+                                    <li onclick="selectCountry('240','gq')"><span class="fi fi-gq"></span> +240 GQ</li>
+                                    <li onclick="selectCountry('291','er')"><span class="fi fi-er"></span> +291 ER</li>
+                                    <li onclick="selectCountry('372','ee')"><span class="fi fi-ee"></span> +372 EE</li>
+                                    <li onclick="selectCountry('268','sz')"><span class="fi fi-sz"></span> +268 SZ</li>
+                                    <li onclick="selectCountry('251','et')"><span class="fi fi-et"></span> +251 ET</li>
+                                    <li onclick="selectCountry('679','fj')"><span class="fi fi-fj"></span> +679 FJ</li>
+                                    <li onclick="selectCountry('358','fi')"><span class="fi fi-fi"></span> +358 FI</li>
+                                    <li onclick="selectCountry('33','fr')"><span class="fi fi-fr"></span> +33 FR</li>
+                                    <li onclick="selectCountry('241','ga')"><span class="fi fi-ga"></span> +241 GA</li>
+                                    <li onclick="selectCountry('220','gm')"><span class="fi fi-gm"></span> +220 GM</li>
+                                    <li onclick="selectCountry('995','ge')"><span class="fi fi-ge"></span> +995 GE</li>
+                                    <li onclick="selectCountry('49','de')"><span class="fi fi-de"></span> +49 DE</li>
+                                    <li onclick="selectCountry('233','gh')"><span class="fi fi-gh"></span> +233 GH</li>
+                                    <li onclick="selectCountry('30','gr')"><span class="fi fi-gr"></span> +30 GR</li>
+                                    <li onclick="selectCountry('1','gd')"><span class="fi fi-gd"></span> +1 GD</li>
+                                    <li onclick="selectCountry('502','gt')"><span class="fi fi-gt"></span> +502 GT</li>
+                                    <li onclick="selectCountry('224','gn')"><span class="fi fi-gn"></span> +224 GN</li>
+                                    <li onclick="selectCountry('245','gw')"><span class="fi fi-gw"></span> +245 GW</li>
+                                    <li onclick="selectCountry('592','gy')"><span class="fi fi-gy"></span> +592 GY</li>
+                                    <li onclick="selectCountry('509','ht')"><span class="fi fi-ht"></span> +509 HT</li>
+                                    <li onclick="selectCountry('504','hn')"><span class="fi fi-hn"></span> +504 HN</li>
+                                    <li onclick="selectCountry('36','hu')"><span class="fi fi-hu"></span> +36 HU</li>
+                                    <li onclick="selectCountry('354','is')"><span class="fi fi-is"></span> +354 IS</li>
+                                    <li onclick="selectCountry('91','in')"><span class="fi fi-in"></span> +91 IN</li>
+                                    <li onclick="selectCountry('62','id')"><span class="fi fi-id"></span> +62 ID</li>
+                                    <li onclick="selectCountry('98','ir')"><span class="fi fi-ir"></span> +98 IR</li>
+                                    <li onclick="selectCountry('964','iq')"><span class="fi fi-iq"></span> +964 IQ</li>
+                                    <li onclick="selectCountry('353','ie')"><span class="fi fi-ie"></span> +353 IE</li>
+                                    <li onclick="selectCountry('972','il')"><span class="fi fi-il"></span> +972 IL</li>
+                                    <li onclick="selectCountry('39','it')"><span class="fi fi-it"></span> +39 IT</li>
+                                    <li onclick="selectCountry('1','jm')"><span class="fi fi-jm"></span> +1 JM</li>
+                                    <li onclick="selectCountry('81','jp')"><span class="fi fi-jp"></span> +81 JP</li>
+                                    <li onclick="selectCountry('962','jo')"><span class="fi fi-jo"></span> +962 JO</li>
+                                    <li onclick="selectCountry('7','kz')"><span class="fi fi-kz"></span> +7 KZ</li>
+                                    <li onclick="selectCountry('254','ke')"><span class="fi fi-ke"></span> +254 KE</li>
+                                    <li onclick="selectCountry('686','ki')"><span class="fi fi-ki"></span> +686 KI</li>
+                                    <li onclick="selectCountry('850','kp')"><span class="fi fi-kp"></span> +850 KP</li>
+                                    <li onclick="selectCountry('82','kr')"><span class="fi fi-kr"></span> +82 KR</li>
+                                    <li onclick="selectCountry('965','kw')"><span class="fi fi-kw"></span> +965 KW</li>
+                                    <li onclick="selectCountry('996','kg')"><span class="fi fi-kg"></span> +996 KG</li>
+                                    <li onclick="selectCountry('856','la')"><span class="fi fi-la"></span> +856 LA</li>
+                                    <li onclick="selectCountry('371','lv')"><span class="fi fi-lv"></span> +371 LV</li>
+                                    <li onclick="selectCountry('961','lb')"><span class="fi fi-lb"></span> +961 LB</li>
+                                    <li onclick="selectCountry('266','ls')"><span class="fi fi-ls"></span> +266 LS</li>
+                                    <li onclick="selectCountry('231','lr')"><span class="fi fi-lr"></span> +231 LR</li>
+                                    <li onclick="selectCountry('218','ly')"><span class="fi fi-ly"></span> +218 LY</li>
+                                    <li onclick="selectCountry('423','li')"><span class="fi fi-li"></span> +423 LI</li>
+                                    <li onclick="selectCountry('370','lt')"><span class="fi fi-lt"></span> +370 LT</li>
+                                    <li onclick="selectCountry('352','lu')"><span class="fi fi-lu"></span> +352 LU</li>
+                                    <li onclick="selectCountry('261','mg')"><span class="fi fi-mg"></span> +261 MG</li>
+                                    <li onclick="selectCountry('265','mw')"><span class="fi fi-mw"></span> +265 MW</li>
+                                    <li onclick="selectCountry('60','my')"><span class="fi fi-my"></span> +60 MY</li>
+                                    <li onclick="selectCountry('960','mv')"><span class="fi fi-mv"></span> +960 MV</li>
+                                    <li onclick="selectCountry('223','ml')"><span class="fi fi-ml"></span> +223 ML</li>
+                                    <li onclick="selectCountry('356','mt')"><span class="fi fi-mt"></span> +356 MT</li>
+                                    <li onclick="selectCountry('692','mh')"><span class="fi fi-mh"></span> +692 MH</li>
+                                    <li onclick="selectCountry('222','mr')"><span class="fi fi-mr"></span> +222 MR</li>
+                                    <li onclick="selectCountry('230','mu')"><span class="fi fi-mu"></span> +230 MU</li>
+                                    <li onclick="selectCountry('52','mx')"><span class="fi fi-mx"></span> +52 MX</li>
+                                    <li onclick="selectCountry('691','fm')"><span class="fi fi-fm"></span> +691 FM</li>
+                                    <li onclick="selectCountry('373','md')"><span class="fi fi-md"></span> +373 MD</li>
+                                    <li onclick="selectCountry('377','mc')"><span class="fi fi-mc"></span> +377 MC</li>
+                                    <li onclick="selectCountry('976','mn')"><span class="fi fi-mn"></span> +976 MN</li>
+                                    <li onclick="selectCountry('382','me')"><span class="fi fi-me"></span> +382 ME</li>
+                                    <li onclick="selectCountry('212','ma')"><span class="fi fi-ma"></span> +212 MA</li>
+                                    <li onclick="selectCountry('258','mz')"><span class="fi fi-mz"></span> +258 MZ</li>
+                                    <li onclick="selectCountry('95','mm')"><span class="fi fi-mm"></span> +95 MM</li>
+                                    <li onclick="selectCountry('264','na')"><span class="fi fi-na"></span> +264 NA</li>
+                                    <li onclick="selectCountry('674','nr')"><span class="fi fi-nr"></span> +674 NR</li>
+                                    <li onclick="selectCountry('977','np')"><span class="fi fi-np"></span> +977 NP</li>
+                                    <li onclick="selectCountry('31','nl')"><span class="fi fi-nl"></span> +31 NL</li>
+                                    <li onclick="selectCountry('64','nz')"><span class="fi fi-nz"></span> +64 NZ</li>
+                                    <li onclick="selectCountry('505','ni')"><span class="fi fi-ni"></span> +505 NI</li>
+                                    <li onclick="selectCountry('227','ne')"><span class="fi fi-ne"></span> +227 NE</li>
+                                    <li onclick="selectCountry('234','ng')"><span class="fi fi-ng"></span> +234 NG</li>
+                                    <li onclick="selectCountry('389','mk')"><span class="fi fi-mk"></span> +389 MK</li>
+                                    <li onclick="selectCountry('47','no')"><span class="fi fi-no"></span> +47 NO</li>
+                                    <li onclick="selectCountry('968','om')"><span class="fi fi-om"></span> +968 OM</li>
+                                    <li onclick="selectCountry('92','pk')"><span class="fi fi-pk"></span> +92 PK</li>
+                                    <li onclick="selectCountry('680','pw')"><span class="fi fi-pw"></span> +680 PW</li>
+                                    <li onclick="selectCountry('507','pa')"><span class="fi fi-pa"></span> +507 PA</li>
+                                    <li onclick="selectCountry('675','pg')"><span class="fi fi-pg"></span> +675 PG</li>
+                                    <li onclick="selectCountry('595','py')"><span class="fi fi-py"></span> +595 PY</li>
+                                    <li onclick="selectCountry('51','pe')"><span class="fi fi-pe"></span> +51 PE</li>
+                                    <li onclick="selectCountry('63','ph')"><span class="fi fi-ph"></span> +63 PH</li>
+                                    <li onclick="selectCountry('48','pl')"><span class="fi fi-pl"></span> +48 PL</li>
+                                    <li onclick="selectCountry('351','pt')"><span class="fi fi-pt"></span> +351 PT</li>
+                                    <li onclick="selectCountry('974','qa')"><span class="fi fi-qa"></span> +974 QA</li>
+                                    <li onclick="selectCountry('40','ro')"><span class="fi fi-ro"></span> +40 RO</li>
+                                    <li onclick="selectCountry('7','ru')"><span class="fi fi-ru"></span> +7 RU</li>
+                                    <li onclick="selectCountry('250','rw')"><span class="fi fi-rw"></span> +250 RW</li>
+                                    <li onclick="selectCountry('1','kn')"><span class="fi fi-kn"></span> +1 KN</li>
+                                    <li onclick="selectCountry('1','lc')"><span class="fi fi-lc"></span> +1 LC</li>
+                                    <li onclick="selectCountry('1','vc')"><span class="fi fi-vc"></span> +1 VC</li>
+                                    <li onclick="selectCountry('685','ws')"><span class="fi fi-ws"></span> +685 WS</li>
+                                    <li onclick="selectCountry('378','sm')"><span class="fi fi-sm"></span> +378 SM</li>
+                                    <li onclick="selectCountry('239','st')"><span class="fi fi-st"></span> +239 ST</li>
+                                    <li onclick="selectCountry('966','sa')"><span class="fi fi-sa"></span> +966 SA</li>
+                                    <li onclick="selectCountry('221','sn')"><span class="fi fi-sn"></span> +221 SN</li>
+                                    <li onclick="selectCountry('381','rs')"><span class="fi fi-rs"></span> +381 RS</li>
+                                    <li onclick="selectCountry('232','sl')"><span class="fi fi-sl"></span> +232 SL</li>
+                                    <li onclick="selectCountry('65','sg')"><span class="fi fi-sg"></span> +65 SG</li>
+                                    <li onclick="selectCountry('421','sk')"><span class="fi fi-sk"></span> +421 SK</li>
+                                    <li onclick="selectCountry('386','si')"><span class="fi fi-si"></span> +386 SI</li>
+                                    <li onclick="selectCountry('677','sb')"><span class="fi fi-sb"></span> +677 SB</li>
+                                    <li onclick="selectCountry('252','so')"><span class="fi fi-so"></span> +252 SO</li>
+                                    <li onclick="selectCountry('27','za')"><span class="fi fi-za"></span> +27 ZA</li>
+                                    <li onclick="selectCountry('211','ss')"><span class="fi fi-ss"></span> +211 SS</li>
+                                    <li onclick="selectCountry('34','es')"><span class="fi fi-es"></span> +34 ES</li>
+                                    <li onclick="selectCountry('94','lk')"><span class="fi fi-lk"></span> +94 LK</li>
+                                    <li onclick="selectCountry('249','sd')"><span class="fi fi-sd"></span> +249 SD</li>
+                                    <li onclick="selectCountry('597','sr')"><span class="fi fi-sr"></span> +597 SR</li>
+                                    <li onclick="selectCountry('46','se')"><span class="fi fi-se"></span> +46 SE</li>
+                                    <li onclick="selectCountry('41','ch')"><span class="fi fi-ch"></span> +41 CH</li>
+                                    <li onclick="selectCountry('963','sy')"><span class="fi fi-sy"></span> +963 SY</li>
+                                    <li onclick="selectCountry('886','tw')"><span class="fi fi-tw"></span> +886 TW</li>
+                                    <li onclick="selectCountry('992','tj')"><span class="fi fi-tj"></span> +992 TJ</li>
+                                    <li onclick="selectCountry('255','tz')"><span class="fi fi-tz"></span> +255 TZ</li>
+                                    <li onclick="selectCountry('66','th')"><span class="fi fi-th"></span> +66 TH</li>
+                                    <li onclick="selectCountry('670','tl')"><span class="fi fi-tl"></span> +670 TL</li>
+                                    <li onclick="selectCountry('228','tg')"><span class="fi fi-tg"></span> +228 TG</li>
+                                    <li onclick="selectCountry('676','to')"><span class="fi fi-to"></span> +676 TO</li>
+                                    <li onclick="selectCountry('1','tt')"><span class="fi fi-tt"></span> +1 TT</li>
+                                    <li onclick="selectCountry('216','tn')"><span class="fi fi-tn"></span> +216 TN</li>
+                                    <li onclick="selectCountry('90','tr')"><span class="fi fi-tr"></span> +90 TR</li>
+                                    <li onclick="selectCountry('993','tm')"><span class="fi fi-tm"></span> +993 TM</li>
+                                    <li onclick="selectCountry('688','tv')"><span class="fi fi-tv"></span> +688 TV</li>
+                                    <li onclick="selectCountry('256','ug')"><span class="fi fi-ug"></span> +256 UG</li>
+                                    <li onclick="selectCountry('380','ua')"><span class="fi fi-ua"></span> +380 UA</li>
+                                    <li onclick="selectCountry('971','ae')"><span class="fi fi-ae"></span> +971 AE</li>
+                                    <li onclick="selectCountry('44','gb')"><span class="fi fi-gb"></span> +44 GB</li>
+                                    <li onclick="selectCountry('1','us')"><span class="fi fi-us"></span> +1 US</li>
+                                    <li onclick="selectCountry('598','uy')"><span class="fi fi-uy"></span> +598 UY</li>
+                                    <li onclick="selectCountry('998','uz')"><span class="fi fi-uz"></span> +998 UZ</li>
+                                    <li onclick="selectCountry('678','vu')"><span class="fi fi-vu"></span> +678 VU</li>
+                                    <li onclick="selectCountry('379','va')"><span class="fi fi-va"></span> +379 VA</li>
+                                    <li onclick="selectCountry('58','ve')"><span class="fi fi-ve"></span> +58 VE</li>
+                                    <li onclick="selectCountry('84','vn')"><span class="fi fi-vn"></span> +84 VN</li>
+                                    <li onclick="selectCountry('967','ye')"><span class="fi fi-ye"></span> +967 YE</li>
+                                    <li onclick="selectCountry('260','zm')"><span class="fi fi-zm"></span> +260 ZM</li>
+                                    <li onclick="selectCountry('263','zw')"><span class="fi fi-zw"></span> +263 ZW</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" id="phoneCountry" value="1" />
+                            <input type="tel" id="phone" class="connect-form__phone-input" placeholder="9196844108" inputmode="numeric" />
+                        </div>
                         <span class="error-message" id="phoneError"></span>
                     </div>
                 </div>
