@@ -156,7 +156,6 @@ function validateContactForm(event) {
         isValid = false;
     }
 
-    // Validar Teléfono (opcional)
     if (phone !== '') {
         if (!/^[0-9\s\-\(\)\+]*$/.test(phone)) {
             showError('phoneError', 'Phone number can only contain numbers, spaces, hyphens, parentheses and plus sign');
@@ -164,7 +163,6 @@ function validateContactForm(event) {
         }
     }
 
-    // Validar Mensaje
     if (message === '') {
         showError('messageError', 'Message is required');
         isValid = false;
