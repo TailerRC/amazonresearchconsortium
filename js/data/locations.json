@@ -74,53 +74,43 @@
     },
     {
       "id": "usa-1",
-      "lat": 35.9940,
-      "lng": -78.8986,
+      "lat": 36.00480167319038,
+      "lng": -78.94262377193658,
       "country": "United States",
-      "countryI18n": "popup.usa.title",
       "institution": "Nicholas School of the Environment, Duke University",
-      "institutionI18n": "popup.usa.institution1",
-      "website": "https://nicholas.duke.edu"
+      "website": "https://maps.app.goo.gl/Lc7zRDxWvq13CCYA6"
     },
     {
       "id": "usa-2",
-      "lat": 35.9940,
-      "lng": -78.8986,
+      "lat": 36.00734235319424, 
+      "lng": -78.93376891652366, 
       "country": "United States",
-      "countryI18n": "popup.usa.title",
       "institution": "Duke Global Health Institute, Duke University",
-      "institutionI18n": "popup.usa.institution2",
-      "website": "https://globalhealth.duke.edu"
+      "website": "https://maps.app.goo.gl/Q9MzzLnpqPsLwGkbA"
     },
     {
       "id": "usa-3",
-      "lat": 35.9049,
-      "lng": -79.0469,
+      "lat": 35.90196652144728, 
+      "lng": -79.0533111613553,
       "country": "United States",
-      "countryI18n": "popup.usa.title",
-      "institution": "Infectious Disease Epidemiology and Ecology Lab, UNC Chapel Hill",
-      "institutionI18n": "popup.usa.institution3",
-      "website": "https://sph.unc.edu"
+      "institution": "Infectious Disease Epidemiology and Ecology Lab, University of North Carolina at Chapel Hill",
+      "website": "https://maps.app.goo.gl/ofrmVjHcGb7FCAKX7"
     },
     {
       "id": "usa-4",
-      "lat": 39.3299,
-      "lng": -76.6205,
+      "lat": 39.32820059302163,  
+      "lng": -76.62366226012739,
       "country": "United States",
-      "countryI18n": "popup.usa.title",
       "institution": "Hydroclimate Research Group, Johns Hopkins University",
-      "institutionI18n": "popup.usa.institution4",
-      "website": "https://krieger.jhu.edu"
+      "website": "https://maps.app.goo.gl/nCTdGKUn4crWRDYk9"
     },
     {
       "id": "usa-5",
-      "lat": 42.6868,
-      "lng": -73.8259,
+      "lat": 42.68428487430973, 
+      "lng": -73.82611079096412,
       "country": "United States",
-      "countryI18n": "popup.usa.title",
       "institution": "State University of New York at Albany",
-      "institutionI18n": "popup.usa.institution5",
-      "website": "https://www.albany.edu"
+      "website": "https://maps.app.goo.gl/xqduECf7PZd3iQNw8"
     }
   ]
 }
