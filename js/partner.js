@@ -216,6 +216,12 @@ function clearAllErrors() {
 // ─────────────────────────────────────────────────────────────
 function submitForm(firstName, lastName, email, phone, message) {
 
+    // Obtener código de país desde el input hidden
+    const phoneCountry = document.getElementById('phoneCountry').value;
+    
+    // Combinar código + número
+    const fullPhone = phone ? `${phoneCountry}${phone}` : '';
+
     // URL de submit real (del index.html descargado de Zoho Forms)
     const ZOHO_ACTION = 'https://forms.zohopublic.com/rodrtailergm1/form/ARCFORM/formperma/pc7O7Ffa-tzF1gtDxGy8KYwLUaRREggpMoofw0wE0XA/htmlRecords/submit';
 
@@ -224,7 +230,7 @@ function submitForm(firstName, lastName, email, phone, message) {
         'Name_First'             : firstName,
         'Name_Last'              : lastName,
         'Email'                  : email,
-        'PhoneNumber_countrycode': phone,
+        'PhoneNumber_countrycode': fullPhone,
         'MultiLine'              : message,
         'zf_referrer_name'       : window.location.href,
         'zf_redirect_url'        : '',
@@ -295,3 +301,27 @@ function closeSuccessModal() {
         }, 300);
     }
 }
+
+function toggleDropdown() {
+    document.getElementById('countryList').classList.toggle('open');
+}
+
+function selectCountry(code, iso) {
+    const selected = document.querySelector('.phone-dropdown__selected');
+    selected.innerHTML = `
+        <span class="fi fi-${iso}"></span>
+        <span id="countryDialCode">+${code}</span>
+        <span class="phone-dropdown__arrow">▾</span>
+    `;
+    document.getElementById('phoneCountry').value = code;
+    document.getElementById('countryList').classList.remove('open');
+    // Re-attach onclick after innerHTML reset
+    selected.onclick = toggleDropdown;
+}
+
+document.addEventListener('click', function(e) {
+    const dd = document.getElementById('countryDropdown');
+    if (dd && !dd.contains(e.target)) {
+        document.getElementById('countryList').classList.remove('open');
+    }
+});
