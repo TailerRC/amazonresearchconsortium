@@ -156,13 +156,9 @@ function validateContactForm(event) {
         isValid = false;
     }
 
-    // Validar Teléfono (opcional pero si se proporciona debe ser válido)
+    // Validar Teléfono (opcional)
     if (phone !== '') {
-        const digitsOnly = phone.replace(/\D/g, '');
-        if (digitsOnly.length < 10) {
-            showError('phoneError', 'Phone number must contain at least 10 digits');
-            isValid = false;
-        } else if (!/^[0-9\s\-\(\)\+]*$/.test(phone)) {
+        if (!/^[0-9\s\-\(\)\+]*$/.test(phone)) {
             showError('phoneError', 'Phone number can only contain numbers, spaces, hyphens, parentheses and plus sign');
             isValid = false;
         }
