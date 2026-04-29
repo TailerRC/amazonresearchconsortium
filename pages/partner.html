@@ -120,30 +120,57 @@
             </div>
 
             <!-- Right: form -->
-            <form class="connect-section__form" onsubmit="return false;">
+            <form id="connectForm" class="connect-section__form" onsubmit="return validateContactForm(event);">
                 <div class="connect-form__row">
                     <div class="connect-form__field">
-                        <input type="text" placeholder="First Name*" data-i18n-placeholder="pages_partner.placeholder1" data-i18n-placeholder="pages_partner.placeholder1" data-i18n-placeholder="pages_partner.placeholder2" data-i18n-placeholder="pages_partner.placeholder1" data-i18n-placeholder="pages_partner.placeholder3" data-i18n-placeholder="pages_partner.placeholder2" data-i18n-placeholder="pages_partner.placeholder4" required />
+                        <label for="firstName" class="connect-form__label">
+                            <span data-i18n="pages_partner.label_first_name">First Name</span>
+                            <span class="connect-form__required">*</span>
+                            <span class="connect-form__restriction">(Letters only)</span>
+                        </label>
+                        <input type="text" id="firstName" placeholder="John" data-i18n-placeholder="pages_partner.placeholder_first_name" inputmode="text" required />
+                        <span class="error-message" id="firstNameError"></span>
                     </div>
                     <div class="connect-form__field">
-                        <input type="text" placeholder="Last Name*" data-i18n-placeholder="pages_partner.placeholder5" data-i18n-placeholder="pages_partner.placeholder3" data-i18n-placeholder="pages_partner.placeholder6" data-i18n-placeholder="pages_partner.placeholder2" data-i18n-placeholder="pages_partner.placeholder7" data-i18n-placeholder="pages_partner.placeholder4" data-i18n-placeholder="pages_partner.placeholder8" required />
+                        <label for="lastName" class="connect-form__label">
+                            <span data-i18n="pages_partner.label_last_name">Last Name</span>
+                            <span class="connect-form__required">*</span>
+                            <span class="connect-form__restriction">(Letters only)</span>
+                        </label>
+                        <input type="text" id="lastName" placeholder="Doe" data-i18n-placeholder="pages_partner.placeholder_last_name" inputmode="text" required />
+                        <span class="error-message" id="lastNameError"></span>
                     </div>
                 </div>
                 <div class="connect-form__row">
                     <div class="connect-form__field">
-                        <input type="email" placeholder="Email Address*" data-i18n-placeholder="pages_partner.placeholder9" data-i18n-placeholder="pages_partner.placeholder5" data-i18n-placeholder="pages_partner.placeholder10" data-i18n-placeholder="pages_partner.placeholder3" data-i18n-placeholder="pages_partner.placeholder11" data-i18n-placeholder="pages_partner.placeholder6" data-i18n-placeholder="pages_partner.placeholder12" required />
+                        <label for="email" class="connect-form__label">
+                            <span data-i18n="pages_partner.label_email">Email Address</span>
+                            <span class="connect-form__required">*</span>
+                        </label>
+                        <input type="email" id="email" placeholder="your@email.com" data-i18n-placeholder="pages_partner.placeholder_email" required />
+                        <span class="error-message" id="emailError"></span>
                     </div>
                     <div class="connect-form__field">
-                        <input type="tel" placeholder="Phone Number" data-i18n-placeholder="pages_partner.placeholder13" data-i18n-placeholder="pages_partner.placeholder7" data-i18n-placeholder="pages_partner.placeholder14" data-i18n-placeholder="pages_partner.placeholder4" data-i18n-placeholder="pages_partner.placeholder15" data-i18n-placeholder="pages_partner.placeholder8" data-i18n-placeholder="pages_partner.placeholder16" />
+                        <label for="phone" class="connect-form__label">
+                            <span data-i18n="pages_partner.label_phone">Phone Number</span>
+                            <span class="connect-form__restriction">(Numbers only)</span>
+                        </label>
+                        <input type="tel" id="phone" placeholder="555-000-0000" data-i18n-placeholder="pages_partner.placeholder_phone" inputmode="numeric" />
+                        <span class="error-message" id="phoneError"></span>
                     </div>
                 </div>
                 <div class="connect-form__row connect-form__row--full">
                     <div class="connect-form__field">
-                        <textarea placeholder="Message*" data-i18n-placeholder="pages_partner.placeholder17" data-i18n-placeholder="pages_partner.placeholder9" data-i18n-placeholder="pages_partner.placeholder18" data-i18n-placeholder="pages_partner.placeholder5" data-i18n-placeholder="pages_partner.placeholder19" data-i18n-placeholder="pages_partner.placeholder10" data-i18n-placeholder="pages_partner.placeholder20" rows="5" required></textarea>
+                        <label for="message" class="connect-form__label">
+                            <span data-i18n="pages_partner.label_message">Message</span>
+                            <span class="connect-form__required">*</span>
+                        </label>
+                        <textarea id="message" placeholder="Tell us how we can help..." data-i18n-placeholder="pages_partner.placeholder_message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
                     </div>
                 </div>
                 <div class="connect-form__submit-row">
-                    <button data-i18n="pages_partner.button1" type="submit" class="connect-form__submit">SUBMIT</button>
+                    <button data-i18n="pages_partner.button_submit" type="submit" class="connect-form__submit">SUBMIT</button>
                 </div>
             </form>
         </div>

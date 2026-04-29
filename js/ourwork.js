@@ -14,24 +14,20 @@ function initMap() {
     return;
   }
 
-  // Create map centered on Latin America
   mapInstance = L.map('map').setView([defaultMapView.lat, defaultMapView.lng], defaultMapView.zoom);
 
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
-    maxZoom: 19,
+  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenTopoMap contributors',
+    maxZoom: 17,
     opacity: 0.85
   }).addTo(mapInstance);
 
-  // Load locations from JSON data file
   fetch('js/data/locations.json')
     .then(response => response.json())
     .then(data => {
       const locations = data.locations;
       
       locations.forEach((location, index) => {
-        // Create custom icon using FontAwesome
         const markerIcon = L.divIcon({
           html: `<div class="leaflet-marker-icon-custom">
                    <i class="fa-solid fa-location-dot"></i>
@@ -47,13 +43,13 @@ function initMap() {
           title: location.country
         }).addTo(mapInstance);
 
-        // Generate popup content with i18n support
+        // Generate popup content
         const popupContent = `
           <div class="popup-template">
             <h4 class="popup-title">${location.country}</h4>
             <p class="popup-institution">${location.institution}</p>
             <div class="popup-buttons">
-              <a href="${location.website}" target="_blank" data-i18n="popup.visit" class="popup-link popup-visit">Visit</a>
+              <a href="${location.website}" target="_blank" class="popup-link popup-visit">Google Map</a>
             </div>
           </div>
         `;
@@ -63,15 +59,6 @@ function initMap() {
           closeButton: true,
           maxWidth: 300,
           className: 'custom-popup'
-        });
-
-        // Translate button when popup is opened
-        marker.on('popupopen', function() {
-          if (typeof i18n !== 'undefined') {
-            setTimeout(() => {
-              i18n.reapply();
-            }, 50);
-          }
         });
 
         // Add animation on marker creation
@@ -91,6 +78,12 @@ function goToLocation(lat, lng, zoom = 6) {
       animate: true,
       duration: 1
     });
+    
+    // Scroll to map
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+      mapElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 }
 
@@ -245,5 +238,100 @@ document.addEventListener('DOMContentLoaded', function () {
   if (resetBtn) {
     resetBtn.addEventListener('click', resetMap);
   }
+
+  // Publications tabs functionality
+  const publicationTabs = document.querySelectorAll('.publication-tab');
+  publicationTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const year = this.getAttribute('data-year');
+      
+      // Remove active class from all tabs
+      publicationTabs.forEach(t => t.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      this.classList.add('active');
+      
+      // Hide all publication years
+      const allYears = document.querySelectorAll('.publication-year');
+      allYears.forEach(yearDiv => yearDiv.classList.remove('active'));
+      
+      // Show selected year
+      const selectedYear = document.getElementById(`year-${year}`);
+      if (selectedYear) {
+        selectedYear.classList.add('active');
+      }
+    });
+  });
+
+  // Commitment Cards Carousel functionality - Carousel 1
+    let currentSlide = 0;
+    const totalSlides = 3;
+    const track = document.getElementById('commitmentTrack');
+    const dots = document.querySelectorAll('#commitmentDots .dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function goToSlide(index) {
+        currentSlide = index;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    // Dot click handlers - Carousel 1
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Arrow button handlers - Carousel 1
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            goToSlide((currentSlide + 1) % totalSlides);
+        });
+    }
+
+    // Commitment Cards Carousel functionality - Carousel 2
+    let currentSlide2 = 0;
+    const track2 = document.getElementById('commitmentTrack2');
+    const dots2 = document.querySelectorAll('#commitmentDots2 .dot');
+    const prevBtn2 = document.getElementById('prevBtn2');
+    const nextBtn2 = document.getElementById('nextBtn2');
+
+    function goToSlide2(index) {
+        currentSlide2 = index;
+        track2.style.transform = `translateX(-${currentSlide2 * 100}%)`;
+        dots2.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide2);
+        });
+    }
+
+    // Dot click handlers - Carousel 2
+    dots2.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide2(index);
+        });
+    });
+
+    // Arrow button handlers - Carousel 2
+    if (prevBtn2) {
+        prevBtn2.addEventListener('click', () => {
+            goToSlide2((currentSlide2 - 1 + totalSlides) % totalSlides);
+        });
+    }
+
+    if (nextBtn2) {
+        nextBtn2.addEventListener('click', () => {
+            goToSlide2((currentSlide2 + 1) % totalSlides);
+        });
+    }
 
 });
