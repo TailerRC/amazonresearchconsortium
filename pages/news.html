@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Project Updates | ARC</title>
     <script>
-      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-      const base = document.createElement('base');
-      base.href = isLocal ? '/' : '/amazonresearchconsortium/';
+      const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const base = document.createElement("base");
+      if (isLocal) {
+        base.href = "/";
+      } else {
+        const match = location.pathname.match(/^(\/[^/]+\/)/);
+        base.href = match ? match[1] : "/";
+      }
       document.head.prepend(base);
     </script>
     <script src="js/i18n.js"></script>
